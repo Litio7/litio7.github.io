@@ -5,7 +5,7 @@ date: 2023-08-12
 toc: true
 pin: true
 image:
-  path: /assets/img/htb-writeup-keeper/keeper_logo.png
+ path: /assets/img/htb-writeup-keeper/keeper_logo.png
 categories:
   - Machines
 tags:
@@ -40,7 +40,7 @@ Busco las credenciales por defecto del servicio '4.4.4+dfsg-2ubuntu1'.
 
 ![](/assets/img/htb-writeup-keeper/keeper5.png)
 
-Encuentro 2 usuarios registrados en el sistema. Y en el usuario 'lnorgaard' encuentro la contraseña 'Welcome2023!'.
+Encuentro 2 usuarios registrados en el sistema. Y en el usuario 'lnorgaard' encuentro una contraseña 'Welcome2023!'.
  
 ![](/assets/img/htb-writeup-keeper/keeper6.png)
 
@@ -70,7 +70,7 @@ Existe un Proof of Concept en github precisamente para esto.
 Una vez clonado el PoC, monto un servidor para exportarlo a la maquina victima.
 
 ```terminal
-/home/kali/Documents/htb/machines/keeper:-$ sudo git clone https://github.com/CMEPW/keepass-dump-masterkey.git
+/home/kali/Documents/htb/machines/keeper:-$ git clone https://github.com/CMEPW/keepass-dump-masterkey.git
 
 /home/kali/Documents/htb/machines/keeper:-$ python3 -m http.server 
 
