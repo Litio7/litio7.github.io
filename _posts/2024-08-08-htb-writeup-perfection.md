@@ -3,7 +3,7 @@ title: Perfection
 description: Perfection es una máquina de Linux fácil que cuenta con una aplicación web con la funcionalidad de calcular las puntuaciones de los estudiantes. Esta aplicación es vulnerable a la Server-Side Template Injection (SSTI) a través de un bypass de filtro regex. Se puede obtener un acceso inicial explotando la vulnerabilidad SSTI. Al enumerar los usuarios se revela que son parte del grupo 'sudo'. Una mayor enumeración descubre una base de datos con hashes de contraseñas, y el correo del usuario revela un posible formato de contraseña. Usando un 'ataque de máscara' en el hash, se obtiene la contraseña del usuario, la cual se utiliza para obtener acceso 'root'.
 date: 2024-05-23
 toc: true
-pin: true
+pin: false
 image:
  path: /assets/img/htb-writeup-perfection/perfection_logo.png
 categories:

