@@ -1,6 +1,6 @@
 ---
 title: Mailing
-despcription: Mailing es una máquina con Windows que ejecuta hMailServer y alberga un sitio web vulnerable a Path Traversal. Esta vulnerabilidad se puede explotar para acceder al archivo de configuración de hMailServer, revelando el hash de la contraseña del Administrador. Descifrar este hash proporciona la contraseña del Administrador para la cuenta de correo electrónico. Aprovechamos CVE-2024-21413 en la aplicación de correo de Windows en el host remoto para capturar el hash NTLM del usuario maya. Luego podemos descifrar este hash para obtener la contraseña y acceder como usuario maya a través de WinRM. Para la escalada de privilegios, explotamos CVE-2023-2255 en LibreOffice
+description: Mailing es una máquina con Windows que ejecuta hMailServer y alberga un sitio web vulnerable a Path Traversal. Esta vulnerabilidad se puede explotar para acceder al archivo de configuración de hMailServer, revelando el hash de la contraseña del Administrador. Descifrar este hash proporciona la contraseña del Administrador para la cuenta de correo electrónico. Aprovechamos CVE-2024-21413 en la aplicación de correo de Windows en el host remoto para capturar el hash NTLM del usuario maya. Luego podemos descifrar este hash para obtener la contraseña y acceder como usuario maya a través de WinRM. Para la escalada de privilegios, explotamos CVE-2023-2255 en LibreOffice
 date: 2024-06-28
 toc: true
 pin: false
