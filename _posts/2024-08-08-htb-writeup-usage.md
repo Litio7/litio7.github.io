@@ -86,7 +86,9 @@ Table: admin_users
 $2y$10$ohq2kLpBH/ri.P5wR0P3UOmc24Ydvl9DA9H1S6ooOMgH5xVfUPrL2:whatever1
 ```
 
-Consigo logearme como administrador. Analizando la pagina encuentro que la version de laravel es vulnerable, CVE-2023-24249.
+Consigo logearme como administrador. 
+
+Analizando la pagina encuentro que la version de laravel es vulnerable, CVE-2023-24249.
 
 <https://nvd.nist.gov/vuln/detail/CVE-2023-24249>
 

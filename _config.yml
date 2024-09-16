@@ -16,7 +16,7 @@ timezone: America/Argentina/Buenos_Aires
 
 title: Litio7 # the main title
 
-tagline: Road Map # it will display as the subtitle
+tagline: cyber security writeups # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.

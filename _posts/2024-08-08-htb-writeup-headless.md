@@ -45,7 +45,7 @@ Para explotar esta vulnerabilidad, intercepto una petición 'POST' del formulari
 /home/kali/Documents/htb/machines/headless:-$ python3 -m http.server 8003 
 	Serving HTTP on 0.0.0.0 port 8003 http://0.0.0.0:8003/ ...
 ```
-El ataque XSS que tiene dos partes principales.
+El ataque XSS tiene dos partes principales.
 
 Inyección de un script en el encabezado 'User-Agent' para robar cookies.
 
