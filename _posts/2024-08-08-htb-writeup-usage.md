@@ -13,6 +13,8 @@ tags:
   - htb
   - sqli blind
   - cve
+  - ssh
+  - http
 ---
 ## Information Gathering
 

@@ -14,6 +14,10 @@ tags:
   - lfi
   - rce
   - cve
+  - smtp
+  - http
+  - pop3
+  - winrm
 ---
 ## Information Gathering
 

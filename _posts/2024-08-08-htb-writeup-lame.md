@@ -1,6 +1,6 @@
 ---
 title: Lame
-description: Lame es una máquina fácil en Linux que solo necesita un exploit para obtener acceso root. Fue la primera máquina publicada en Hack The Box y, antes de ser retirada, solía ser la primera máquina que los nuevos usuarios enfrentaban.
+description: Lame es una máquina Linux que solo necesita un exploit para obtener acceso root. Fue la primera máquina publicada en Hack The Box y, antes de ser retirada, solía ser la primera máquina que los nuevos usuarios enfrentaban.
 date: 2024/07/18
 toc: true
 pin: false
@@ -12,8 +12,10 @@ tags:
   - htb
   - linux
   - rce
-  - smb
   - metasploit
+  - ftp
+  - ssh
+  - smb
 ---
 
 ## Information Gathering
@@ -159,10 +161,8 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 root@lame:/# export TERM=xterm
 
 root@lame:/# cat /home/makis/user.txt
-cat /home/makis/user.txt
 
 root@lame:/# cat /root/root.txt
-cat /root/root.txt
 ```
 ## Alternativa con Metasploit. 
 

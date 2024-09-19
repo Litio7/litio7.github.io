@@ -1,6 +1,6 @@
 ---
 title: TowMillion
-description: TwoMillion es una máquina de dificultad Fácil en Linux, lanzada para celebrar que HackTheBox alcanzó los 2 millones de usuarios. La máquina utiliza una versión antigua de la plataforma de HackTheBox que incluye un antiguo código de invitación obsoleto. Al hackear el código de invitación, se puede crear una cuenta en la plataforma. Esta cuenta permite explorar varios endpoints de la API, uno de los cuales puede usarse para elevar los privilegios del usuario a Administrador. Con acceso administrativo, el usuario puede hacer una inyección de comandos en el endpoint de generación de VPN para obtener un shell del sistema. Se encuentra un archivo .env con credenciales de la base de datos, y debido a la reutilización de contraseñas, los atacantes pueden iniciar sesión como usuario admin en la máquina. Además, el kernel del sistema está desactualizado, y se puede usar CVE-2023-0386 para obtener un shell con privilegios de root.
+description: TwoMillion es una máquina Linux de dificultad Fácil, lanzada para celebrar que HackTheBox alcanzó los 2 millones de usuarios. La máquina utiliza una versión antigua de la plataforma de HackTheBox que incluye un antiguo código de invitación obsoleto. Al hackear el código de invitación, se puede crear una cuenta en la plataforma. Esta cuenta permite explorar varios endpoints de la API, uno de los cuales puede usarse para elevar los privilegios del usuario a Administrador. Con acceso administrativo, el usuario puede hacer una inyección de comandos en el endpoint de generación de VPN para obtener un shell del sistema. Se encuentra un archivo .env con credenciales de la base de datos, y debido a la reutilización de contraseñas, los atacantes pueden iniciar sesión como usuario admin en la máquina. Además, el kernel del sistema está desactualizado, y se puede usar CVE-2023-0386 para obtener un shell con privilegios de root.
 date: 2024-07-19
 toc: true
 pin: false
@@ -14,6 +14,8 @@ tags:
   - os command injection
   - rce
   - misconfiguration
+  - ssh
+  - http
 ---
 ## Information Gathering
 
