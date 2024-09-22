@@ -20,7 +20,7 @@ tags:
 ## Information Gathering
 
 ```terminal
-/home/u-kali/Documents/htb/machines/cap:/home/kali/Documents/htb/machines/cap:-$ ping -c 1 10.10.10.245
+/home/kali/Documents/htb/machines/cap:/home/kali/Documents/htb/machines/cap:-$ ping -c 1 10.10.10.245
 PING 10.10.10.245 (10.10.10.245) 56(84) bytes of data.
 64 bytes from 10.10.10.245: icmp_seq=1 ttl=63 time=307 ms
 
@@ -170,7 +170,7 @@ Utilizo Wireshark para analizar los archivos, y en 0.pcap descubro credenciales 
 
 ![](/assets/img/htb-writeup-cap/cap4.png)
 
-Las credenciales tambien son validas par SSH.
+Las credenciales tambien son validas para SSH.
 
 ```terminal
 /home/kali/Documents/htb/machines/cap:-$ ssh nathan@10.10.10.245
