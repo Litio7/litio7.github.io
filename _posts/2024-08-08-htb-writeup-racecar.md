@@ -55,15 +55,15 @@ También requiere un archivo llamado 'flag.txt', como se indica en la línea 566
 ## Vulnerability Exploitation
 
 
-https://owasp.org/www-community/attacks/Format_string_attack
+<https://owasp.org/www-community/attacks/Format_string_attack>
 
 Creé un archivo 'flag.txt' y agregué algunos datos que serían fáciles de identificar en formato hexadecimal, en este caso ‘A’.
-
-Después de hacer esto, volví a ejecutar el ejecutable y esta vez, después de ganar la carrera, pasé %p varias veces como dato.
 
 ```terminal
 /home/kali/Documents/htb/challenges/racecar:-$ echo 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' > flag.txt
 ```
+
+Después de hacer esto, volví a correr el ejecutable y esta vez, después de ganar la carrera, pasé '%p' varias veces como dato.
 
 ```terminal
 /home/kali/Documents/htb/challenges/racecar:-$ ./racecar

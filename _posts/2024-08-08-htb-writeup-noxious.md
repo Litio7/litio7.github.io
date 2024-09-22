@@ -1,6 +1,6 @@
 ---
 title: Noxious
-description: En este Sherlock, los jugadores analizarán el tráfico de la red y descubrirán una técnica de robo de credenciales mediante el uso indebido de la función del protocolo LLMNR en Windows. Los jugadores aprenderán cómo una víctima cometió un error tipográfico al navegar a un recurso compartido de red y cómo el atacante estaba utilizando la herramienta Responder para robar hashes y hacerse pasar por un dispositivo legítimo en la red interna. Los jugadores también aprenderán a descifrar hashes NTLMV2 recopilando información del tráfico SMB.
+description: El dispositivo IDS, nos alertó sobre un posible dispositivo no autorizado en la red interna de Active Directory. El sistema de detección de intrusiones también indicó señales de tráfico LLMNR, lo cual es inusual. Se sospecha que se produjo un ataque de envenenamiento de LLMNR. El tráfico LLMNR se dirigió hacia Forela-WKstn002, que tiene la dirección IP 172.17.79.136. Se le proporciona a usted, nuestro experto en análisis forense de redes, una captura de paquetes limitada del tiempo circundante. Dado que esto ocurrió en la VLAN de Active Directory, se sugiere que realicemos una búsqueda de amenazas de red teniendo en cuenta el vector de ataque de Active Directory, centrándonos específicamente en el envenenamiento de LLMNR.
 date: 2024-08-02
 toc: true
 pin: false
