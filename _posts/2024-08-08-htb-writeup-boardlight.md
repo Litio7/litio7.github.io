@@ -1,6 +1,6 @@
 ---
 title: Boardlight
-description: Boardlight es una máquina de dificultad fácil que cuenta con una instancia de `dolibarr` vulnerable a [CVE-2023-30253]. Esta vulnerabilidad se aprovecha para obtener acceso como `www-data`. Después de enumerar y volcar el contenido del archivo de configuración web, las credenciales en texto plano conducen al acceso SSH de la máquina. Al enumerar el sistema, se identifica un binario SUID relacionado con enlightenment que es vulnerable a una escalada de privilegios a través de CVE-2022-37706 y puede ser explotado para obtener un shell con privilegios de root.
+description: Boardlight es una máquina de dificultad fácil que cuenta con una instancia de dolibarr vulnerable a CVE-2023-30253. Esta vulnerabilidad se aprovecha para obtener acceso como www-data. Después de enumerar y volcar el contenido del archivo de configuración web, se encuentran las credenciales en texto plano que conducen al acceso ssh de la máquina. Al enumerar el sistema, se identifica un binario SUID relacionado con enlightenment que es vulnerable a una escalada de privilegios a través de CVE-2022-37706 y puede ser explotado para obtener un shell con privilegios de root.
 date: 2024-06-04
 toc: true
 pin: false
@@ -79,7 +79,7 @@ El login resulta valido con 'user:admin', 'password:admin'.
 
 ![](/assets/img/htb-writeup-boardlight/boardlight2_2.png)
 
-Dolibarr 17.0.1 es vulnerable a Remoted Code Execution.
+Dolibarr 17.0.0 es vulnerable a Remoted Code Execution.
 
 <https://nvd.nist.gov/vuln/detail/CVE-2023-30253>
 

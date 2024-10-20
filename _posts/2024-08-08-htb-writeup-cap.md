@@ -20,7 +20,7 @@ tags:
 ## Information Gathering
 
 ```terminal
-/home/kali/Documents/htb/machines/cap:/home/kali/Documents/htb/machines/cap:-$ ping -c 1 10.10.10.245
+/home/kali/Documents/htb/machines/cap:-$ ping -c 1 10.10.10.245
 PING 10.10.10.245 (10.10.10.245) 56(84) bytes of data.
 64 bytes from 10.10.10.245: icmp_seq=1 ttl=63 time=307 ms
 
@@ -156,15 +156,13 @@ http://10.10.10.245 [200 OK] Bootstrap, Country[RESERVED][ZZ], HTML5, HTTPServer
 
 ![](/assets/img/htb-writeup-cap/cap1.png)
 
-<https://github.com/puikinsh/srtdash-admin-dashboard>
-
 En la pestaña 'Security Snapshot',  tengo la opción de descargar archivos con extensión .pcap.
 
 Al realizar fuzzing en la URL '10.10.10.245/data/15', logro acceder a otros archivos .pcap.
 
 ![](/assets/img/htb-writeup-cap/cap2.png)
 
-Utilizo Wireshark para analizar los archivos, y en 0.pcap descubro credenciales de FTP: nathan : Buck3tH4TF0RM3!.
+Utilizo Wireshark para analizar los archivos, y en 0.pcap descubro credenciales FTP, nathan:Buck3tH4TF0RM3!.
 
 ![](/assets/img/htb-writeup-cap/cap3.png)
 
