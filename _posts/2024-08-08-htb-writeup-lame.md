@@ -9,8 +9,8 @@ image:
 categories:
   - Machines
 tags:
-  - htb
   - linux
+  - hack the box
   - rce
   - metasploit
   - ftp

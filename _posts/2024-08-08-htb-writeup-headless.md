@@ -10,10 +10,11 @@ categories:
   - Machines
 tags:
   - linux
-  - htb
+  - hack the box
   - xss
   - os command injection
   - ssh
+  - upnp
 ---
 
 ## Information Gathering

@@ -10,7 +10,7 @@ categories:
   - Machines
 tags:
   - linux
-  - htb
+  - hack the box
   - os command injection
   - rce
   - misconfiguration

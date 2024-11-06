@@ -1,6 +1,6 @@
 ---
 title: Noxious
-description: El dispositivo IDS, nos alertó sobre un posible dispositivo no autorizado en la red interna de Active Directory. El sistema de detección de intrusiones también indicó señales de tráfico LLMNR, lo cual es inusual. Se sospecha que se produjo un ataque de envenenamiento de LLMNR. El tráfico LLMNR se dirigió hacia Forela-WKstn002, que tiene la dirección IP 172.17.79.136. Se le proporciona a usted, nuestro experto en análisis forense de redes, una captura de paquetes limitada del tiempo circundante. Dado que esto ocurrió en la VLAN de Active Directory, se sugiere que realicemos una búsqueda de amenazas de red teniendo en cuenta el vector de ataque de Active Directory, centrándonos específicamente en el envenenamiento de LLMNR.
+description: El IDS, nos alertó sobre un posible dispositivo no autorizado en la red interna de Active Directory. El sistema de detección de intrusiones también indicó señales de tráfico LLMNR, lo cual es inusual. Se sospecha que se produjo un ataque de envenenamiento de LLMNR. El tráfico LLMNR se dirigió hacia Forela-WKstn002, que tiene la dirección IP 172.17.79.136. Se le proporciona a usted, nuestro experto en análisis forense de redes, una captura de paquetes limitada del tiempo circundante. Dado que esto ocurrió en la VLAN de Active Directory, se sugiere que realicemos una búsqueda de amenazas de red teniendo en cuenta el vector de ataque de Active Directory, centrándonos específicamente en el envenenamiento de LLMNR.
 date: 2024-08-02
 toc: true
 pin: false
@@ -11,7 +11,7 @@ categories:
 tags:
   - windows
   - forensics
-  - htb
+  - hack the box
   - soc
   - llmnr poisoning
 ---

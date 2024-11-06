@@ -10,7 +10,7 @@ categories:
   - Machines
 tags:
   - windows
-  - htb
+  - hack the box
   - lfi
   - rce
   - cve

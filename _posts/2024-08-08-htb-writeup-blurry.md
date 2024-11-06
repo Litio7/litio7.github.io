@@ -1,6 +1,6 @@
 ---
 title: Blurry
-description: Blurry es una máquina Linux de dificultad media que presenta vectores relacionados con DevOps que rodean el aprendizaje automático. El foothold se compone de una serie de CVEs recientemente revelados sobre ClearML suite. El servicio proporciona una plataforma web, un servidor de archivos y una API; todos ellos contienen vulnerabilidades que pueden encadenarse para la ejecución remota de código. Luego de obtener una shell en el objetivo, se descubre un programa que se puede ejecutar con sudo. El programa carga modelos arbitrarios de PyTorch para evaluarlos en un conjunto de datos protegido. Si bien se sabe que dichos modelos son susceptibles a una deserialización insegura, se utiliza fickling para escanear el conjunto de datos en busca de archivos pickle inseguros, antes de cargar el modelo. Se puede inyectar código malicioso en un modelo mediante runpy para eludir las comprobaciones de fickling.
+description: Blurry es una máquina Linux de dificultad media, presenta vectores relacionados con DevOps que rodean el aprendizaje automático. El foothold se compone de una serie de CVEs recientemente revelados sobre ClearML suite. El servicio proporciona una plataforma web, un servidor de archivos y una API; todos ellos contienen vulnerabilidades que pueden encadenarse para la ejecución remota de código. Luego de obtener una shell en el objetivo, se descubre un programa que se puede ejecutar como sudo. El programa carga modelos arbitrarios de PyTorch para evaluarlos en un conjunto de datos protegido. Si bien se sabe que dichos modelos son susceptibles a una deserialización insegura, se utiliza fickling para escanear el conjunto de datos en busca de archivos pickle inseguros, antes de cargar el modelo. Se puede inyectar código malicioso en un modelo mediante runpy para eludir las comprobaciones de fickling.
 date: 2024-10-17
 toc: true
 pin: false
@@ -10,7 +10,7 @@ categories:
   - Machines
 tags:
   - linux
-  - htb
+  - hack the box
   - rce
   - cve
   - ssh

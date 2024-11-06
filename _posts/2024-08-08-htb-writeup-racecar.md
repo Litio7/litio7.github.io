@@ -9,7 +9,7 @@ image:
 categories:
   - Challenges
 tags:
-  - htb
+  - hack the box
   - pwd
   - format string attack
 
@@ -30,7 +30,7 @@ linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0,
 BuildID[sha1]=c5631a370f7704c44312f6692e1da56c25c1863c, not stripped
 ```
 
-```termminal
+```terminal
 /home/kali/Documents/htb/challenges/racecar:-$ ./racecar
 ```
 
@@ -42,7 +42,7 @@ Las opciones ganadoras son el auto 1 y la carrera 2, o el auto 2 y la carrera 1.
 
 Cuando ganas, te permite ingresar caracteres y luego vuelve a imprimirlos.
 
-https://dogbolt.org/
+<https://dogbolt.org/>
 
 ![](/assets/img/htb-writeup-racecar/racecar2.png)
 
@@ -54,9 +54,6 @@ También requiere un archivo llamado 'flag.txt', como se indica en la línea 566
 
 ## Vulnerability Exploitation
 
-
-<https://owasp.org/www-community/attacks/Format_string_attack>
-
 Creé un archivo 'flag.txt' y agregué algunos datos que serían fáciles de identificar en formato hexadecimal, en este caso ‘A’.
 
 ```terminal
@@ -64,6 +61,8 @@ Creé un archivo 'flag.txt' y agregué algunos datos que serían fáciles de ide
 ```
 
 Después de hacer esto, volví a correr el ejecutable y esta vez, después de ganar la carrera, pasé '%p' varias veces como dato.
+
+<https://owasp.org/www-community/attacks/Format_string_attack>
 
 ```terminal
 /home/kali/Documents/htb/challenges/racecar:-$ ./racecar

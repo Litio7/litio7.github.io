@@ -10,7 +10,7 @@ categories:
   - Machines
 tags:
   - linux
-  - htb
+  - hack the box
   - idor
   - ftp
   - ssh
