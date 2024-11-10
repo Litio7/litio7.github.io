@@ -1,7 +1,7 @@
 ---
 title: Lame
 description: Lame es una máquina Linux que solo necesita un exploit para obtener acceso root. Fue la primera máquina publicada en Hack The Box y, antes de ser retirada, solía ser la primera máquina que los nuevos usuarios enfrentaban.
-date: 2024/07/18
+date: 2024/07/17
 toc: true
 pin: false
 image:

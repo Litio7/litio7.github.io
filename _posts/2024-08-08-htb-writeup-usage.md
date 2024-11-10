@@ -1,7 +1,7 @@
 ---
 title: Usage
 description:  Usage es una máquina Linux fácil de manejar que presenta un sitio de blog vulnerable a inyecciones SQL, lo que permite extraer y descifrar la contraseña cifrada del administrador. Esto lleva al acceso al panel de administración, donde se explota un módulo desactualizado de Laravel para subir un web shell PHP y obtener ejecución remota de código. En la máquina, las credenciales en texto plano almacenadas en un archivo permiten el acceso SSH como otro usuario, quien puede ejecutar un binario personalizado como root. La herramienta realiza una llamada insegura a 7zip, lo que se aprovecha para leer la clave SSH privada del usuario root y comprometer completamente el sistema.
-date: 2024-06-08
+date: 2024-06-07
 toc: true
 pin: false
 image:
@@ -11,6 +11,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - sqli
   - sqli blind
   - cve
   - ssh

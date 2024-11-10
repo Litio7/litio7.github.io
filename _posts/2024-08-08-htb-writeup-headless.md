@@ -1,7 +1,7 @@
 ---
 title: Headless
 description: Headless es una máquina Linux de dificultad fácil que cuenta con un servidor Python Werkzeug que aloja un sitio web. El sitio web tiene un formulario de soporte al cliente, el cual resulta ser vulnerable a blind Cross-Site Scripting (XSS) a través del encabezado User-Agent. Esta vulnerabilidad se utiliza para robar una cookie de administrador, que luego se usa para acceder al panel de administración. La página es vulnerable a inyecciones de comandos, lo que permite obtener un shell inverso en la máquina. Al enumerar el correo del usuario, se descubre un script que no utiliza rutas absolutas, lo cual se aprovecha para obtener un shell con privilegios de root.
-date: 2024-05-24
+date: 2024-05-23
 toc: true
 pin: false
 image:
@@ -16,7 +16,6 @@ tags:
   - ssh
   - upnp
 ---
-
 ## Information Gathering
 
 ```terminal
@@ -103,7 +102,6 @@ dvir@headless:~$ cat user.txt
 ```
 
 ---
-
 ## Privilege Escalation
 
 El usuiario 'dvir' puede ejecutar el comnado '/usr/bin/syscheck' como 'sudo'.

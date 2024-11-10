@@ -69,15 +69,15 @@ administrator'--
 
 Esta injeccion altera la query comentando (AND password = ''). Por lo tanto, la parte que verifica la contraseña se omite. Aunque es importante que el usuario sea valido.
 
-![](/assets/img/ps-writeup-sqli/ps-lab2_2.png)
-
-![](/assets/img/ps-writeup-sqli/ps-lab2_3.png)
-
 La consulta final seria:
 
 ```sql
 SELECT name FROM users WHERE username = 'administrator'--'
 ```
+
+![](/assets/img/ps-writeup-sqli/ps-lab2_2.png)
+
+![](/assets/img/ps-writeup-sqli/ps-lab2_3.png)
 
 <https://portswigger.net/web-security/sql-injection#subverting-application-logic>
 

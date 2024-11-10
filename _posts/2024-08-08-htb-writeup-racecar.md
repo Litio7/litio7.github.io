@@ -1,7 +1,7 @@
 ---
 title: Racecar
 description: ¿Sabías que la palabra racecar, escrita al revés, es racecar? Bueno, ahora que ya sabes todo sobre las carreras, ¡gana esta carrera y consigue la bandera!
-date: 2024-07-03
+date: 2024-07-02
 toc: true
 pin: false
 image:
@@ -125,7 +125,6 @@ Y para hacer eso es necesario el siguiente script.
 
 
 ```python
-/home/kali/Documents/htb/challenges/racecar:-$ cat exp.py
 from pwn import *
 
 flag = ''

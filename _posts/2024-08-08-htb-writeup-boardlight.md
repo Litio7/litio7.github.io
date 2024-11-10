@@ -1,7 +1,7 @@
 ---
 title: Boardlight
 description: Boardlight es una máquina de dificultad fácil que cuenta con una instancia de dolibarr vulnerable a CVE-2023-30253. Esta vulnerabilidad se aprovecha para obtener acceso como www-data. Después de enumerar y volcar el contenido del archivo de configuración web, se encuentran las credenciales en texto plano que conducen al acceso ssh de la máquina. Al enumerar el sistema, se identifica un binario SUID relacionado con enlightenment que es vulnerable a una escalada de privilegios a través de CVE-2022-37706 y puede ser explotado para obtener un shell con privilegios de root.
-date: 2024-06-04
+date: 2024-06-03
 toc: true
 pin: false
 image:

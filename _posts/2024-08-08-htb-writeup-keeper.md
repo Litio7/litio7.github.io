@@ -1,7 +1,7 @@
 ---
 title: Keeper
 description: Keeper es una máquina Linux de dificultad fácil que presenta un sistema de gestión de tickets de soporte con credenciales por defecto. Al enumerar el servicio, se pueden encontrar credenciales en texto claro que permiten el acceso a SSH. Con acceso a SSH, se puede obtener un volcado de la base de datos de KeePass, lo cual permite recuperar la contraseña maestra. Una vez con acceso a la base de datos de KeePass, se obtienen las claves SSH de root, que permiten obtener una shell con privilegios en el host.
-date: 2023-11-07
+date: 2023-11-06
 toc: true
 pin: false
 image:
