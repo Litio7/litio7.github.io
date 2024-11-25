@@ -1,6 +1,6 @@
 ---
 title: Racecar
-description: ¿Sabías que la palabra racecar, escrita al revés, es racecar? Bueno, ahora que ya sabes todo sobre las carreras, ¡gana esta carrera y consigue la bandera!
+description: Did you know that racecar spelled backwards is racecar? Well, now that you know everything about racing, win this race and get the flag!
 date: 2024-07-02
 toc: true
 pin: false
