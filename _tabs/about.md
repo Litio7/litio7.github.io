@@ -8,5 +8,5 @@ order: 4
 Aquí encontrarás una variedad de recursos detallados que documentan el proceso de resolución de diferentes máquinas, con explicaciones sobre las tecnicas y herramientas utilizadas.
 {: .prompt-tip }
 
-> The core of this site is my detailed write-ups on tackling machines and cybersecurity challenges. Here, you'll find comprehensive resources documenting the step-by-step process of solving various machines, along with clear explanations of the techniques and tools used.
+> The core of this site is my detailed write-ups on tackling machines and cybersecurity challenges. Here, you'll find comprehensive resources documenting the step by step process of solving various machines, along with clear explanations of the techniques and tools used.
 {: .prompt-tip }

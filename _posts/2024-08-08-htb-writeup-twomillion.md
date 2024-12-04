@@ -8,6 +8,7 @@ image:
  path: /assets/img/htb-writeup-twomillion/twomillion_logo.png
 categories:
   - Machines
+  - Hack The Box
 tags:
   - linux
   - hack the box

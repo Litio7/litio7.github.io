@@ -8,6 +8,7 @@ image:
  path: /assets/img/htb-writeup-usage/usage_logo.png
 categories:
   - Machines
+  - Hack The Box
 tags:
   - linux
   - hack the box

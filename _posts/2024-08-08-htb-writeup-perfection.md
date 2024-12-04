@@ -8,6 +8,7 @@ image:
  path: /assets/img/htb-writeup-perfection/perfection_logo.png
 categories:
   - Machines
+  - Hack The Box
 tags:
   - linux
   - hack the box

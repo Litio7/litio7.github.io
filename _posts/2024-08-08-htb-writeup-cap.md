@@ -8,6 +8,7 @@ image:
  path: /assets/img/htb-writeup-cap/cap_logo.png
 categories:
   - Machines
+  - Hack The Box
 tags:
   - linux
   - hack the box
@@ -195,7 +196,7 @@ Python 3.8 tiene dos capacidades
 
 'cap_setuid' permite cambiar el UID del proceso, lo que puede ser usado para escalar privilegios.
 
-```treminal
+```terminal
 nathan@cap:~$ id
 uid=1001(nathan) gid=1001(nathan) groups=1001(nathan)
 

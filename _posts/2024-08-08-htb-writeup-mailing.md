@@ -8,6 +8,7 @@ image:
  path: /assets/img/htb-writeup-mailing/mailing_logo.png
 categories:
   - Machines
+  - Hack The Box
 tags:
   - windows
   - hack the box
