@@ -170,7 +170,7 @@ Utilizo una herramienta en línea para descifrar el hash.
 
 Descifro el hash y obtengo como resultado la contraseña 'iloveyou1'.
 
-Esta contraseña es válida para acceder al panel de login en <http://greenhorn.htb/login.php>
+Esta contraseña es válida para acceder al panel de login en ```http://greenhorn.htb/login.php```
 
 ![](/assets/img/htb-writeup-greenhorn/greenhorn2_1.png)
 
