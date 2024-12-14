@@ -204,3 +204,6 @@ b'?!}'
 ```
 
 HTB{why_d1d_1_s4v3_th3_fl4g_0n_th3_5t4ck?!}
+
+> <https://www.hackthebox.com/achievement/challenge/1521382/242>
+{: .prompt-tip }

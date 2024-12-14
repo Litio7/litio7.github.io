@@ -12,7 +12,7 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - misconfiguration
+  - data leak
   - ssh
   - http
 ---
@@ -50,7 +50,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 ---
-## Web Analysis & Vulnerability Exploitation
+## Web Analysis & Data Leak Exploitation
 
 La página web inicial parece ser una plantilla predeterminada de Apache.
 

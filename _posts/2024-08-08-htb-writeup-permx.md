@@ -269,3 +269,6 @@ mtz@permx:~$ su root
 Password: 123456
 root@permx:/home/mtz# cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/613>
+{: .prompt-tip }

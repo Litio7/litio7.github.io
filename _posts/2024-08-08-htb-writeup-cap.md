@@ -12,10 +12,11 @@ categories:
 tags:
   - linux
   - hack the box
-  - idor
   - ftp
   - ssh
   - http
+  - data leak
+  - idor
   - capabilities
 ---
 ## Information Gathering
@@ -153,7 +154,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 http://10.10.10.245 [200 OK] Bootstrap, Country[RESERVED][ZZ], HTML5, HTTPServer[gunicorn], IP[10.10.10.245], JQuery[2.2.4], Modernizr[2.8.3.min], Script, Title[Security Dashboard], X-UA-Compatible[ie=edge]
 ```
 ---
-## Web Analysis
+## Web Analysis & Data Leak Exploitation
 
 ![](/assets/img/htb-writeup-cap/cap1.png)
 
@@ -207,3 +208,6 @@ uid=0(root) gid=1001(nathan) groups=1001(nathan)
 
 ~# cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/351>
+{: .prompt-tip }

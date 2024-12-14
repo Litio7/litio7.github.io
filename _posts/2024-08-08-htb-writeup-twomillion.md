@@ -64,7 +64,7 @@ http://2million.htb [200 OK] Cookies[PHPSESSID], Country[RESERVED][ZZ], Email[in
 200 -	 4KB - /invite
 ```
 ---
-## Web Analysis & Vulnerability Exploitation
+## Web Analysis & Misconfiguration Exploitation
 
 ![](/assets/img/htb-writeup-twomillion/twomillion1_1.png)
 ![](/assets/img/htb-writeup-twomillion/twomillion1_3.png)
@@ -159,8 +159,9 @@ Completo los parametros que el servidor me solicita, 'Content-Type', 'Content-Le
 Con esto soy capaz de inyectar comandos.
 
 ![](/assets/img/htb-writeup-twomillion/twomillion3_9.png)
+
 ---
-### Foothold
+## Foothold
 		
 ```terminal
 /home/kali/Documents/htb/machines/twomillion:-$ nc -nlvkp 5555
@@ -247,3 +248,6 @@ admin@2million:~/CVE-2023-0386$ ./exp
 
 root@2million:~/CVE-2023-0386# cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/547>
+{: .prompt-tip }

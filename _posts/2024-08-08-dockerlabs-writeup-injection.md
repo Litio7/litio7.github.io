@@ -116,8 +116,6 @@ root:x:0:0:root:/root:/bin/bash
 dylan:x:1000:1000:dylan,,,:/home/dylan:/bin/bash
 ```
 
-En el sistema, al buscar binarios con permisos SUID, identifico varios y confirmo que /usr/bin/env es vulnerable según GTFOBins.
-
 Para identificar posibles binarios SUID en el sistema, utilicé el siguiente comando:
 
 ```terminal

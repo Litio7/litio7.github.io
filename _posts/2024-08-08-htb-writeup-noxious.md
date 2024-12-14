@@ -165,3 +165,5 @@ Aquí la víctima se conecta al recurso compartido en el controlador de dominio.
 
 	\\DC01\DC-Confidential
 
+> <https://labs.hackthebox.com/achievement/sherlock/1521382/747>
+{: .prompt-tip }

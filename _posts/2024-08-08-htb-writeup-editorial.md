@@ -260,3 +260,5 @@ Please make sure you have the correct access rights and the repository exists.'
 prod@editorial:~$ cat root.txt
 ```
 
+> <https://www.hackthebox.com/achievement/machine/1521382/608>
+{: .prompt-tip }

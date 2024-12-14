@@ -192,3 +192,6 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
 
 root@usage:~# cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/597>
+{: .prompt-tip }

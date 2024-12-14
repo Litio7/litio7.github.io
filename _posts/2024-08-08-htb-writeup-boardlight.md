@@ -1,5 +1,5 @@
 ---
-title: Boardlight
+title: BoardLight
 description: Boardlight es una máquina de dificultad fácil que cuenta con una instancia de dolibarr vulnerable a CVE-2023-30253. Esta vulnerabilidad se aprovecha para obtener acceso como www-data. Después de enumerar y volcar el contenido del archivo de configuración web, se encuentran las credenciales en texto plano que conducen al acceso ssh de la máquina. Al enumerar el sistema, se identifica un binario SUID relacionado con enlightenment que es vulnerable a una escalada de privilegios a través de CVE-2022-37706 y puede ser explotado para obtener un shell con privilegios de root.
 date: 2024-06-03
 toc: true
@@ -17,7 +17,6 @@ tags:
   - ssh
   - http
 ---
-
 ## Information Gathering
 
 ```terminal
@@ -65,7 +64,6 @@ crm                     [Status: 200, Size: 6360, Words: 397, Lines: 150, Durati
 El subdirectorio que se encontró 'crm' devuelve un código de estado HTTP 200 con un tamaño de 6360 bytes. El hecho de que el tamaño sea diferente al de la página inicial (15949 bytes) indica que este directorio tiene contenido distinto.
 
 ---
-
 ## Web Analysis & CVE Exploitation
 
 ```terminal
@@ -122,7 +120,6 @@ larissa@10.10.11.11's password: serverfun2$2023!!
 larissa@boardlight:~$ cat user.txt
 ```
 ---
-
 ## Privilege Escalation
 
 Listo privilegios SUID.
@@ -160,3 +157,6 @@ larissa@boardlight:/tmp$ ./exploit.sh
 python -c 'import pty;pty.spawn("/bin/bash")'
 root@boardlight:~$ cat /root/root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/608>
+{: .prompt-tip }

@@ -214,3 +214,5 @@ El proceso se auto terminó después de completar la infección con UltraVNC bac
 
 	2024-02-14 03:41:58
 
+> <https://labs.hackthebox.com/achievement/sherlock/1521382/632>
+{: .prompt-tip }

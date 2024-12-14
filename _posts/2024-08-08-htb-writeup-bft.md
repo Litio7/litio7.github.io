@@ -152,3 +152,6 @@ Al analizar el script de PowerShell incrustado en el archivo '.bat', puedo extra
 6. Each MFT record is 1024 bytes in size. If a file on disk has smaller size than 1024 bytes, they can be stored directly on MFT File itself. These are called MFT Resident files. During Windows File system Investigation, its crucial to look for any malicious/suspicious files that may be resident in MFT. This way we can find contents of malicious files/scripts. Find the contents of The malicious stager identified in Question3 and answer with the C2 IP and port.
 
 	43.204.110.203:6666
+
+> <https://labs.hackthebox.com/achievement/sherlock/1521382/633>
+{: .prompt-tip }

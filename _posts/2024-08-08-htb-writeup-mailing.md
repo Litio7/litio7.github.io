@@ -242,3 +242,6 @@ Por ultimo, utilizo Impacket-WMIexec con las credenciales del usuario 'localadmi
 
 C:\Users\localadmin\Desktop> type root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/600>
+{: .prompt-tip }

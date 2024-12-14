@@ -17,9 +17,7 @@ tags:
   - ssh
   - http
   - insecure deserialization
-
 ---
-
 ## Information Gathering
 
 ```terminal
@@ -58,7 +56,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 ---
-
 ## Web Analysis & CVE Exploitation
 
 ![](/assets/img/htb-writeup-blurry/blurry1.png)
@@ -111,7 +108,6 @@ El proyecto al que se debe apuntar es el 'Black Swan', que parece ser el unico v
 ![](/assets/img/htb-writeup-blurry/blurry6.png)
 
 ---
-
 ## Privilege Escalation
 
 ```terminal
@@ -133,7 +129,6 @@ Una vez dentro, enumero los privilegios del usuario 'jippity'.
 ```terminal
 jippity@blurry:~$ sudo -l
 ```
-
 
 ![](/assets/img/htb-writeup-blurry/blurry8.png)
 
@@ -168,3 +163,6 @@ jippity@blurry:/tmp$ sudo /usr/bin/evaluate_model /models/exploit.pth
 ```
 
 ![](/assets/img/htb-writeup-blurry/blurry12.png)
+
+> <https://www.hackthebox.com/achievement/machine/1521382/605>
+{: .prompt-tip }

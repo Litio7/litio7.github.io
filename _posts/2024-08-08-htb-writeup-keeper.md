@@ -129,3 +129,6 @@ Para conviertir la clave privada del archivo '.ppk' a un formato '.pem' que Open
 
 root@keeper:~# cat root.txt
 ```
+
+> <https://www.hackthebox.com/achievement/machine/1521382/556>
+{: .prompt-tip }
