@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-boardlight/boardlight_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
@@ -16,6 +16,8 @@ tags:
   - cve
   - ssh
   - http
+  - tcp
+
 ---
 ## Information Gathering
 

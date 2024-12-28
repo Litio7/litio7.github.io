@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-mailing/mailing_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - windows
   - hack the box
@@ -17,8 +17,9 @@ tags:
   - cve
   - smtp
   - http
-  - pop3
   - winrm
+  - tcp
+
 ---
 ## Information Gathering
 

@@ -7,16 +7,18 @@ pin: false
 image:
  path: /assets/img/htb-writeup-twomillion/twomillion_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
   - os command injection
   - rce
-  - misconfiguration
+  - misconfigurations
   - ssh
   - http
+  - tcp
+
 ---
 ## Information Gathering
 

@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-injection/injection_logo.png
 categories:
-  - Machines
   - Docker Labs
+  - Machines
 tags:
   - linux
   - dockerlabs
@@ -16,6 +16,8 @@ tags:
   - suid
   - ssh
   - http
+  - tcp
+
 ---
 ## Information Gathering
 

@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-headless/headless_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
@@ -16,6 +16,8 @@ tags:
   - os command injection
   - ssh
   - upnp
+  - tcp
+
 ---
 ## Information Gathering
 

@@ -1,19 +1,22 @@
 ---
 title: Bft
 description: En este Sherlock, se familiarizará con la investigación forense de MFT (tabla maestra de archivos). Se le presentarán herramientas y metodologías conocidas para analizar artefactos de MFT a fin de identificar actividades maliciosas. Durante nuestro análisis, utilizará la herramienta MFTECmd para analizar el archivo MFT proporcionado, TimeLine Explorer para abrir y analizar los resultados del MFT analizado y un editor hexadecimal para recuperar el contenido de los archivos del MFT.
-date: 2024-04-05
+date: 2024-08-06
 toc: true
 pin: false
 image:
  path: /assets/img/htb-writeup-bft/bft_logo.png
 categories:
+  - Hack The Box
   - Sherlocks
 tags:
   - windows
   - forensics
   - hack the box
-  - drif
+  - dfir
+
 ---
+### Initial Analysis
 
 ```powershell
 PS C:\Users\Escritorio\HtB> 7z x BFT.zip -phacktheblue
@@ -51,7 +54,6 @@ Timeline Explorer requiere '.Net'
 <https://dotnet.microsoft.com/es-es/download/dotnet>
 
 ---
-
 ### Q1. Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?
 
 Filtro por '.zip'
@@ -128,30 +130,14 @@ Al analizar el script de PowerShell incrustado en el archivo '.bat', puedo extra
 ##### A6. 43.204.110.203:6666
 
 ---
+### Timeline
 
-1. Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?
+| Time (UTC) | Description                 | Reference |
+| :--------- | :-------------------------- | :-------: |
+| 16:34:40   | Malicious Zip downloaded    | $MFT      |
+| 16:35:15   | Initial Zip begin unzipping | $MFT      |
+| 16:38:39   | invoice.bat unzipped        | $MFT      |
 
-	Stage-20240213T093324Z-001.zip
-
-2. Examine the Zone Identifier contents for the initially downloaded ZIP file. This field reveals the HostUrl from where the file was downloaded, serving as a valuable Indicator of Compromise (IOC) in our investigation/analysis. What is the full Host URL from where this ZIP file was downloaded?
-
-	https://storage.googleapis.com/drive-bulk-export-anonymous/20240213T093324.039Z/4133399871716478688/a40aecd0-1cf3-4f88-b55a-e188d5c1c04f/1/c277a8b4-afa9-4d34-b8ca-e1eb5e5f983c?authuser
-
-3. What is the full path and name of the malicious file that executed malicious code and connected to a C2 server?
-
-	C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat
-
-4. Analyze the $Created0x30 timestamp for the previously identified file. When was this file created on disk?
-
-	2024-02-13 16:38:39
-
-5. Finding the hex offset of an MFT record is beneficial in many investigative scenarios. Find the hex offset of the stager file from Question 3.
-
-	16E3000
-
-6. Each MFT record is 1024 bytes in size. If a file on disk has smaller size than 1024 bytes, they can be stored directly on MFT File itself. These are called MFT Resident files. During Windows File system Investigation, its crucial to look for any malicious/suspicious files that may be resident in MFT. This way we can find contents of malicious files/scripts. Find the contents of The malicious stager identified in Question3 and answer with the C2 IP and port.
-
-	43.204.110.203:6666
 
 > <https://labs.hackthebox.com/achievement/sherlock/1521382/633>
 {: .prompt-tip }

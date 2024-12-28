@@ -7,6 +7,7 @@ pin: false
 image:
  path: /assets/img/htb-writeup-noxious/noxious_logo.png
 categories:
+  - Hack The Box
   - Sherlocks
 tags:
   - windows
@@ -14,19 +15,16 @@ tags:
   - hack the box
   - soc
   - llmnr poisoning
+
 ---
+### Initial Analysis
 
 ```terminal
 /home/kali/Documents/htb/sherlocks/noxious:-$ 7z -phacktheblue x noxious.zip
 capture.pcap
 ```
-```terminal
-/home/kali/Documents/htb/sherlocks/noxious:-$ file capture.pcap 
-capture.pcap: pcap capture file, microsecond ts (little-endian) - version 2.4 (Ethernet, capture length 262144)
-```
 
 ---
-
 ### Q1. Its suspected by the security team that there was a rogue device in Forela’s internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.
 
 LLMNR usa el puerto 'UDP 5355'. Dado que estoy tratando con un posible ataque de envenenamiento de LLMNR, utilizo Wireshark para filtrar este puerto.
@@ -126,44 +124,6 @@ Revisando algunos paquetes mas, encuentro el paquete numero '10214' con informac
 Aquí la víctima se conecta al recurso compartido en el controlador de dominio.
 
 ##### A9. \\DC01\DC-Confidential
-
----
-
-1. Its suspected by the security team that there was a rogue device in Forela’s internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.
-
-	172.17.79.135
-
-2. What is the hostname of the rogue machine?
-
-	kali
-
-3. Now we need to confirm whether the attacker captured the user’s hash and it is crackable!! What is the username whose hash was captured?
-
-	john.deacon
-
-4. In NTLM traffic we can see that the victim credentials were relayed multiple times to the attacker’s machine. When were the hashes captured the First time?
-
-	2024-06-24 11:18:30
-
-5. What was the typo made by the victim when navigating to the file share that caused his credentials to be leaked?
-
-	DCC01
-
-6. To get the actual credentials of the victim user we need to stitch together multiple values from the ntlm negotiation packets. What is the NTLM server challenge value?
-
-	601019d191f054f1
-
-7. Now doing something similar find the NTProofStr value.
-
-	c0cc803a6d9fb5a9082253a04dbd4cd4
-
-8. To test the password complexity, try recovering the password from the information found from packet capture. This is a crucial step as this way we can find whether the attacker was able to crack this and how quickly.
-
-	NotMyPassword0k?
-
-9. Just to get more context surrounding the incident, what is the actual file share that the victim was trying to navigate to?
-
-	\\DC01\DC-Confidential
 
 > <https://labs.hackthebox.com/achievement/sherlock/1521382/747>
 {: .prompt-tip }

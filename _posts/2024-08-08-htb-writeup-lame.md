@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-lame/lame_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
@@ -17,6 +17,8 @@ tags:
   - ftp
   - ssh
   - smb
+  - tcp
+
 ---
 ## Information Gathering
 

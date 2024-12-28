@@ -7,16 +7,19 @@ pin: false
 image:
  path: /assets/img/htb-writeup-greenhorn/greenhorn_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
-  - data leak
+  - data leaks
+  - password attacks
   - rce
   - cve
   - ssh
   - http
+  - tcp
+
 ---
 ## Information Gathering
 
@@ -155,7 +158,7 @@ Al navegar hacia ese archivo en el repositorio 'GreenHorn', encuentro un hash ci
 ![](/assets/img/htb-writeup-greenhorn/greenhorn1_7.png)
 
 ```terminal
-/home/kali/Documents/htb/machines/greenhorn:-$ hashcat --show d5443aef1b64544f3685bf112f6c405218c573c7279a831b1fe9612e3a4d770486743c5580556c0d838b51749de15530f87fb793afdcc689b6b39024d7790163
+/home/kali/Documents/htb/machines/greenhorn:-$ hashcat --show 'd5443aef1b64544f3685bf112f6c405218c573c7279a831b1fe9612e3a4d770486743c5580556c0d838b51749de15530f87fb793afdcc689b6b39024d7790163'
     # | Name                                                       | Category
 ======+============================================================+======================================
  1700 | SHA2-512                                                   | Raw Hash
@@ -236,9 +239,6 @@ www-data@greenhorn:/$ whoami
 www-data
 ```
 
----
-## User pivoting
-
 ```terminal
 www-data@greenhorn:/$ cat /etc/passwd | grep /bash$
 root:x:0:0:root:/root:/bin/bash
@@ -318,7 +318,6 @@ Se genera un archivo con el texto reconstruido en 'output.png'.
 
 ```terminal
 junior@greenhorn:~$ su root
-su root
 Password: sidefromsidetheothersidesidefromsidetheotherside
 
 root@greenhorn:~# cat root.txt

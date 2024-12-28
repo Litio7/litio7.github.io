@@ -1,19 +1,22 @@
 ---
 title: Unit42
 description: En este Sherlock, te familiarizarás con los registros de Sysmon y varios EventIDs útiles para identificar y analizar actividades maliciosas en un sistema Windows. Unit42 de Palo Alto realizó recientemente una investigación sobre una campaña de UltraVNC, en la que los atacantes utilizaron una versión con backdoor de UltraVNC para mantener el acceso a los sistemas. Este laboratorio está inspirado en esa campaña y guía a los participantes a través de la etapa de acceso inicial de la campaña.
-date: 2024-04-04
+date: 2024-08-03
 toc: true
 pin: false
 image:
  path: /assets/img/htb-writeup-unit42/unit42_logo.png
 categories:
+  - Hack The Box
   - Sherlocks
 tags:
   - windows
   - hack the box
   - forensics
-  - drif
+  - dfir
+
 ---
+### Initial Analysis
 
 ```
 PS C:\Users\litio7\Documents\htb\> 7z x -phacktheblue unit42.zip
@@ -21,6 +24,7 @@ Microsoft-Windows-Sysmon-Operational.evtx
 ```
 ![](/assets/img/htb-writeup-unit42/unit421_1.png)
 
+---
 ### Q1. How many Event logs are there with Event ID 11?
 
 Se utiliza la función 'Filter Current Log' para buscar exclusivamente eventos con Event ID 11.
@@ -181,38 +185,22 @@ El proceso se auto terminó después de completar la infección con UltraVNC bac
 ##### A8. 2024-02-14 03:41:58
 
 ---
+### Timeline
 
-1. How many Event logs are there with Event ID 11?
+| Time (UTC)            | Description                           | Reference               |
+| :-------------------- | :------------------------------------ | :---------------------: |
+| 2024-02-14T03:41:26.4 | Firefox DNS query for Dropbox         | DNS (22)                |
+| 2024-02-14T03:41:26.5 | Firefox malware download              | File Creation (11)      |
+| 2024-02-14T03:41:30.4 | Windows tags malware as downloaded    | File Creation (11)      |
+| 2024-02-14T03:41:45.8 | Firefox DNS query for Dropbox         | DNS (22)                |
+| 2024-02-14T03:41:56.6 | Preventivo24.02.14.exe.exe launched   | Process Creation (1)    |
+| 2024-02-14T03:41:57.9 | Malware starts msiexec                | Process Creation (1)    |
+| 2024-02-14T03:41:58.4 | Malware writes files to disk          | File Creation (11)      |
+| 2024-02-14T03:41:58.4 | Malware timestomps 15 files.          | Time Modification (2)   |
+| 2024-02-14T03:41:58.6 | Malware connects to 93.184.216.34     | Network (3)             |
+| 2024-02-14T03:41:58.8 | Malware DNS query for www.example.com | DNS (22)                |
+| 2024-02-14 03:41:58.8 | Malware terminates itself             | Process Termination (5) |
 
-	56
-
-2. Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim’s system?
-
-	C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe
-
-3. Which Cloud drive was used to distribute the malware?
-
-	dropbox
-
-4. The initial malicious file time-stamped (a defense evasion technique, where the file creation date is changed to make it appear old) many files it created on disk. What was the timestamp changed to for a PDF file?
-
-	2024-01-14 08:10:06
-
-5. The malicious file dropped a few files on disk. Where was “once.cmd” created on disk? Please answer with the full path along with the filename.
-
-	C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd
-
-6. The malicious file attempted to reach a dummy domain, most likely to check the internet connection status. What domain name did it try to connect to?
-
-	www.example.com
-
-7. Which IP address did the malicious process try to reach out to?
-
-	93.184.216.34
-
-8. The malicious process terminated itself after infecting the PC with a backdoored variant of UltraVNC. When did the process terminate itself?
-
-	2024-02-14 03:41:58
 
 > <https://labs.hackthebox.com/achievement/sherlock/1521382/632>
 {: .prompt-tip }

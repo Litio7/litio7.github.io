@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-blurry/blurry_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
@@ -17,6 +17,8 @@ tags:
   - ssh
   - http
   - insecure deserialization
+  - tcp
+
 ---
 ## Information Gathering
 

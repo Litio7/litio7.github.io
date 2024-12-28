@@ -7,8 +7,8 @@ pin: false
 image:
  path: /assets/img/htb-writeup-cicada/cicada_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - windows
   - hack the box

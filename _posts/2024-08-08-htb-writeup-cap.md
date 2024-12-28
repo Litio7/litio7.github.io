@@ -7,17 +7,19 @@ pin: false
 image:
  path: /assets/img/htb-writeup-cap/cap_logo.png
 categories:
-  - Machines
   - Hack The Box
+  - Machines
 tags:
   - linux
   - hack the box
   - ftp
   - ssh
   - http
-  - data leak
+  - data leaks
   - idor
   - capabilities
+  - tcp
+
 ---
 ## Information Gathering
 

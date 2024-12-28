@@ -1,5 +1,5 @@
 ---
-title: Agua de Mayo
+title: AguaDeMayo
 description: DockerLabs es una plataforma gratuita diseñada para practicar hacking ético al alcance de todo el mundo utilizando Docker. DockerLabs ofrece un entorno seguro y accesible para desplegar laboratorios vulnerables de la forma más eficiente y sencilla posible.
 date: 2024-12-1
 toc: true
@@ -7,14 +7,16 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-aguademayo/aguademayo_logo.png
 categories:
-  - Machines
   - Docker Labs
+  - Machines
 tags:
   - linux
   - dockerlabs
-  - data leak
+  - data leaks
   - ssh
   - http
+  - tcp
+
 ---
 ## Information Gathering
 
@@ -28,12 +30,12 @@ PING 127.17.0.2 (127.17.0.2) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.047/0.047/0.047/0.000 ms
 ```
 ```terminal
-/home/kali/Documents/dockerlabs/aguademayo:-$ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn -oG nmap1 127.17.0.2
+/home/kali/Documents/dockerlabs/aguademayo:-$ sudo nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn -oG nmap1 127.17.0.2
 Host: 127.17.0.2 ()	Status: Up
 Host: 127.17.0.2 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65533)
 ```
 ```terminal
-/home/kali/Documents/dockerlabs/aguademayo:-$ nmap --privileged -sCV -p22,80 -vvv -oN nmap2 127.17.0.2
+/home/kali/Documents/dockerlabs/aguademayo:-$ sudo nmap -sCV -p22,80 -vvv -oN nmap2 127.17.0.2
 PORT   STATE SERVICE REASON         VERSION
 22/tcp open  ssh     syn-ack ttl 64 OpenSSH 9.2p1 Debian 2+deb12u2 (protocol 2.0)
 | ssh-hostkey: 

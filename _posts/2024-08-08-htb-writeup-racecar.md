@@ -7,6 +7,7 @@ pin: false
 image:
  path: /assets/img/htb-writeup-challenges/pwd_logo.png
 categories:
+  - Hack The Box
   - Challenges
 tags:
   - hack the box
