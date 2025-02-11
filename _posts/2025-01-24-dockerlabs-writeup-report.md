@@ -14,7 +14,7 @@ tags:
   - ssh
   - http
   - tcp
-  - rce
+  - rfi
   - git
   - data leaks
   - information gathering

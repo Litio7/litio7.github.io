@@ -12,13 +12,14 @@ categories:
 tags:
   - linux
   - hack the box
-  - os command injection
-  - api
-  - rce
-  - misconfigurations
   - ssh
   - http
   - tcp
+  - os command injection
+  - api
+  - misconfigurations
+  - suid
+  - capabilities
   - cve
   - devtools
   - information gathering

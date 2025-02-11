@@ -14,7 +14,7 @@ tags:
   - hack the box
   - data leaks
   - password attacks
-  - rce
+  - rfi
   - cve
   - ssh
   - http

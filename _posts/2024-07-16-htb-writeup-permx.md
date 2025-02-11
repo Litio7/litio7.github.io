@@ -13,6 +13,7 @@ tags:
   - linux
   - hack the box
   - cve
+  - rfi
   - rce
   - xss
   - data leaks
@@ -128,7 +129,7 @@ La siguiente página web detalla muy bien la forma de explotar esta vulnerabilid
 
 <https://starlabs.sg/advisories/23/23-4220/>
 
-Como explica la página web, parece que es posible cargar archivos arbitrarios en el directorio 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/' de forma no autenticada.
+Como explica la página web, parece que es posible cargar archivos arbitrarios en el directorio `http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/` de forma no autenticada.
 
 Al buscar en la dirección, el directorio está repleto de reverse shells de otros usuarios.
 
@@ -142,7 +143,7 @@ El PoC es muy sencillo, simplemente hay que crear un archivo PHP que ejecute un 
 The file has successfully been uploaded.
 ```
 
-Si actualizo 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/', se puede apreciar que el archivo rce1.php está subido.
+Si actualizo `http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/`, se puede apreciar que el archivo rce1.php está subido.
 
 ![](/assets/img/htb-writeup-permx/permx6.png)
 

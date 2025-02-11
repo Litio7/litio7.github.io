@@ -12,7 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
-  - rce
+  - os command injection
   - metasploit
   - ftp
   - ssh
