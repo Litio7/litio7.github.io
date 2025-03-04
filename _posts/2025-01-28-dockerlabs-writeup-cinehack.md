@@ -13,8 +13,10 @@ tags:
   - dockerlabs
   - tcp
   - http
+  - fuzzing web
   - password attacks
   - rfi
+  - interactive tty
   - sudo abuse
   - cron abuse
   - information gathering
@@ -42,12 +44,20 @@ Realizo un escaneo agresivo de puertos con nmap, lo que me permite identificar r
 
 ```terminal
 /home/kali/Documents/dockerlabs/cinehack:-$ sudo nmap -p- --open -sS --min-rate 5000 -vvv 127.17.0.3 -n -Pn -oG nmap1
+Host: 127.17.0.2 ()     Status: Up
+Host: 127.17.0.2 ()     Ports: 80/open/tcp//http///     Ignored State: closed (65534)
 ```
 
 Profundizo en los puertos detectados, recopilando información detallada sobre los servicios y versiones en ejecución.
 
 ```terminal
 /home/kali/Documents/dockerlabs/cinehack:-$ sudo nmap -sCV -p80 -vvv 127.17.0.2 -oN nmap2
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.58 ((Ubuntu))
+|_http-title: Bienvenido a Cinema DL
+|_http-server-header: Apache/2.4.58 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
 ```
 ```terminal
 /home/kali/Documents/dockerlabs/cinehack:-$ whatweb 127.17.0.2

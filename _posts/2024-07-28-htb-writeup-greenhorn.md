@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - data leaks
   - password attacks
   - rfi
@@ -22,7 +23,7 @@ tags:
   - information gathering
   - web analysis
   - data leak exploitation
-  - vulnerability exploitation
+  - cve exploitation
   - privilege escalation
 
 ---
@@ -164,9 +165,9 @@ Al navegar hacia ese archivo en el repositorio 'GreenHorn', encuentro un hash ci
 
 ```terminal
 /home/kali/Documents/htb/machines/greenhorn:-$ hashcat --show 'd5443aef1b64544f3685bf112f6c405218c573c7279a831b1fe9612e3a4d770486743c5580556c0d838b51749de15530f87fb793afdcc689b6b39024d7790163'
-    # | Name                                                       | Category
-======+============================================================+======================================
- 1700 | SHA2-512                                                   | Raw Hash
+   # | Name                                            | Category
+=====+=================================================+==============================
+1700 | SHA2-512                                        | Raw Hash
 
 ```
 
@@ -183,11 +184,9 @@ Esta contraseña es válida para acceder al panel de login en ```http://greenhor
 ![](/assets/img/htb-writeup-greenhorn/greenhorn2_1.png)
 
 ---
-## Vulnerability Exploitation
+## CVE Exploitation
 
-La versión actual de 'Pluck' (v4.7.18) es vulnerable a ejecución remota de código (RCE).
-
-<https://nvd.nist.gov/vuln/detail/CVE-2023-50564>
+La versión actual de 'Pluck' (v4.7.18) es vulnerable a ejecución remota de código, [CVE-2023-50564](https://nvd.nist.gov/vuln/detail/CVE-2023-50564).
 
 ![](/assets/img/htb-writeup-greenhorn/greenhorn2_2.png)
 
@@ -329,5 +328,5 @@ Password: sidefromsidetheothersidesidefromsidetheotherside
 root@greenhorn:~# cat root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/617>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/617" target="_blank">Greenhorn Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

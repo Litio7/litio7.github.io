@@ -15,10 +15,12 @@ tags:
   - ssh
   - http
   - tcp
+  - fuzzing web
   - sqli blind
   - password attacks
   - cve
   - rce
+  - interactive tty
   - data leaks
   - port forwarding
   - cron abuse
@@ -575,6 +577,6 @@ Verifico en mi listener de Netcat y confirmo que se ha recibido una conexión co
 root@monitorsthree:~# cat root.txt 
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/622>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/622" target="_blank">Monitorsthree Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
 

@@ -14,7 +14,9 @@ tags:
   - ssh
   - http
   - tcp
+  - fuzzing web
   - rfi
+  - interactive tty
   - git
   - data leaks
   - information gathering

@@ -11,19 +11,21 @@ categories:
 tags:
   - linux
   - dockerlabs
+  - fuzzing web
   - sqli
   - sqli blind
   - data leaks
   - cron abuse
   - rce
   - cve
+  - interactive tty
   - capabilities
   - ssh
   - http
   - tcp
   - information gathering
   - web analysis
-  - vulnerability exploitation
+  - cve exploitation
   - foothold
   - lateral movement
   - privilege escalation
@@ -111,11 +113,9 @@ Al no encontrar rutas directamente explotables, decidí usar Nuclei para detecta
 ![](/assets/img/dockerlabs-writeup-norc/norc1_11.png)
 
 ---
-## Vulnerability Exploitation
+## CVE Exploitation
 
-El análisis identificó que el plugin WP Fastest Cache en la aplicación es vulnerable a CVE-2023-6063. Esta vulnerabilidad permite SQL Injection.
-
-<https://nvd.nist.gov/vuln/detail/CVE-2023-6063>
+El análisis identificó que el plugin WP Fastest Cache en la aplicación es vulnerable a [CVE-2023-6063](https://nvd.nist.gov/vuln/detail/CVE-2023-6063). Esta vulnerabilidad permite SQL Injection.
 
 Este PoC muestra como explotar esta vulnerabilidad usando SQLMap.
 

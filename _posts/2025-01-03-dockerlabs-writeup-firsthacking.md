@@ -13,6 +13,7 @@ tags:
   - dockerlabs
   - ftp
   - tcp
+  - cve
   - information gathering
   - cve exploitation
   - backdoor
@@ -81,6 +82,9 @@ Send `exit` to quit shell
 id
 uid=0(root) gid=0(root) groups=0(root)
 ```
+
+> Para explotar esta misma vulnerabilidad con Metasploit, consultar el writeup [Tproot](https://litio7.github.io/posts/dockerlabs-writeup-tproot/).
+{: .prompt-tip }
 
 ---
 ## Backdoor

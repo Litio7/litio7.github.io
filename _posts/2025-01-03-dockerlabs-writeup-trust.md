@@ -14,6 +14,7 @@ tags:
   - ssh
   - http
   - tcp
+  - fuzzing web
   - password attacks
   - sudo abuse
   - information gathering

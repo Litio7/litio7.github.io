@@ -14,7 +14,7 @@ tags:
   - hack the box
 ---
 
-> <https://www.hackthebox.com/achievement/machine/1521382/636>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/636" target="_blank">Alert Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
 
 > Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.

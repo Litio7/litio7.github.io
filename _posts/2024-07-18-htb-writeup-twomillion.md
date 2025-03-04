@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - ssh
   - http
   - tcp
@@ -26,6 +27,7 @@ tags:
   - web analysis
   - misconfiguration exploitation
   - foothold
+  - user pivoting
   - privilege escalation
 
 ---
@@ -75,7 +77,7 @@ http://2million.htb [200 OK] Cookies[PHPSESSID], Country[RESERVED][ZZ], Email[in
 200 -	 4KB - /invite
 ```
 ---
-## Web Analysis & Misconfiguration Exploitation
+## Web Analysis
 
 ![](/assets/img/htb-writeup-twomillion/twomillion1_1.png)
 ![](/assets/img/htb-writeup-twomillion/twomillion1_3.png)
@@ -96,6 +98,9 @@ Pego el codigo en Javascript Beautifier para hacerlo mas legible.
 <https://beautifier.io/>
 
 ![](/assets/img/htb-writeup-twomillion/twomillion2_3.png)
+
+---
+## Misconfiguration Exploitation
 
 Dentro de la funcion 'makeInviteCode', resalta una API '/api/v1/invite/how/to/generate' la cual permite tramitar una peticion 'POST'.
 
@@ -186,7 +191,12 @@ Con esto soy capaz de inyectar comandos.
 
 www-data@2million:~/html$ whoami
 www-data
+```
 
+---
+## User Pivoting
+
+```terminal
 www-data@2million:~/html$ cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 admin:x:1000:1000::/home/admin:/bin/bash
@@ -260,5 +270,5 @@ admin@2million:~/CVE-2023-0386$ ./exp
 root@2million:~/CVE-2023-0386# cat /root/root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/547>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/547" target="_blank">Twomillion Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

@@ -14,6 +14,7 @@ tags:
   - ssh
   - http
   - tcp
+  - fuzzing web
   - lfi
   - sudo abuse
   - information gathering

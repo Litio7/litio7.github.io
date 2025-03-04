@@ -11,6 +11,7 @@ categories:
 tags:
   - linux
   - dockerlabs
+  - fuzzing web
   - data leaks
   - sudo abuse
   - suid

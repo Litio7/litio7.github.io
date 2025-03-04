@@ -12,6 +12,7 @@ categories:
 tags:
   - windows
   - hack the box
+  - fuzzing web
   - lfi
   - path traversal
   - rce
@@ -252,5 +253,5 @@ Por ultimo, utilizo Impacket-WMIexec con las credenciales del usuario 'localadmi
 C:\Users\localadmin\Desktop> type root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/600>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/600" target="_blank">Mailing Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

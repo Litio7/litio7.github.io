@@ -180,5 +180,5 @@ jippity@blurry:/tmp$ sudo /usr/bin/evaluate_model /models/exploit.pth
 
 ![](/assets/img/htb-writeup-blurry/blurry12.png)
 
-> <https://www.hackthebox.com/achievement/machine/1521382/605>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/605" target="_blank">Blurry Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

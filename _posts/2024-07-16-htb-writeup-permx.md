@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - cve
   - rfi
   - rce
@@ -24,7 +25,7 @@ tags:
   - tcp
   - information gathering
   - web analysis
-  - vulnerability exploitation
+  - cve exploitation
   - privilege escalation
 
 ---
@@ -118,12 +119,10 @@ Concretamente, se puede encontrar la versión exacta del software que se emplea 
 
 ![](/assets/img/htb-writeup-permx/permx4.png)
 
-La cual cuenta con vulnerabilidades conocidas,  CVE-2023-4220.
-
-<https://nvd.nist.gov/vuln/detail/CVE-2023-4220>
+La cual cuenta con vulnerabilidades conocidas, [CVE-2023-4220](https://nvd.nist.gov/vuln/detail/CVE-2023-4220).
 
 ---
-## Vulnerability Exploitation
+## CVE Exploitation
 
 La siguiente página web detalla muy bien la forma de explotar esta vulnerabilidad.
 
@@ -279,5 +278,5 @@ Password: 123456
 root@permx:/home/mtz# cat /root/root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/613>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/613" target="_blank">Permx Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

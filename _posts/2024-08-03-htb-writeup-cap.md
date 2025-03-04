@@ -217,5 +217,5 @@ uid=0(root) gid=1001(nathan) groups=1001(nathan)
 ~# cat /root/root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/351>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/351" target="_blank">Cap Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

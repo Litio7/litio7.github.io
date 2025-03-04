@@ -13,8 +13,10 @@ tags:
   - dockerlabs
   - tcp
   - http
+  - fuzzing web
   - lfi
   - rce
+  - interactive tty
   - data leaks
   - suid
   - information gathering

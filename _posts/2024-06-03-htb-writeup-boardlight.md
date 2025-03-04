@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - rce
   - cve
   - data leaks
@@ -176,5 +177,5 @@ python -c 'import pty;pty.spawn("/bin/bash")'
 root@boardlight:~$ cat /root/root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/608>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/608" target="_blank">Boardlight Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

@@ -274,5 +274,5 @@ Please make sure you have the correct access rights and the repository exists.'
 prod@editorial:~$ cat root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/608>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/608" target="_blank">Editorial Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

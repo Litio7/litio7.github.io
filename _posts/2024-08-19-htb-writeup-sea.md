@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - xss
   - cve
   - port forwarding
@@ -22,7 +23,7 @@ tags:
   - tcp
   - information gathering
   - web analysis
-  - vulnerability exploitation
+  - user pivoting
   - lateral movement
   - privilege escalation
 
@@ -213,11 +214,9 @@ El segundo análisis revela recursos adicionales en el subdirectorio '/themes/bi
 ![](/assets/img/htb-writeup-sea/sea1_5.png)
 
 ---
-## Vulnerability Exploitation
+## User Pivoting
 
-La versión de WonderCMS v3.2.0 presenta una vulnerabilidad de Cross Site Scripting
-
-<https://nvd.nist.gov/vuln/detail/CVE-2023-41425>
+La versión de WonderCMS v3.2.0 presenta una vulnerabilidad de Cross Site Scripting, [CVE-2023-41425](https://nvd.nist.gov/vuln/detail/CVE-2023-41425).
 
 <https://github.com/insomnia-jacob/CVE-2023-41425>
 
@@ -344,5 +343,5 @@ Mediante Burp Suite, modifico el parámetro 'log_file' en la solicitud intercept
 
 ![](/assets/img/htb-writeup-sea/sea3_5.png)
 
-> <https://www.hackthebox.com/achievement/machine/1521382/620>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/620" target="_blank">Sea Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }

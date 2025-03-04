@@ -11,10 +11,12 @@ categories:
 tags:
   - linux
   - dockerlabs
+  - fuzzing web
   - os command injection
   - misconfigurations
   - data leaks
   - password attacks
+  - interactive tty
   - sudo abuse
   - cve
   - http
@@ -161,7 +163,7 @@ El resultado es 'tinkerbell'. Sin embargo, esta contraseña no me permite accede
 ![](/assets/img/dockerlabs-writeup-mybb/mybb1_15.png)
 
 ---
-## Vulnerability Exploitation & CVE Exploitation
+## Vulnerability Exploitation
 
 Con pocas opciones restantes, decido realizar un ataque de fuerza bruta sobre el usuario 'admin'. Para ello, intercepto la solicitud POST del panel de inicio de sesión.
 
@@ -183,13 +185,14 @@ Utilizo la respuesta 'The username and password combination you entered is inval
 
 ![](/assets/img/dockerlabs-writeup-mybb/mybb1_18.png)
 
-Hydra genera varias contraseñas posibles. Después de probarlas manualmente, consigo acceder con las siguientes credenciales: admin:babygirl.
+Hydra genera varias contraseñas posibles. Después de probarlas manualmente, consigo acceder con las siguientes credenciales: `admin`:`babygirl`.
+
+---
+## CVE Exploitation
 
 ![](/assets/img/dockerlabs-writeup-mybb/mybb1_21.png)
 
-Ya dentro del panel de administración, verifico la versión de MyBB instalada. Encuentro que esta versión es vulnerable a una inyección de código en usuarios con privilegios administrador.
-
-<https://nvd.nist.gov/vuln/detail/cve-2023-41362>
+Ya dentro del panel de administración, verifico la versión de MyBB instalada. Encuentro que esta versión es vulnerable a una inyección de código en usuarios con privilegios administrador. [CVE-2023-41362](https://nvd.nist.gov/vuln/detail/cve-2023-41362)
 
 Descargo y ejecuto un exploit público para aprovechar esta vulnerabilidad.
 

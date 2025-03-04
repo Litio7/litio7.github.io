@@ -14,7 +14,7 @@ tags:
   - hack the box
 ---
 
-> <https://www.hackthebox.com/achievement/machine/1521382/646>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/646" target="_blank">Cat Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
 
 > Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.

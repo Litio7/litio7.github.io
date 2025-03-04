@@ -12,6 +12,7 @@ categories:
 tags:
   - linux
   - hack the box
+  - fuzzing web
   - sqli
   - sqli blind
   - cve
@@ -206,5 +207,5 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
 root@usage:~# cat /root/root.txt
 ```
 
-> <https://www.hackthebox.com/achievement/machine/1521382/597>
+> <a href="https://www.hackthebox.com/achievement/machine/1521382/597" target="_blank">Usage Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
