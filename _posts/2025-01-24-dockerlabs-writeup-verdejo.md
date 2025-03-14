@@ -15,6 +15,7 @@ tags:
   - http
   - tcp
   - ssti
+  - password attacks
   - sudo abuse
   - information gathering
   - web analysis

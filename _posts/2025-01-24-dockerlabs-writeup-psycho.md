@@ -16,6 +16,7 @@ tags:
   - tcp
   - fuzzing web
   - lfi
+  - suid
   - sudo abuse
   - information gathering
   - web analysis

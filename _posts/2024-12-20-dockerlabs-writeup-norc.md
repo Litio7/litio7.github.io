@@ -15,6 +15,7 @@ tags:
   - sqli
   - sqli blind
   - data leaks
+  - wordpress
   - cron abuse
   - rce
   - cve

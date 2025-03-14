@@ -15,6 +15,7 @@ tags:
   - http
   - tcp
   - sqli blind
+  - steganography
   - suid
   - information gathering
   - web analysis

