@@ -1,6 +1,6 @@
 ---
 title: Instant
-description: La maquina Instant esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
+description: Instant es una máquina de dificultad media que incluye ingeniería inversa de una aplicación móvil, explotación de endpoints de API y descifrado de hashes y archivos cifrados. Los jugadores analizarán un APK para extraer información confidencial y un token de autorización codificado. Posteriormente, explotarán un endpoint de API vulnerable a la lectura arbitraria de archivos. Finalmente, comprometerán completamente el sistema descifrando y analizando los datos de sesión cifrados de Solar-PuTTY.
 date: 2024-12-14
 toc: true
 pin: false

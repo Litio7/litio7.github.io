@@ -1,6 +1,6 @@
 ---
 title: Chemistry
-description: Chemistry is an easy-difficulty Linux machine that showcases a Remote Code Execution (RCE) vulnerability in the pymatgen (CVE-2024-23346) Python library by uploading a malicious CIF file to the hosted CIF Analyzer website on the target. After discovering and cracking hashes, we authenticate to the target via SSH as rosa user. For privilege escalation, we exploit a Path Traversal vulnerability that leads to an Arbitrary File Read in a Python library called AioHTTP (CVE-2024-23334) which is used on the web application running internally to read the root flag. 
+description: Chemistry es una máquina Linux de dificultad fácil que presenta una vulnerabilidad de Ejecución Remota de Código (RCE) en la biblioteca de Python pymatgen (CVE-2024-23346), al subir un archivo CIF malicioso al sitio web alojado en el analizador CIF del objetivo. Tras descubrir y descifrar los hashes, nos autenticamos en el objetivo mediante SSH como usuario rosa. Para la escalada de privilegios, explotamos una vulnerabilidad de Path Traversal que provoca una Lectura Arbitraria de Archivos en una biblioteca de Python llamada AioHTTP (CVE-2024-23334), donde utiliza en la aplicación web que se ejecuta internamente para leer la flag de root. 
 date: 2024-11-04
 toc: true
 pin: false

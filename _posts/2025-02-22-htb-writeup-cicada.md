@@ -14,8 +14,9 @@ tags:
   - hack the box
   - tcp
   - dns
+  - rpc
   - smb
-  - lookupsid
+  - sid enum
   - kerberos
   - ldap
   - winrm
