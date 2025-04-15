@@ -29,7 +29,7 @@ github:
   username: Litio7 # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: litio_7 # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: G-T49C6L6QE3 # fill in your Google Analytics ID
+    id: # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:

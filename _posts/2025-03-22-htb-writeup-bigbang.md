@@ -43,6 +43,19 @@ Profundizo en los puertos detectados, recopilando información detallada sobre l
 
 ```terminal
 /home/kali/Documents/htb/machines/bigbang:-$ sudo nmap -sCV -p22,80 -vvv 10.10.11.52 -oN nmap2
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.9p1 Ubuntu 3ubuntu0.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 d4:15:77:1e:82:2b:2f:f1:cc:96:c6:28:c1:86:6b:3f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBET3VRLx4oR61tt3uTowkXZzNICnY44UpSL7zW4DLrn576oycUCy2Tvbu7bRvjjkUAjg4G080jxHLRJGI4NJoWQ=
+|   256 6c:42:60:7b:ba:ba:67:24:0f:0c:ac:5d:be:92:0c:66 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILbYOg6bg7lmU60H4seqYXpE3APnWEqfJwg1ojft/DPI
+80/tcp open  http    syn-ack ttl 62 Apache httpd 2.4.62
+|_http-title: Did not follow redirect to http://blog.bigbang.htb/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.62 (Debian)
+Service Info: Host: blog.bigbang.htb; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/645" target="_blank">BigBang Machine from Hack The Box has been Pwned</a>

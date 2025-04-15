@@ -244,7 +244,7 @@ uid=1000(tom) gid=1000(tom) grupos=1000(tom)
 ---
 ## User Pivoting
 
-Inicio revisando el contenido del archivo /etc/passwd para verificar los usuarios disponibles
+Inicio revisando el contenido del archivo `/etc/passwd` para verificar los usuarios disponibles
 
 ```terminal
 tom@thlcpptv16:~$ cat /etc/passwd | grep sh$
