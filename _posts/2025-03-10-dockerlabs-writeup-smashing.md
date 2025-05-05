@@ -239,6 +239,7 @@ Procedo a cambiarla con el siguiente comando.
 
 [0x000011d0]> s 0x000023dc
 [0x000023dc]> wx e8 c6 fc ff ff @ 0x000023dc
+[0x000023dc]> pd 3
 ```
 
 ![](assets/img/dockerlabs-writeup-smashing/smashing3_3.png)

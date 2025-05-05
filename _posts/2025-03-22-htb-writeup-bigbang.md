@@ -1,5 +1,5 @@
 ---
-title: BigBang &#x1F512;
+title: BigBang
 description: La maquina BigBang esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
 date: 2025-03-22
 toc: true
@@ -59,7 +59,4 @@ Service Info: Host: blog.bigbang.htb; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/645" target="_blank">BigBang Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
-
-> Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.
 {: .prompt-tip }

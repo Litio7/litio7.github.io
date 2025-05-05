@@ -8,7 +8,6 @@ image:
  path: /assets/img/dockerlabs-writeup-balufood/balufood_logo.png
 categories:
   - Docker Labs
-  - Machines
 tags:
   - linux
   - dockerlabs

@@ -19,7 +19,7 @@ tags:
   - ldap
   - winrm
   - sid enum
-  - acl
+  - access control list
   - shadow credentials attack
   - tgt
   - unpac the hash
@@ -34,7 +34,7 @@ tags:
 ---
 ### Machine Information
 
-As is common in Windows pentests, you will start the Certified box with credentials for the following account: Username: judith.mader Password: judith09
+As is common in Windows pentests, you will start the Certified box with credentials for the following account: Username: `judith.mader` Password: `judith09`
 
 ---
 ## Information Gathering
@@ -324,7 +324,7 @@ Sincronizo la hora del sistema con el controlador de dominio para evitar errores
 /home/kali/Documents/htb/machines/certified:-$ sudo ntpdate certified.htb
 ```
 
-Realizo un unPAC para obtener un TGT de `management_svc` utilizando la clave establecida previamente.
+Realizo una autenticación mediante PKINIT para obtener un TGT del usuario `management_svc`, utilizando un certificado `.pfx` y su contraseña previamente obtenida.
 
 ```terminal
 (Entorno_Python)-/home/kali/Documents/htb/machines/certified:-$ sudo python ~/Documents/github/PKINITtools/gettgtpkinit.py -cert-pfx B9d864l1.pfx -pfx-pass 1wTrdCQNVWS01dVJTvPS certified.htb/management_svc hhh.ccache
