@@ -528,7 +528,6 @@ root@alert:/# id
 uid=0(root) gid=0(root) groups=0(root)
 
 root@alert:/# cat /root/root.txt
-cat /root/root.txt
 ```
 
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/636" target="_blank">Alert Machine from Hack The Box has been Pwned</a>

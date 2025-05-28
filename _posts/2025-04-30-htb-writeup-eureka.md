@@ -1,7 +1,7 @@
 ---
 title: Eureka &#x1F512;
 description: La maquina Eureka esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
-date: 2025-04-30
+date: 2025-05-01
 toc: true
 pin: false
 image:

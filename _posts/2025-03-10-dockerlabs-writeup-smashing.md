@@ -263,7 +263,7 @@ Chocolate.1704
 /home/kali/Documents/dockerlabs/smashing:-$ ssh flipsy@127.17.0.2
 flipsy@127.17.0.2's password: Chocolate.1704
 
-/home/kali/Documents/dockerlabs/smashing:-$ id
+$ id
 uid=1001(flipsy) gid=1001(flipsy) groups=1001(flipsy),100(users)
 ```
 
