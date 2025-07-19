@@ -7,10 +7,10 @@ pin: false
 image:
  path: /assets/img/ps-writeup-pathtraversal/pathtraversal_logo.png
 categories:
-  - Port Swigger
+  - Port_Swigger
 tags:
-  - port swigger
-  - path traversal
+  - port_swigger
+  - path_traversal
   - lfi
 
 ---

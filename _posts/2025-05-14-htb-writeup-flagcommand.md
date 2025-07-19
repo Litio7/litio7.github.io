@@ -7,15 +7,15 @@ pin: false
 image:
  path: /assets/img/htb-writeup-challenges/web_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Challenges
 tags:
-  - hack the box
+  - hack_the_box
   - misconfigurations
   - api
   - devtools
-  - web analysis
-  - misconfiguration exploitation
+  - web_analysis
+  - misconfiguration_exploitation
 
 ---
 ## Web Analysis

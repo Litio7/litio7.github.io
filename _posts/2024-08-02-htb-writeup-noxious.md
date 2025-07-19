@@ -7,14 +7,14 @@ pin: false
 image:
  path: /assets/img/htb-writeup-noxious/noxious_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Sherlocks
 tags:
   - windows
   - forensics
-  - hack the box
+  - hack_the_box
   - soc
-  - llmnr poisoning
+  - llmnr_poisoning
 
 ---
 ### Initial Analysis

@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/ps-writeup-sqli/sqli_logo.png
 categories:
-  - Port Swigger
+  - Port_Swigger
 tags:
-  - port swigger
+  - port_swigger
   - sqli
-  - sqli blind
+  - sqli_blind
 
 ---
 

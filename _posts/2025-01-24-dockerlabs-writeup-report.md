@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-report/report_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - fuzzing web
+  - fuzzing_web
   - rfi
-  - interactive tty
+  - interactive_tty
   - git
-  - data leaks
-  - information gathering
-  - web analysis
+  - data_leaks
+  - information_gathering
+  - web_analysis
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,21 +7,21 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-aguademayo/aguademayo_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
-  - fuzzing web
-  - data leaks
-  - sudo abuse
+  - fuzzing_web
+  - data_leaks
+  - sudo_abuse
   - suid
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

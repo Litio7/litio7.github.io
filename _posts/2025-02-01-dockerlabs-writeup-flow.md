@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-flow/flow_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - ssh
   - http
-  - data leaks
-  - password attacks
-  - os command injection
-  - reverse engineering
-  - buffer overflow
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - vulnerability exploitation
-  - privilege escalation
+  - data_leaks
+  - password_attacks
+  - os_command_injection
+  - reverse_engineering
+  - buffer_overflow
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

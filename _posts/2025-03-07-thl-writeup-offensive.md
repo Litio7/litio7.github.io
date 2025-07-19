@@ -7,30 +7,30 @@ pin: false
 image:
  path: /assets/img/thl-writeup-offensive/offensive_logo.png
 categories:
-  - The Hackers Labs
+  - The_Hackers_Labs
 tags:
   - linux
-  - the hackers labs
+  - the_hackers_labs
   - tcp
   - ssh
   - http
   - wordpress
-  - fuzzing web
+  - fuzzing_web
   - steganography
   - misconfigurations
-  - os command injection
+  - os_command_injection
   - rce
-  - interactive tty
-  - port forwarding
-  - password attacks
+  - interactive_tty
+  - port_forwarding
+  - password_attacks
   - suid
-  - path hijacking
-  - information gathering
-  - web analysis
-  - misconfiguration exploitation
+  - path_hijacking
+  - information_gathering
+  - web_analysis
+  - misconfiguration_exploitation
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

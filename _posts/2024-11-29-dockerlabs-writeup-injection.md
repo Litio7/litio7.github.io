@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-injection/injection_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -16,10 +16,10 @@ tags:
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-cinehack/cinehack_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
-  - fuzzing web
-  - password attacks
+  - fuzzing_web
+  - password_attacks
   - rfi
-  - interactive tty
-  - sudo abuse
-  - cron abuse
-  - information gathering
-  - web analysis
+  - interactive_tty
+  - sudo_abuse
+  - cron_abuse
+  - information_gathering
+  - web_analysis
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

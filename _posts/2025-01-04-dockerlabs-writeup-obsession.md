@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-obsession/obsession_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,15 +15,15 @@ tags:
   - ssh
   - http
   - tcp
-  - fuzzing web
-  - data leaks
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - vulnerability exploitation
-  - misconfiguration exploitation
-  - web analysis
-  - privilege escalation
+  - fuzzing_web
+  - data_leaks
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - vulnerability_exploitation
+  - misconfiguration_exploitation
+  - web_analysis
+  - privilege_escalation
 
 ---
 ## Information Gathering

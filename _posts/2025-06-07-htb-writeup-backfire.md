@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-backfire/backfire_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
@@ -20,14 +20,14 @@ tags:
   - rce
   - misconfigurations
   - cve
-  - data leaks
-  - port forwarding
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - user pivoting
-  - privilege escalation
+  - data_leaks
+  - port_forwarding
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -207,7 +207,7 @@ ilya@backfire:~$ cat user.txt
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 ilya@backfire:~$ grep sh$ /etc/passwd

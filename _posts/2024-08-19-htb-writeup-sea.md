@@ -7,25 +7,25 @@ pin: false
 image:
  path: /assets/img/htb-writeup-sea/sea_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - fuzzing web
+  - hack_the_box
+  - fuzzing_web
   - xss
   - cve
-  - port forwarding
-  - os command injection
-  - password attacks
+  - port_forwarding
+  - os_command_injection
+  - password_attacks
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - user pivoting
-  - lateral movement
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - foothold
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -214,7 +214,7 @@ El segundo análisis revela recursos adicionales en el subdirectorio '/themes/bi
 ![](/assets/img/htb-writeup-sea/sea1_5.png)
 
 ---
-## User Pivoting
+## Foothold
 
 La versión de WonderCMS v3.2.0 presenta una vulnerabilidad de Cross Site Scripting, [CVE-2023-41425](https://nvd.nist.gov/vuln/detail/CVE-2023-41425).
 

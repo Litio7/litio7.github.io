@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-administrator/administrator_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - tcp
   - ftp
   - dns
@@ -19,16 +19,16 @@ tags:
   - kerberos
   - ldap
   - winrm
-  - active directory
-  - access control list
-  - password attacks
-  - targeted kerberoast attack
-  - dcsync attack
+  - active_directory
+  - access_control_list
+  - password_attacks
+  - targeted_kerberoast_attack
+  - dcsync_attack
   - tgs
-  - information gathering
-  - active directory enumeration
-  - active directory exploitation
-  - privilege escalation
+  - information_gathering
+  - active_directory_enumeration
+  - active_directory_exploitation
+  - privilege_escalation
 
 ---
 ### Machine Information

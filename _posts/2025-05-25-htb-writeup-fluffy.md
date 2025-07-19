@@ -7,10 +7,10 @@ pin: false
 image:
  path: /assets/img/htb-writeup-fluffy/fluffy_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
-  - hack the box
+  - hack_the_box
   - windows
   - tcp
   - dns
@@ -18,11 +18,11 @@ tags:
   - smb
   - ldap
   - winrm
-  - information gathering
-  - cve exploitation
-  - privilege escalation
-  - active directory enumeration
-  - active directory exploitation
+  - information_gathering
+  - cve_exploitation
+  - privilege_escalation
+  - active_directory_enumeration
+  - active_directory_exploitation
 
 ---
 ## Machine Information

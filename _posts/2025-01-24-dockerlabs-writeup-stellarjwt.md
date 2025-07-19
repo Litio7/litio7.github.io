@@ -7,21 +7,21 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-stellarjwt/stellarjwt_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - fuzzing web
-  - data leaks
-  - password attacks
-  - sudo abuse
-  - web analysis
-  - data leak exploitation
-  - user pivoting
-  - privilege escalation
+  - fuzzing_web
+  - data_leaks
+  - password_attacks
+  - sudo_abuse
+  - web_analysis
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -128,7 +128,7 @@ uid=1001(neptuno) gid=1001(neptuno) groups=1001(neptuno),100(users)
 ```
 
 ---
-## User Pivoting 1
+## Lateral Movement
 
 ```terminal
 neptuno@kali:~$ cat /etc/passwd | grep /bash$
@@ -157,7 +157,6 @@ uid=1002(nasa) gid=1002(nasa) groups=1002(nasa),100(users)
 ```
 
 ---
-## User Pivoting 2
 
 Reviso los permisos del usuario `nasa`.
 

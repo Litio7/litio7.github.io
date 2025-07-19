@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-darkweb/darkweb_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,15 +15,15 @@ tags:
   - smb
   - ftp
   - misconfigurations
-  - data leaks
-  - password attacks
+  - data_leaks
+  - password_attacks
   - onion
   - tor
-  - sudo abuse
-  - information gathering
-  - misconfiguration exploitation
-  - data leak exploitation
-  - privilege escalation
+  - sudo_abuse
+  - information_gathering
+  - misconfiguration_exploitation
+  - data_leak_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,24 +7,24 @@ pin: false
 image:
  path: /assets/img/htb-writeup-mailing/mailing_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
-  - fuzzing web
+  - hack_the_box
+  - fuzzing_web
   - lfi
-  - path traversal
+  - path_traversal
   - rce
   - cve
   - smtp
   - http
   - winrm
   - tcp
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

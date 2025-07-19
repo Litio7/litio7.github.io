@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-escapetwo/escapetwo_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - tcp
   - dns
   - smb
@@ -19,21 +19,21 @@ tags:
   - ldap
   - mssql
   - winrm
-  - active directory
-  - data leaks
+  - active_directory
+  - data_leaks
   - misconfigurations
-  - shadow credentials attack
+  - shadow_credentials_attack
   - tgt
-  - pass the hash
-  - mssql command execution
-  - hash dumping
-  - adcs abuse
-  - unpac the hash
-  - information gathering
-  - misconfiguration exploitation
-  - data leak exploitation
-  - lateral movement
-  - privilege escalation
+  - pass_the_hash
+  - mssql_command_execution
+  - hash_dumping
+  - adcs_abuse
+  - unpac_the_hash
+  - information_gathering
+  - misconfiguration_exploitation
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ### Machine Information

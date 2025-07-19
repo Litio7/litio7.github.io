@@ -7,12 +7,12 @@ pin: false
 image:
  path: /assets/img/htb-writeup-challenges/pwd_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Challenges
 tags:
-  - hack the box
+  - hack_the_box
   - pwd
-  - format string attack
+  - format_string_attack
 
 ---
 ## Information Gathering

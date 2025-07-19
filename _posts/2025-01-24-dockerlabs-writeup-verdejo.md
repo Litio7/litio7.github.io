@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-verdejo/verdejo_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,12 +15,12 @@ tags:
   - http
   - tcp
   - ssti
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - web analysis
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
   - foothold
-  - privilege escalation
+  - privilege_escalation
 
 ---
 ## Information Gathering

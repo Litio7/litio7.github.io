@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-move/move_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -16,16 +16,16 @@ tags:
   - ssh
   - http
   - php
-  - arbitrary file read
-  - path traversal
-  - fuzzing web
+  - arbitrary_file_read
+  - path_traversal
+  - fuzzing_web
   - cve
-  - sudo abuse
-  - os command injection
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - privilege escalation
+  - sudo_abuse
+  - os_command_injection
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-mirame/mirame_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - sqli blind
+  - sqli_blind
   - steganography
   - suid
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

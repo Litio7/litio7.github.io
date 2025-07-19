@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-rustykey/rustykey_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
 
 ---
 ## Machine Information
@@ -19,7 +19,7 @@ tags:
 As is common in real life Windows pentests, you will start the RustyKey box with credentials for the following account: rr.parker / 8#t5HE8L!W3A
 
 ---
-## Information Gathering
+## Reconnaissance
 
 El análisis inicial comienza con el comando ping para confirmar la accesibilidad de la máquina objetivo en la red.
 
@@ -104,8 +104,11 @@ Host script results:
 |_  start_date: N/A
 ```
 
+---
+
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/669" target="_blank">RustyKey Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
 
 > Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.
 {: .prompt-tip }
+

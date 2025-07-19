@@ -7,29 +7,29 @@ pin: false
 image:
  path: /assets/img/htb-writeup-certified/certified_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - tcp
   - dns
   - smb
   - kerberos
   - ldap
   - winrm
-  - sid enum
-  - access control list
-  - shadow credentials attack
+  - sid_enum
+  - access_control_list
+  - shadow_credentials_attack
   - tgt
-  - unpac the hash
-  - pass the hash
-  - adcs abuse
-  - hash dumping
-  - information gathering
-  - active directory enumeration
-  - active directory exploitation
-  - privilege escalation
+  - unpac_the_hash
+  - pass_the_hash
+  - adcs_abuse
+  - hash_dumping
+  - information_gathering
+  - active_directory_enumeration
+  - active_directory_exploitation
+  - privilege_escalation
 
 ---
 ### Machine Information
@@ -357,7 +357,7 @@ evil-winrm -i certified.htb -u management_svc -H "a091c1832bcdd4677c28b5a6a12955
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 Revisando nuevamente el BloodHound, compruebo que el usuario `management_svc` dispone de privilegios de `GenericAll` sobre el usuario `ca_operator`. Teniendo estos permisos, podo a llegar a cambiar las credenciales sobre el usuario `ca_operator`.
 

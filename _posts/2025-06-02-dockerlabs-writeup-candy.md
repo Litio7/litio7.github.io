@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-candy/candy_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
   - php
-  - data leaks
+  - data_leaks
   - rce
-  - interactive tty
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - data leak exploitation
-  - lateral movement
-  - privilege escalation
+  - interactive_tty
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

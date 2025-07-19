@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-tproot/tproot_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -16,8 +16,8 @@ tags:
   - tcp
   - cve
   - metasploit
-  - information gathering
-  - cve exploitation
+  - information_gathering
+  - cve_exploitation
 
 ---
 ## Information Gathering

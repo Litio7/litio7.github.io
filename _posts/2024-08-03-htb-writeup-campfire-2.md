@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-campfire-2/campfire-2_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Sherlocks
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - forensics
   - dfir
 

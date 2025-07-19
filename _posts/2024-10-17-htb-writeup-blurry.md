@@ -7,22 +7,22 @@ pin: false
 image:
  path: /assets/img/htb-writeup-blurry/blurry_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - rce
   - cve
-  - sudo abuse
+  - sudo_abuse
   - ssh
   - http
-  - insecure deserialization
+  - insecure_deserialization
   - tcp
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

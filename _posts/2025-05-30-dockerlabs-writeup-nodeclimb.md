@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-nodeclimb/nodeclimb_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - ftp
   - ssh
-  - password attacks
+  - password_attacks
   - misconfigurations
-  - sudo abuse
-  - java script
-  - information gathering
-  - misconfiguration exploitation
-  - privilege escalation
+  - sudo_abuse
+  - java_script
+  - information_gathering
+  - misconfiguration_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

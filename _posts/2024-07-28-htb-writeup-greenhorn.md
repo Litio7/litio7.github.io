@@ -7,24 +7,24 @@ pin: false
 image:
  path: /assets/img/htb-writeup-greenhorn/greenhorn_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - fuzzing web
-  - data leaks
-  - password attacks
+  - hack_the_box
+  - fuzzing_web
+  - data_leaks
+  - password_attacks
   - rfi
   - cve
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-library/library_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
-  - fuzzing web
-  - data leaks
-  - sudo abuse
-  - python library hijacking
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - privilege escalation
+  - fuzzing_web
+  - data_leaks
+  - sudo_abuse
+  - python_library_hijacking
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

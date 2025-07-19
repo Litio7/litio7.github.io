@@ -7,16 +7,16 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-breakmyssh/breakmyssh_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
-  - password attacks
+  - password_attacks
   - cve
   - ssh
   - tcp
-  - information gathering
-  - privilege escalation
+  - information_gathering
+  - privilege_escalation
 
 ---
 ## Information Gathering

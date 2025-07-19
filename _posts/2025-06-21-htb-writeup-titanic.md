@@ -7,26 +7,26 @@ pin: false
 image:
  path: /assets/img/htb-writeup-titanic/titanic_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
   - lfi
-  - data leaks
-  - arbitrary file read
-  - fuzzing web
+  - data_leaks
+  - arbitrary_file_read
+  - fuzzing_web
   - git
-  - password attacks
+  - password_attacks
   - cve
-  - arbitrary code execution
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - arbitrary_code_execution
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

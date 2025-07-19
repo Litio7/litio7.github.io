@@ -7,13 +7,13 @@ pin: false
 image:
  path: /assets/img/htb-writeup-challenges/hardware_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Challenges
 tags:
-  - hack the box
+  - hack_the_box
   - hardware
-  - data leaks
-  - data leak exploitation
+  - data_leaks
+  - data_leak_exploitation
 
 ---
 ## Data Leak Exploitation

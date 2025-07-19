@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-balufood/balufood_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - ssh
   - upnp
-  - data leaks
+  - data_leaks
   - misconfigurations
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - user pivoting
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -108,7 +108,7 @@ uid=1000(sysadmin) gid=1000(sysadmin) groups=1000(sysadmin),100(users)
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 sysadmin@6fa083db4c91:~$ grep 'sh$' /etc/passwd

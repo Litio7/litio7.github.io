@@ -7,25 +7,25 @@ pin: false
 image:
  path: /assets/img/htb-writeup-alert/alert_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
   - xss
-  - fuzzing web
+  - fuzzing_web
   - lfi
-  - arbitrary file read
-  - password attacks
-  - port forwarding
+  - arbitrary_file_read
+  - password_attacks
+  - port_forwarding
   - rce
-  - information gathering
-  - web analysis
+  - information_gathering
+  - web_analysis
   - foothold
-  - privilege escalation
+  - privilege_escalation
 
 ---
 ## Information Gathering

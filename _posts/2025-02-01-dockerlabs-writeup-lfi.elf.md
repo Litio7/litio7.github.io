@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-lfi.elf/lfi.elf_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
-  - fuzzing web
+  - fuzzing_web
   - lfi
   - rce
-  - interactive tty
-  - data leaks
+  - interactive_tty
+  - data_leaks
   - suid
-  - information gathering
-  - web analysis
+  - information_gathering
+  - web_analysis
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

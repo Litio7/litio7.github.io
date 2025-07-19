@@ -7,25 +7,25 @@ pin: false
 image:
  path: /assets/img/htb-writeup-linkvortex/linkvortex_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
-  - fuzzing web
+  - fuzzing_web
   - git
-  - data leaks
+  - data_leaks
   - cve
-  - arbitrary file read
-  - sudo abuse
-  - symlink abuse
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - arbitrary_file_read
+  - sudo_abuse
+  - symlink_abuse
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

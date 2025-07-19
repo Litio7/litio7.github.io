@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-consolelog/consolelog_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
   - ssh
-  - data leaks
-  - java script
-  - fuzzing web
-  - password attacks
-  - sudo abuse
+  - data_leaks
+  - java_script
+  - fuzzing_web
+  - password_attacks
+  - sudo_abuse
   - suid
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

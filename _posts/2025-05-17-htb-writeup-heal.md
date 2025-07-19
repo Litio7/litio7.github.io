@@ -7,32 +7,32 @@ pin: false
 image:
  path: /assets/img/htb-writeup-heal/heal_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
   - devtools
-  - arbitrary file read
-  - path traversal
+  - arbitrary_file_read
+  - path_traversal
   - php
   - cve
-  - fuzzing web
+  - fuzzing_web
   - rce
-  - password attacks
-  - interactive tty
-  - data leaks
-  - port forwarding
+  - password_attacks
+  - interactive_tty
+  - data_leaks
+  - port_forwarding
   - api
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - cve exploitation
-  - lateral movement
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - cve_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,12 +7,12 @@ pin: false
 image:
  path: /assets/img/htb-writeup-tombwatcher/tombwatcher_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
-  - active directory
+  - hack_the_box
+  - active_directory
 
 ---
 ## Machine Information

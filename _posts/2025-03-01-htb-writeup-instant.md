@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/htb-writeup-instant/instant_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - ssh
   - http
   - tcp
   - apk
   - api
-  - data leaks
+  - data_leaks
   - lfi
-  - password attacks
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - password_attacks
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

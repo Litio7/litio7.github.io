@@ -7,29 +7,29 @@ pin: false
 image:
  path: /assets/img/thl-writeup-thlcppt_v16/thlcppt_v16_logo.png
 categories:
-  - The Hackers Labs
+  - The_Hackers_Labs
 tags:
   - linux
-  - the hackers labs
+  - the_hackers_labs
   - ssh
   - http
   - tcp
   - wordpress
-  - sqli blind
+  - sqli_blind
   - cve
-  - password attacks
-  - arbitrary file read
-  - data leaks
-  - sudo abuse
+  - password_attacks
+  - arbitrary_file_read
+  - data_leaks
+  - sudo_abuse
   - suid
-  - information gathering
-  - web analysis
-  - cve exploitation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
   - foothold
-  - escaping docker
-  - user pivoting
+  - escaping_docker
+  - lateral_movement
   - pivoting
-  - privilege escalation
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -242,7 +242,7 @@ uid=1000(tom) gid=1000(tom) grupos=1000(tom)
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 Inicio revisando el contenido del archivo `/etc/passwd` para verificar los usuarios disponibles
 

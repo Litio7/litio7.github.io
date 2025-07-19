@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-vacaciones/vacaciones_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - data leaks
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - user pivoting
-  - privilege escalation
+  - data_leaks
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

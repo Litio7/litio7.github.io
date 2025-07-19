@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-raas/raas_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,16 +15,16 @@ tags:
   - smb
   - tcp
   - misconfigurations
-  - reverse engineering
+  - reverse_engineering
   - cryptography
-  - sudo abuse
-  - data leaks
+  - sudo_abuse
+  - data_leaks
   - capabilities
-  - information gathering
-  - misconfiguration exploitation
-  - data leak exploitation
-  - user pivoting
-  - privilege escalation
+  - information_gathering
+  - misconfiguration_exploitation
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -209,7 +209,7 @@ uid=1002(bob) gid=1002(bob) groups=1002(bob),100(users)
 ```
 
 ---
-## User Pivoting 1
+## Lateral Movement
 
 ```terminal
 bob@kali:~$ cat /etc/passwd | grep sh$
@@ -244,7 +244,7 @@ uid=1003(calamardo) gid=1003(calamardo) groups=1003(calamardo),100(users)
 ```
 
 ---
-## User Pivoting 2
+
 
 En el archivo `.bashrc` se encuentra una contraseña en texto claro asociada al usuario `patricio`.
 

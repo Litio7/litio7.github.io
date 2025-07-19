@@ -7,21 +7,21 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-whereismywebshell/whereismywebshell_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - http
-  - data leaks
-  - fuzzing web
-  - interactive tty
+  - data_leaks
+  - fuzzing_web
+  - interactive_tty
   - php
   - rce
-  - information gathering
-  - web analysis
+  - information_gathering
+  - web_analysis
   - foothold
-  - privilege escalation
+  - privilege_escalation
 
 ---
 ## Information Gathering

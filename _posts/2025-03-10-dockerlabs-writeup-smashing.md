@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-smashing/smashing_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,19 +15,19 @@ tags:
   - http
   - tcp
   - api
-  - fuzzing web
-  - insecure deserialization
-  - password attacks
-  - buffer overflow
-  - sudo abuse
-  - interactive tty
+  - fuzzing_web
+  - insecure_deserialization
+  - password_attacks
+  - buffer_overflow
+  - sudo_abuse
+  - interactive_tty
   - idor
-  - os command injection
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - user pivoting
-  - privilege escalation
+  - os_command_injection
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -268,7 +268,7 @@ uid=1001(flipsy) gid=1001(flipsy) groups=1001(flipsy),100(users)
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 $ cat /etc/passwd | grep sh$

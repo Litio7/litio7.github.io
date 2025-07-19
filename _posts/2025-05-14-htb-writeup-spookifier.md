@@ -7,14 +7,14 @@ pin: false
 image:
  path: /assets/img/htb-writeup-challenges/web_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Challenges
 tags:
-  - hack the box
+  - hack_the_box
   - ssti
-  - arbitrary file read
-  - web analysis
-  - vulnerability exploitation
+  - arbitrary_file_read
+  - web_analysis
+  - vulnerability_exploitation
 
 ---
 ## Web Analysis

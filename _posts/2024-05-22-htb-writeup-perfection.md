@@ -7,21 +7,21 @@ pin: false
 image:
  path: /assets/img/htb-writeup-perfection/perfection_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - ssti
-  - data leaks
-  - password attacks
+  - data_leaks
+  - password_attacks
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

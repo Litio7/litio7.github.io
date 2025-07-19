@@ -7,26 +7,26 @@ pin: false
 image:
  path: /assets/img/htb-writeup-editorial/editorial_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - api
-  - data leaks
+  - data_leaks
   - ssrf
   - cve
   - rce
   - git
-  - sudo abuse
+  - sudo_abuse
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - user pivoting
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

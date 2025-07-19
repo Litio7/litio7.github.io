@@ -6,11 +6,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-support/support_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - tcp
   - dns
   - smb
@@ -19,13 +19,13 @@ tags:
   - winrm
   - misconfigurations
   - debugging
-  - resource based constrained delegation
+  - resource_based_constrained_delegation
   - tgs
-  - information gathering
-  - vulnerability exploitation
-  - active directory enumeration
-  - active directory exploitation
-  - privilege escalation
+  - information_gathering
+  - vulnerability_exploitation
+  - active_directory_enumeration
+  - active_directory_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

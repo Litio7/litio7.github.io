@@ -7,12 +7,12 @@ pin: false
 image:
  path: /assets/img/htb-writeup-bft/bft_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Sherlocks
 tags:
   - windows
   - forensics
-  - hack the box
+  - hack_the_box
   - dfir
 
 ---

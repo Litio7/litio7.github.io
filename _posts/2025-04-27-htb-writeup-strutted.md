@@ -7,26 +7,26 @@ pin: false
 image:
  path: /assets/img/htb-writeup-strutted/strutted_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
   - cve
-  - path traversal
+  - path_traversal
   - rce
-  - interactive tty
-  - data leaks
-  - sudo abuse
+  - interactive_tty
+  - data_leaks
+  - sudo_abuse
   - suid
-  - information gathering
-  - web analysis
+  - information_gathering
+  - web_analysis
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

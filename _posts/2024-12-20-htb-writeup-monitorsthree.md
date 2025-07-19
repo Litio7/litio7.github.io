@@ -7,30 +7,30 @@ pin: false
 image:
  path: /assets/img/htb-writeup-monitorsthree/monitorsthree_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - ssh
   - http
   - tcp
-  - fuzzing web
-  - sqli blind
-  - password attacks
+  - fuzzing_web
+  - sqli_blind
+  - password_attacks
   - cve
   - rce
-  - interactive tty
-  - data leaks
-  - port forwarding
-  - cron abuse
+  - interactive_tty
+  - data_leaks
+  - port_forwarding
+  - cron_abuse
   - devtools
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

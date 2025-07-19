@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-sightless/sightless_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - ftp
   - ssh
   - http
@@ -21,14 +21,14 @@ tags:
   - ssti
   - cve
   - rce
-  - os command injection
-  - password attacks
-  - port forwarding
-  - information gathering
-  - web analysis
+  - os_command_injection
+  - password_attacks
+  - port_forwarding
+  - information_gathering
+  - web_analysis
   - foothold
-  - escaping docker
-  - privilege escalation
+  - escaping_docker
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,29 +7,29 @@ pin: false
 image:
  path: /assets/img/htb-writeup-cicada/cicada_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
   - tcp
   - dns
   - rpc
   - smb
-  - sid enum
+  - sid_enum
   - kerberos
   - ldap
   - winrm
-  - active directory
-  - password spraying
-  - sebackupprivilege abuse
-  - pass the hash
-  - hash dumping
-  - reg abuse
-  - information gathering
-  - active directory enumeration
-  - active directory exploitation
-  - privilege escalation
+  - active_directory
+  - password_spraying
+  - sebackupprivilege_abuse
+  - pass_the_hash
+  - hash_dumping
+  - reg_abuse
+  - information_gathering
+  - active_directory_enumeration
+  - active_directory_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,23 +7,23 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-psycho/psycho_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - fuzzing web
+  - fuzzing_web
   - lfi
   - suid
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - lateral movement
-  - user pivoting
-  - privilege escalation
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - lateral_movement
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -118,7 +118,7 @@ uid=1001(vaxei) gid=1001(vaxei) groups=1001(vaxei),100(users)
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 vaxei@kali:~$ cat /etc/passwd | grep sh$

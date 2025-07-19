@@ -7,33 +7,33 @@ pin: false
 image:
  path: /assets/img/htb-writeup-bigbang/bigbang_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - http
   - ssh
   - wordpress
   - php
   - cve
-  - insecure deserialization
+  - insecure_deserialization
   - rce
-  - interactive tty
-  - password attacks
-  - port forwarding
-  - fuzzing web
+  - interactive_tty
+  - password_attacks
+  - port_forwarding
+  - fuzzing_web
   - apk
   - api
-  - os command injection
+  - os_command_injection
   - rfi
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - lateral movement
-  - user pivoting
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - lateral_movement
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -233,7 +233,7 @@ shawking@bigbang:~$ cat user.txt
 ```
 
 ---
-## User Pivoting
+
 
 Identifico los usuarios del sistema que tienen una shell válida.
 

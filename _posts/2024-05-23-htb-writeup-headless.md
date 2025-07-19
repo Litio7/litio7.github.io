@@ -7,21 +7,21 @@ pin: false
 image:
  path: /assets/img/htb-writeup-headless/headless_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - xss
-  - os command injection
-  - sudo abuse
+  - os_command_injection
+  - sudo_abuse
   - ssh
   - upnp
   - tcp
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -7,24 +7,24 @@ pin: false
 image:
  path: /assets/img/htb-writeup-underpass/underpass_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - udp
   - ssh
   - http
   - snmp
   - misconfigurations
-  - data leaks
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - misconfiguration exploitation
-  - data leak exploitation
-  - privilege escalation
+  - data_leaks
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - misconfiguration_exploitation
+  - data_leak_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

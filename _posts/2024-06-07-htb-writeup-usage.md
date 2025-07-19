@@ -7,28 +7,28 @@ pin: false
 image:
  path: /assets/img/htb-writeup-usage/usage_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - fuzzing web
+  - hack_the_box
+  - fuzzing_web
   - sqli
-  - sqli blind
+  - sqli_blind
   - cve
-  - data leaks
-  - password attacks
+  - data_leaks
+  - password_attacks
   - ssh
   - http
   - tcp
-  - symlink abuse
-  - sudo abuse
+  - symlink_abuse
+  - sudo_abuse
   - php
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - cve_exploitation
+  - privilege_escalation
 
 
 ---

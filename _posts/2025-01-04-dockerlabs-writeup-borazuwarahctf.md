@@ -7,7 +7,7 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-borazuwarahctf/borazuwarahctf_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
@@ -15,12 +15,12 @@ tags:
   - http
   - tcp
   - steganography
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

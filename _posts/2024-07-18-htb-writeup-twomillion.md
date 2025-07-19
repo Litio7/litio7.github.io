@@ -7,28 +7,28 @@ pin: false
 image:
  path: /assets/img/htb-writeup-twomillion/twomillion_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - fuzzing web
+  - hack_the_box
+  - fuzzing_web
   - ssh
   - http
   - tcp
-  - os command injection
+  - os_command_injection
   - api
   - misconfigurations
   - suid
   - capabilities
   - cve
   - devtools
-  - information gathering
-  - web analysis
-  - misconfiguration exploitation
+  - information_gathering
+  - web_analysis
+  - misconfiguration_exploitation
   - foothold
-  - user pivoting
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -194,7 +194,7 @@ www-data
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 www-data@2million:~/html$ cat /etc/passwd

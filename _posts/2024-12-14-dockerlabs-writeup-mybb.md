@@ -7,26 +7,26 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-mybb/mybb_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
-  - fuzzing web
-  - os command injection
+  - fuzzing_web
+  - os_command_injection
   - misconfigurations
-  - data leaks
-  - password attacks
-  - interactive tty
-  - sudo abuse
+  - data_leaks
+  - password_attacks
+  - interactive_tty
+  - sudo_abuse
   - cve
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - cve exploitation
-  - lateral movement
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - cve_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

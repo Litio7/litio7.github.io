@@ -7,27 +7,27 @@ pin: false
 image:
  path: /assets/img/thl-writeup-elcliente/elcliente_logo.png
 categories:
-  - The Hackers Labs
+  - The_Hackers_Labs
 tags:
   - linux
-  - the hackers labs
+  - the_hackers_labs
   - ssh
   - http
   - tcp
-  - fuzzing web
+  - fuzzing_web
   - xss
-  - cookie hijacking
+  - cookie_hijacking
   - rce
-  - data leaks
-  - sudo abuse
+  - data_leaks
+  - sudo_abuse
   - suid
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
   - foothold
-  - lateral movement
-  - user pivoting
-  - privilege escalation
+  - lateral_movement
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -213,7 +213,7 @@ uid=1001(scott) gid=1001(scott) groups=1001(scott),100(users)
 ```
 
 ---
-## User Pivoting
+
 
 El usuario `scott` puede ejecutar `tar` como `kobe` sin necesidad de contraseña.
 

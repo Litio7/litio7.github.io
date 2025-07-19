@@ -1,0 +1,396 @@
+- id: CVE-2024-41817
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-41817
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.8
+      severity: HIGH
+    - name:  CNA (GitHub)
+      org: GitHub
+      base_score: 7.8
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-titanic/
+      anchor: privilege-escalation
+
+- id: CVE-2024-41570
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-41570
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+    - name:  ADP (CISA-ADP)
+      org: cisa
+      base_score: 9.8
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-backfire/
+      anchor: cve-exploitation
+
+- id: CVE-2024-36991
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-36991
+  sources:
+    - name: CNA (Splunk Inc)
+      org: Splunk
+      base_score: 7.5
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-haze/
+      anchor: cve-exploitation-1
+
+- id: CVE-2024-25641
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-25641
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.2
+      severity: HIGH
+    - name: CNA (GitHub)
+      org: GitHub
+      base_score: 9.1
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-blurry/
+      anchor: web-analysis--cve-exploitation
+
+- id: CVE-2024-24590
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-24590
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 8.8
+      severity: HIGH
+    - name: CNA (HiddenLayer)
+      org: Hidden Layer
+      base_score: 8.0
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-blurry/
+      anchor: web-analysis--cve-exploitation
+
+- id: CVE-2024-2961
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-2961
+  sources:
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 7.3
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-bigbang/
+      anchor: cve-exploitation
+
+- id: CVE-2024-2961
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-2961
+  sources:
+    - name: CNA (Microsoft)
+      org: Microsoft Corporation
+      base_score: 9.8
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-mailing/
+      anchor: cve-exploitation
+
+- id: CVE-2023-50564
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-50564
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 8.8
+      severity: HIGH
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 8.8
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-greenhorn/
+      anchor: cve-exploitation
+
+- id: CVE-2023-50164
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-50164
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-strutted/
+      anchor: foothold
+
+- id: CVE-2023-46214
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-46214
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 8.8
+      severity: HIGH
+    - name: CNA (Splunk Inc)
+      org: Splunk
+      base_score: 8.0
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-haze/
+      anchor: cve-exploitation-2
+
+- id: CVE-2023-41425
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-41425
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 6.1
+      severity: MEDIUM
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 6.1
+      severity: MEDIUM
+  references:
+    - url: /posts/htb-writeup-sea/
+      anchor: foothold
+
+- id: CVE-2023-41362
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-41362
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.2
+      severity: HIGH
+  references:
+    - url: /posts/dockerlabs-writeup-mybb/
+      anchor: cve-exploitation
+
+- id: CVE-2023-40028
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-40028
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 6.5
+      severity: MEDIUM
+    - name: CNA (GitHub, Inc)
+      org: GitHub
+      base_score: 4.9
+      severity: MEDIUM
+  references:
+    - url: /posts/htb-writeup-linkvortex/
+      anchor: vulnerability-exploitation
+
+- id: CVE-2023-32784
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-32784
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.5
+      severity: HIGH
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 7.5
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-keeper/
+      anchor: privilege-escalation--cve-exploitation
+
+- id: CVE-2023-30253
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-30253
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 8.8
+      severity: HIGH
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 8.8
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-boardlight/
+      anchor: web-analysis--cve-exploitation
+
+- id: CVE-2023-26326
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-26326
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-bigbang/
+      anchor: cve-exploitation
+
+- id: CVE-2023-24249
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-24249
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.2
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-checker/
+      anchor: cve-exploitation-1
+
+- id: CVE-2023-6360
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-6360
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+    - name: CNA (Tenable)
+      org: Tenable
+      base_score: 8.6
+      severity: HIGH
+  references:
+    - url: /posts/thl-writeup-thlcpptv16/
+      anchor: cve-exploitation
+
+- id: CVE-2023-6199
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-6199
+  sources:
+    - name: CNA (Fluid Attacks)
+      org: Fluid Attacks
+      base_score: 6.5
+      severity: MEDIUM
+  references:
+    - url: /posts/htb-writeup-checker/
+      anchor: cve-exploitation-2
+
+- id: CVE-2023-6063
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-6063
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.5
+      severity: HIGH
+  references:
+    - url: /posts/dockerlabs-writeup-norc/
+      anchor: cve-exploitation
+
+- id: CVE-2023-4220
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-4220
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 6.1
+      severity: MEDIUM
+    - name: CNA (STAR Labs)
+      org: STAR Labs
+      base_score: 8.1
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-permx/
+      anchor: cve-exploitation
+
+- id: CVE-2023-2255
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-2255
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 5.3
+      severity: MEDIUM
+  references:
+    - url: /posts/htb-writeup-mailing/
+      anchor: privilege-escalation--cve-exploitation
+
+- id: CVE-2023-1545
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-1545
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.5
+      severity: HIGH
+    - name: CNA (Huntr)
+      org: huntr
+      base_score: 7.5
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-checker/
+      anchor: cve-exploitation-1
+
+- id: CVE-2023-0386
+  link: https://nvd.nist.gov/vuln/detail/cve-2023-0386
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.8
+      severity: HIGH
+    - name: ADP (CISA-ADP)
+      org: cisa
+      base_score: 7.8
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-twomillion/
+      anchor: privilege-escalation
+
+- id: CVE-2022-24439
+  link: https://nvd.nist.gov/vuln/detail/cve-2022-24439
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+    - name: CNA (Snyk)
+      org: snyk
+      base_score: 8.1
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-editorial/
+      anchor: privilege-escalation
+
+- id: CVE-2022-0944
+  link: https://nvd.nist.gov/vuln/detail/cve-2022-0944
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 7.2
+      severity: HIGH
+    - name: CNA (Huntr)
+      org: huntr
+      base_score: 9.1
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-sightless/
+      anchor: foothold
+
+- id: CVE-2021-44967
+  link: https://nvd.nist.gov/vuln/detail/cve-2021-44967
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 8.8
+      severity: HIGH
+  references:
+    - url: /posts/htb-writeup-heal/
+      anchor: cve-exploitation
+
+- id: CVE-2021-43798
+  link: https://nvd.nist.gov/vuln/detail/cve-2021-43798
+  sources:
+    - name: CNA (GitHub)
+      org: GitHub
+      base_score: 7.5
+      severity: HIGH
+  references:
+    - url: /posts/dockerlabs-writeup-move/
+      anchor: cve-exploitation
+
+- id: CVE-2018-15473
+  link: https://nvd.nist.gov/vuln/detail/cve-2018-15473
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 5.3
+      severity: MEDIUM
+  references:
+    - url: /posts/dockerlabs-writeup-breakmyssh/
+      anchor: vulnerability-exploitation
+
+- id: CVE-2011-2523
+  link: https://nvd.nist.gov/vuln/detail/cve-2011-2523
+  sources:
+    - name: NIST (NVD)
+      org: nvd
+      base_score: 9.8
+      severity: CRITICAL
+  references:
+    - url: /posts/dockerlabs-writeup-firsthacking/
+      anchor: cve-exploitation
+    - url: /posts/dockerlabs-writeup-tproot/
+      anchor: cve-exploitation
+

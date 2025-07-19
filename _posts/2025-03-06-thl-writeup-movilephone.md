@@ -7,13 +7,13 @@ pin: false
 image:
  path: /assets/img/thl-writeup-movilephone/movilephone_logo.png
 categories:
-  - The Hackers Labs
+  - The_Hackers_Labs
 tags:
   - android
-  - the hackers labs
+  - the_hackers_labs
   - adb
   - tcp
-  - privilege escalation
+  - privilege_escalation
 
 ---
 ## Information Gathering

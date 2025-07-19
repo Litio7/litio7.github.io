@@ -7,15 +7,15 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-firsthacking/firsthacking_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ftp
   - tcp
   - cve
-  - information gathering
-  - cve exploitation
+  - information_gathering
+  - cve_exploitation
   - backdoor
 
 ---

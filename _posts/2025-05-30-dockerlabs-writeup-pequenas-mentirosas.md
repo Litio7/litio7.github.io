@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-pequenas-mentirosas/pequenas-mentirosas_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - tcp
   - ssh
   - http
-  - data leaks
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - data leak exploitation
-  - lateral movement
-  - privilege escalation
+  - data_leaks
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - data_leak_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

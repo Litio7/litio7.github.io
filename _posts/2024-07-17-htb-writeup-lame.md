@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/htb-writeup-lame/lame_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - os command injection
+  - hack_the_box
+  - os_command_injection
   - metasploit
   - ftp
   - ssh
   - smb
   - tcp
-  - os command injection
+  - os_command_injection
   - rce
-  - information gathering
+  - information_gathering
   - foothold
 
 ---

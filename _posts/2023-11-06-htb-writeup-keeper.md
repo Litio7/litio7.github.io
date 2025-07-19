@@ -7,22 +7,22 @@ pin: false
 image:
  path: /assets/img/htb-writeup-keeper/keeper_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - cve
-  - data leaks
+  - data_leaks
   - misconfigurations
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - data leak exploitation
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - data_leak_exploitation
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

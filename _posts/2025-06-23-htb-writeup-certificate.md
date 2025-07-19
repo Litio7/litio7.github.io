@@ -7,11 +7,11 @@ pin: false
 image:
  path: /assets/img/htb-writeup-certificate/certificate_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - windows
-  - hack the box
+  - hack_the_box
 
 ---
 ## Information Gathering

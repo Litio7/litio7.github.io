@@ -7,29 +7,29 @@ pin: false
 image:
  path: /assets/img/htb-writeup-checker/checker_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - http
   - cve
-  - sqli blind
+  - sqli_blind
   - ssrf
-  - data leaks
+  - data_leaks
   - php
   - 2FA
-  - arbitrary file read
-  - password attacks
-  - reverse engineering
-  - sudo abuse
+  - arbitrary_file_read
+  - password_attacks
+  - reverse_engineering
+  - sudo_abuse
   - suid
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

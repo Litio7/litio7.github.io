@@ -7,20 +7,20 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-trust/trust_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
   - ssh
   - http
   - tcp
-  - fuzzing web
-  - password attacks
-  - sudo abuse
-  - information gathering
-  - web analysis
-  - vulnerability exploitation
-  - privilege escalation
+  - fuzzing_web
+  - password_attacks
+  - sudo_abuse
+  - information_gathering
+  - web_analysis
+  - vulnerability_exploitation
+  - privilege_escalation
 
 ---
 ## Information Gathering

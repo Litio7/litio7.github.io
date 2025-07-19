@@ -7,25 +7,25 @@ pin: false
 image:
  path: /assets/img/htb-writeup-boardlight/boardlight_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
-  - fuzzing web
+  - hack_the_box
+  - fuzzing_web
   - rce
   - cve
-  - data leaks
+  - data_leaks
   - misconfigurations
   - suid
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - cve exploitation
-  - lateral movement
-  - privilege escalation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
+  - lateral_movement
+  - privilege_escalation
 
 
 ---

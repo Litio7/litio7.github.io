@@ -7,29 +7,29 @@ pin: false
 image:
  path: /assets/img/dockerlabs-writeup-norc/norc_logo.png
 categories:
-  - Docker Labs
+  - Docker_Labs
 tags:
   - linux
   - dockerlabs
-  - fuzzing web
+  - fuzzing_web
   - sqli
-  - sqli blind
-  - data leaks
+  - sqli_blind
+  - data_leaks
   - wordpress
-  - cron abuse
+  - cron_abuse
   - rce
   - cve
-  - interactive tty
+  - interactive_tty
   - capabilities
   - ssh
   - http
   - tcp
-  - information gathering
-  - web analysis
-  - cve exploitation
+  - information_gathering
+  - web_analysis
+  - cve_exploitation
   - foothold
-  - lateral movement
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering

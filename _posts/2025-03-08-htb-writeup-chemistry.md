@@ -7,24 +7,24 @@ pin: false
 image:
  path: /assets/img/htb-writeup-chemistry/chemistry_logo.png
 categories:
-  - Hack The Box
+  - Hack_The_Box
   - Machines
 tags:
   - linux
-  - hack the box
+  - hack_the_box
   - tcp
   - ssh
   - upnp
   - rce
-  - password attacks
-  - port forwarding
-  - fuzzing web
+  - password_attacks
+  - port_forwarding
+  - fuzzing_web
   - lfi
-  - information gathering
-  - web analysis
+  - information_gathering
+  - web_analysis
   - foothold
-  - user pivoting
-  - privilege escalation
+  - lateral_movement
+  - privilege_escalation
 
 ---
 ## Information Gathering
@@ -222,7 +222,7 @@ app
 ```
 
 ---
-## User Pivoting
+## Lateral Movement
 
 ```terminal
 $ script /dev/null -c bash
