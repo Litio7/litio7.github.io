@@ -777,7 +777,7 @@ bindDNpassword = $1$YDz8WfhoCWmf6aTRkA+QqUI=
 groupBaseDN = CN=Splunk_Admins,CN=Users,DC=haze,DC=htb
 ```
 
-En paralelo, dentro del backup también encontré una copia del archivo `splunk.secret`, el cual difiere del extraido anteriormente en [CVE Exploitation 1](#cve-exploitation-1).
+En paralelo, dentro del backup también encontré una copia del archivo `splunk.secret`, el cual difiere del extraido anteriormente en [Exploit Public Facing Application](#exploit-public-facing-application).
 
 ```terminal
 /home/kali/Documents/htb/machines/haze:-$ cat Splunk/etc/auth/splunk.secret
@@ -945,7 +945,7 @@ C:\Windows\system32> type C:\Users\Administrator\Desktop\root.txt
 | [**Reconnaissance**](#reconnaissance) | | | <a href="https://attack.mitre.org/tactics/TA0043/" target="_blank">TA0043</a>
 | | [Active Scanning](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1595/" target="_blank">T1595</a>
 | | | [Scanning IP Blocks](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/001/" target="_blank">T1595.001</a>
-| | | [Vulnerability Scanning](#active-scaning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">T1595.002</a>
+| | | [Vulnerability Scanning](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">T1595.002</a>
 | | [Gather Victim Host Information](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1592/" target="_blank">T1592</a>
 | | | [Software](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1592/002/" target="_blank">T1592.002</a>|
 | | [Search Victim-Owned Websites](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1594/" target="_blank">T1594</a>
