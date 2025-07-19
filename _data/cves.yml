@@ -37,7 +37,7 @@
       severity: HIGH
   references:
     - url: /posts/htb-writeup-haze/
-      anchor: cve-exploitation-1
+      anchor: exploit-public-facing-application
 
 - id: CVE-2024-25641
   link: https://nvd.nist.gov/vuln/detail/cve-2024-25641
@@ -130,7 +130,7 @@
       severity: HIGH
   references:
     - url: /posts/htb-writeup-haze/
-      anchor: cve-exploitation-2
+      anchor: command-and-scripting-interpreter
 
 - id: CVE-2023-41425
   link: https://nvd.nist.gov/vuln/detail/cve-2023-41425
