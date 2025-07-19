@@ -2,55 +2,59 @@
 layout: page
 ---
 
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  {% for cve in site.data.cves %}
-    <div class="col">
-      <div class="border rounded p-3 h-100">
-        <h5 class="mb-2">
-          <a href="{{ cve.link }}" target="_blank" rel="noopener" class="text-decoration-none">
-            {{ cve.id }}
-          </a>
-        </h5>
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for cve in site.data.cves %}
+      <div class="col">
+        <div class="border rounded p-3 h-100">
+          <h5 class="mb-2">
+            <a href="{{ cve.link }}" target="_blank" rel="noopener" class="text-decoration-none">
+              {{ cve.id }}
+            </a>
+          </h5>
 
-        {% if cve.sources %}
+          {% if cve.sources %}
           <div class="bg-light border rounded px-3 py-2 mb-3 small">
             {% for s in cve.sources %}
-              <div class="d-flex justify-content-between">
-                <span class="text-muted">{{ s.name }}:</span>
-                <span>
-                  Base Score: <strong>{{ s.base_score }}</strong>
-                  <span class="badge {% case s.severity %}
-                    {% when 'CRITICAL' %} bg-danger
-                    {% when 'HIGH' %} bg-warning text-dark
-                    {% when 'MEDIUM' %} bg-info text-dark
-                    {% when 'LOW' %} bg-secondary
-                    {% else %} bg-light text-muted
-                  {% endcase %}">
-                    {{ s.severity }}
-                  </span>
+            <div class="d-flex justify-content-between">
+              <span class="text-muted">{{ s.name }}:</span>
+              <span>
+                Base Score: <strong>{{ s.base_score }}</strong>
+                <span class="badge {% case s.severity %}
+                  {% when 'CRITICAL' %} bg-danger
+                  {% when 'HIGH'     %} bg-warning text-dark
+                  {% when 'MEDIUM'   %} bg-info text-dark
+                  {% when 'LOW'      %} bg-secondary
+                  {% else %} bg-light text-muted
+                {% endcase %}">
+                  {{ s.severity }}
                 </span>
-              </div>
+              </span>
+            </div>
             {% endfor %}
           </div>
-        {% endif %}
+          {% endif %}
 
-        {% if cve.references and cve.references.size > 0 %}
-          <div class="d-flex flex-wrap gap-3 small">
+          {% if cve.references and cve.references.size > 0 %}
+          <ul class="list-inline mb-0 small">
             {% for ref in cve.references %}
               {% assign post = site.posts | where: "url", ref.url | first %}
               {% if post %}
-                <a href="{{ ref.url }}{% if ref.anchor %}#{{ ref.anchor }}{% endif %}"
-                  class="text-decoration-underline-hover fw-semibold text-muted">
-                  {{ post.title }}
-                </a>
+                <li class="list-inline-item">
+                  <a href="{{ ref.url | relative_url }}{% if ref.anchor %}#{{ ref.anchor }}{% endif %}" class="text-decoration-underline-hover fw-semibold text-muted">
+                    {{ post.title }}
+                  </a>
+                </li>
               {% endif %}
             {% endfor %}
-          </div>
-        {% else %}
+          </ul>
+          {% else %}
           <p class="text-muted small mb-0">No related posts.</p>
-        {% endif %}
+          {% endif %}
+        </div>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
+
 
