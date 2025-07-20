@@ -10,7 +10,7 @@ const config = {
   variables: true,
   // The `safelist` should be changed appropriately for future development
   safelist: {
-    standard: [/^collaps/, /^w-/, 'shadow', 'border', 'kbd'],
+    standard: [/^collaps/, /^w-/, 'shadow', 'border', 'kbd', 'd-flex', 'flex-wrap', 'gap-3', 'small', 'text-muted', 'fw-semibold', 'text-decoration-underline-hover'],
     greedy: [/^col-/, /tooltip/]
   }
 };
