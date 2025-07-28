@@ -1,5 +1,5 @@
 ---
-title: Scepter &#x1F512;
+title: Scepter &#x1F4DC;
 description: La maquina Scepter esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
 date: 2025-06-19
 toc: true

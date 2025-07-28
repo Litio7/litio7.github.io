@@ -69,6 +69,17 @@
     - url: /posts/htb-writeup-blurry/
       anchor: web-analysis--cve-exploitation
 
+- id: CVE-2024-6886
+  link: https://nvd.nist.gov/vuln/detail/cve-2024-6886
+  sources:
+    - name: CNA (Gitea Limited)
+      org: gitea
+      base_score: 10.0
+      severity: CRITICAL
+  references:
+    - url: /posts/htb-writeup-cat/
+      anchor: exploitation-for-client-execution
+
 - id: CVE-2024-2961
   link: https://nvd.nist.gov/vuln/detail/cve-2024-2961
   sources:

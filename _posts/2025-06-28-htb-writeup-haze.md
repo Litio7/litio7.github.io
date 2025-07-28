@@ -61,6 +61,8 @@ tags:
   - use_alternate_authentication_material
   - vulnerability_scanning
   - windows_remote_management
+  - command_and_control
+  - ingress_tool_transfer
 
 ---
 ## Reconnaissance
@@ -777,7 +779,7 @@ bindDNpassword = $1$YDz8WfhoCWmf6aTRkA+QqUI=
 groupBaseDN = CN=Splunk_Admins,CN=Users,DC=haze,DC=htb
 ```
 
-En paralelo, dentro del backup también encontré una copia del archivo `splunk.secret`, el cual difiere del extraido anteriormente en [Exploit Public Facing Application](#exploit-public-facing-application).
+En paralelo, dentro del backup también encontré una copia del archivo `splunk.secret`, el cual difiere del extraido anteriormente en [Exploit Public Facing Application*](#exploit-public-facing-application).
 
 ```terminal
 /home/kali/Documents/htb/machines/haze:-$ cat Splunk/etc/auth/splunk.secret
@@ -847,11 +849,6 @@ PS C:\Windows\system32>whoami
 haze\alexander.green
 ```
 
----
-## Privilege Escalation
-
-### System Owner/User Discovery
-
 El usuario `alexander.green` posee el privilegio `SeImpersonatePrivilege` habilitado. Este privilegio permite [abusar de un token autenticado](https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.html?highlight=SeImpersonatePrivilege#seimpersonateprivilege), siempre que se obtenga acceso al mismo <a href="#cwe-922" class="cwe-ref">(CWE-922)</a>.
 
 ```powershell
@@ -869,12 +866,14 @@ SeCreateGlobalPrivilege       Create global objects                     Enabled
 SeIncreaseWorkingSetPrivilege Increase a process working set            Disabled
 ```
 
-El entorno identificado desde el inicio corresponde a un sistema `Windows Server 2022`. Esto habilita el abuso del privilegio `SeImpersonatePrivilege` para escalar privilegios. En este caso, utilizé la herramienta [GodPotato](https://github.com/BeichenDream/GodPotato), diseñada para explotar servicios vulnerables que ejecutan autenticaciones NTLM y permiten el uso de tokens privilegiados en procesos impersonados.
+El entorno identificado desde el inicio corresponde a un sistema `Windows Server 2022`. Esto habilita el abuso del privilegio `SeImpersonatePrivilege` para escalar privilegios. 
 
 ---
+## Privilege Escalation
+
 ### Access Token Manipulation
 
-Descargué el binario de la herramienta y expuse los archivos necesarios a través de un servidor HTTP.
+En este caso, utilizé la herramienta [GodPotato](https://github.com/BeichenDream/GodPotato), diseñada para explotar servicios vulnerables que ejecutan autenticaciones NTLM y permiten el uso de tokens privilegiados en procesos impersonados. Descargué el binario y expuse los archivos necesarios a través de un servidor HTTP.
 
 ```terminal
 /home/kali/Documents/Tools:-$ wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe -O GodPotato/GodPotato-NET4.exe
@@ -937,59 +936,59 @@ C:\Windows\system32> type C:\Users\Administrator\Desktop\root.txt
 | <a id="cwe-94" href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a> | <a href="#code-injection" class="vuln-ref">Code Injection</a> | The product constructs a code segment using externally-influenced input from an upstream component. |
 
 ---
-
 ## MITRE ATT&CK Matrix
 
 | Tactics | Techniques | Sub-Techniques | ID |
-| :--- | :---: | :---: | :---: |
-| [**Reconnaissance**](#reconnaissance) | | | <a href="https://attack.mitre.org/tactics/TA0043/" target="_blank">TA0043</a>
-| | [Active Scanning](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1595/" target="_blank">T1595</a>
-| | | [Scanning IP Blocks](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/001/" target="_blank">T1595.001</a>
-| | | [Vulnerability Scanning](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">T1595.002</a>
-| | [Gather Victim Host Information](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1592/" target="_blank">T1592</a>
-| | | [Software](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1592/002/" target="_blank">T1592.002</a>|
-| | [Search Victim-Owned Websites](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1594/" target="_blank">T1594</a>
-| [**Initial Access**](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0001/" target="_blank">TA0001</a>
-| | [Exploit Public-Facing Application](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1190/" target="_blank">T1190</a>
-| [Credential Access](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0006/" target="_blank">TA0006</a>
-| | [Brute Force](#brute-force) | | <a href="https://attack.mitre.org/techniques/T1110/" target="_blank">T1110</a>
-| | | [Password Cracking](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">T1110.002</a>
-| [Discovery](#initial-access) | | | <a href="https://attack.mitre.org/techniques/TA0007/" target="_blank">TA0007</a>
-| | [Account Discovery](#account-discovery) | | <a href="https://attack.mitre.org/techniques/T1087/" target="_blank">T1087</a>
-| | | [Domain Account](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1087/002/" target="_blank">T1087.002</a>
-| | | [Password Spraying](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1110/003/" target="_blank">T1110.003</a>
-| | [Permission Groups Discovery](#permission-groups-discovery) | | <a href="https://attack.mitre.org/techniques/T1069/" target="_blank">T1069</a>
-| | | [Domain Groups](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">T1069.002</a>
-| [**Lateral Movement**](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0008/" target="_blank">TA0008</a>
-| | [Remote Services](#remote-services) | | <a href="https://attack.mitre.org/techniques/T1021/" target="_blank">T1021</a>
-| | | [Windows Remote Management](#remote-services) | <a href="https://attack.mitre.org/techniques/T1021/006/" target="_blank">T1021.006</a>
-| | | [Domain Groups](#remote-services) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">T1069.002</a>
-| | [Domain or Tenant Policy Modification](#domain-or-tenant-policy-modification) | | <a href="https://attack.mitre.org/techniques/T1484/" target="_blank">T1484</a>
-| | | [Group Policy Modification](#domain-or-tenant-policy-modification) | <a href="https://attack.mitre.org/techniques/T1484/001/" target="_blank">T1484.001</a>
-| | | [Private Keys](#domain-or-tenant-policy-modification) | <a href="https://attack.mitre.org/techniques/T1552/004/" target="_blank">T1552.004</a>
-| [Defense Evasion](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0005/" target="_blank">TA0005</a>
-| | [Use Alternate Authentication Material](#use-alternate-authentication-material) | | <a href="https://attack.mitre.org/techniques/T1550/" target="_blank">T1550</a>
-| | | [Pass the Hash](#use-alternate-authentication-material) | <a href="https://attack.mitre.org/techniques/T1550/002/" target="_blank">T1550.002</a>
-| | | [Domain Groups](#remote-services) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">T1069.002</a>
-| [Persistence](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0003/" target="_blank">TA0003</a>
-| | [Account Manipulation](#account-manipulation) | | <a href="https://attack.mitre.org/techniques/T1098/" target="_blank">T1098</a>
-| | | [Additional Local or Domain Groups](#account-manipulation) | <a href="https://attack.mitre.org/techniques/T1098/007/" target="_blank">T1098.007</a>
-| | | [Group Policy Modification](#account-manipulation) | <a href="https://attack.mitre.org/techniques/T1484/001/" target="_blank">T1484.001</a>
-| | [Steal or Forge Authentication Certificates](#steal-or-forge-authentication-certificates) | | <a href="https://attack.mitre.org/techniques/T1649/" target="_blank">T1649</a>
-| | [Steal or Forge Kerberos Tickets](#steal-or-forge-authentication-certificates) | | <a href="https://attack.mitre.org/techniques/T1558/" target="_blank">T1558</a>
-| | | [Ccache Files](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1558/005/" target="_blank">T1558.005</a>
-| | | [Pass the Ticket](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1550/003/" target="_blank">T1550.003</a>
-| | | [Pass the Hash](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1550/002/" target="_blank">T1550.002</a>
-| | | [Windows Remote Management](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1021/006/" target="_blank">T1021.006</a>
-| | [Unsecured Credentials](#unsecured-credentials) | | <a href="https://attack.mitre.org/techniques/T1552/" target="_blank">T1552</a>
-| | | [Credentials In Files](#unsecured-credentials) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">T1552.001</a>
-| | | [Password Cracking](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">T1110.002</a>
-| [Execution](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0002/" target="_blank">TA0002</a>
-| | [Command and Scripting Interpreter](#command-and-scripting-interpreter) | | <a href="https://attack.mitre.org/techniques/T1059/" target="_blank">T1059</a>
-| | | [PowerShell](#command-and-scripting-interpreter) | <a href="https://attack.mitre.org/techniques/T1059/001/" target="_blank">T1059.001</a>
-| [**Privilege Escalation**](#privilege-escalation) | | | <a href="https://attack.mitre.org/tactics/TA0004/" target="_blank">TA0004</a>
-| | [System Owner/User Discovery](#system-owneruser-discovery) | | <a href="https://attack.mitre.org/techniques/T1033/" target="_blank">T1033</a>
-| | [Access Token Manipulation](#access-token-manipulation) | | <a href="https://attack.mitre.org/techniques/T1134/" target="_blank">T1134</a>
-| | | [Make and Impersonate Token](#access-token-manipulation) | <a href="https://attack.mitre.org/techniques/T1134/003/" target="_blank">T1134.003</a>
-
+| :--- | :--- | :--- | :---: |
+| [**`Reconnaissance`**](#reconnaissance) | | | <a href="https://attack.mitre.org/tactics/TA0043/" target="_blank">**`TA0043`**</a>
+| | [*Active Scanning*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1595/" target="_blank">*T1595*</a>
+| | | [*Scanning IP Blocks*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/001/" target="_blank">*T1595.001*</a>
+| | | [*Vulnerability Scanning*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">*T1595.002*</a>
+| | [*Gather Victim Host Information*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1592/" target="_blank">*T1592*</a>
+| | | [*Software*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1592/002/" target="_blank">*T1592.002*</a>|
+| | [*Search Victim-Owned Websites*](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1594/" target="_blank">*T1594*</a>
+| [**`Initial Access`**](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0001/" target="_blank">**`TA0001`**</a>
+| | [*Exploit Public-Facing Application*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1190/" target="_blank">*T1190*</a>
+| [*Credential Access*](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0006/" target="_blank">*TA0006*</a>
+| | [*Brute Force*](#brute-force) | | <a href="https://attack.mitre.org/techniques/T1110/" target="_blank">*T1110*</a>
+| | | [*Password Cracking*](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">*T1110.002*</a>
+| [*Discovery*](#initial-access) | | | <a href="https://attack.mitre.org/techniques/TA0007/" target="_blank">*TA0007*</a>
+| | [*Account Discovery*](#account-discovery) | | <a href="https://attack.mitre.org/techniques/T1087/" target="_blank">*T1087*</a>
+| | | [*Domain Account*](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1087/002/" target="_blank">*T1087.002*</a>
+| | | [*Password Spraying*](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1110/003/" target="_blank">*T1110.003*</a>
+| | [*Permission Groups Discovery*](#permission-groups-discovery) | | <a href="https://attack.mitre.org/techniques/T1069/" target="_blank">*T1069*</a>
+| | | [*Domain Groups*](#account-discovery) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">*T1069.002*</a>
+| [**`Lateral Movement`**](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0008/" target="_blank">**`TA0008`**</a>
+| | [*Remote Services*](#remote-services) | | <a href="https://attack.mitre.org/techniques/T1021/" target="_blank">*T1021*</a>
+| | | [*Windows Remote Management*](#remote-services) | <a href="https://attack.mitre.org/techniques/T1021/006/" target="_blank">*T1021.006*</a>
+| | | [*Domain Groups*](#remote-services) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">*T1069.002*</a>
+| | [*Domain or Tenant Policy Modification*](#domain-or-tenant-policy-modification) | | <a href="https://attack.mitre.org/techniques/T1484/" target="_blank">*T1484*</a>
+| | | [*Group Policy Modification*](#domain-or-tenant-policy-modification) | <a href="https://attack.mitre.org/techniques/T1484/001/" target="_blank">*T1484.001*</a>
+| | | [*Private Keys*](#domain-or-tenant-policy-modification) | <a href="https://attack.mitre.org/techniques/T1552/004/" target="_blank">*T1552.004*</a>
+| [*Defense Evasion*](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0005/" target="_blank">*TA0005*</a>
+| | [*Use Alternate Authentication Material*](#use-alternate-authentication-material) | | <a href="https://attack.mitre.org/techniques/T1550/" target="_blank">*T1550*</a>
+| | | [*Pass the Hash*](#use-alternate-authentication-material) | <a href="https://attack.mitre.org/techniques/T1550/002/" target="_blank">*T1550.002*</a>
+| | | [*Domain Groups*](#remote-services) | <a href="https://attack.mitre.org/techniques/T1069/002/" target="_blank">*T1069.002*</a>
+| [*Persistence*](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0003/" target="_blank">*TA0003*</a>
+| | [*Account Manipulation*](#account-manipulation) | | <a href="https://attack.mitre.org/techniques/T1098/" target="_blank">*T1098*</a>
+| | | [*Additional Local or Domain Groups*](#account-manipulation) | <a href="https://attack.mitre.org/techniques/T1098/007/" target="_blank">*T1098.007*</a>
+| | | [*Group Policy Modification*](#account-manipulation) | <a href="https://attack.mitre.org/techniques/T1484/001/" target="_blank">*T1484.001*</a>
+| | [*Steal or Forge Authentication Certificates*](#steal-or-forge-authentication-certificates) | | <a href="https://attack.mitre.org/techniques/T1649/" target="_blank">*T1649*</a>
+| | [*Steal or Forge Kerberos Tickets*](#steal-or-forge-authentication-certificates) | | <a href="https://attack.mitre.org/techniques/T1558/" target="_blank">*T1558*</a>
+| | | [*Ccache Files*](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1558/005/" target="_blank">*T1558.005*</a>
+| | | [*Pass the Ticket*](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1550/003/" target="_blank">*T1550.003*</a>
+| | | [*Pass the Hash*](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1550/002/" target="_blank">*T1550.002*</a>
+| | | [*Windows Remote Management*](#steal-or-forge-authentication-certificates) | <a href="https://attack.mitre.org/techniques/T1021/006/" target="_blank">*T1021.006*</a>
+| | [*Unsecured Credentials*](#unsecured-credentials) | | <a href="https://attack.mitre.org/techniques/T1552/" target="_blank">*T1552*</a>
+| | | [*Credentials In Files*](#unsecured-credentials) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">*T1552.001*</a>
+| | | [*Password Cracking*](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">*T1110.002*</a>
+| [*Execution*](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0002/" target="_blank">*TA0002*</a>
+| | [*Command and Scripting Interpreter*](#command-and-scripting-interpreter) | | <a href="https://attack.mitre.org/techniques/T1059/" target="_blank">*T1059*</a>
+| | | [*PowerShell*](#command-and-scripting-interpreter) | <a href="https://attack.mitre.org/techniques/T1059/001/" target="_blank">*T1059.001*</a>
+| | [*System Owner/User Discovery*](#command-and-scripting-interpreter) | | <a href="https://attack.mitre.org/techniques/T1033/" target="_blank">*T1033*</a>
+| [**`Privilege Escalation`**](#privilege-escalation) | | | <a href="https://attack.mitre.org/tactics/TA0004/" target="_blank">**`TA0004`**</a>
+| | [*Access Token Manipulation*](#access-token-manipulation) | | <a href="https://attack.mitre.org/techniques/T1134/" target="_blank">*T1134*</a>
+| | | [*Make and Impersonate Token*](#access-token-manipulation) | <a href="https://attack.mitre.org/techniques/T1134/003/" target="_blank">*T1134.003*</a>
+| [*Command and Control*](#access-token-manipulation) | | | <a href="https://attack.mitre.org/tactics/TA0011/" target="_blank">*TA0011*</a>
+| | [*Ingress Tool Transfer*](#access-token-manipulation) | | <a href="https://attack.mitre.org/techniques/T1105/" target="_blank">*T1105*</a>
 

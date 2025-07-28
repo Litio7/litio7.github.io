@@ -1,5 +1,5 @@
 ---
-title: Cypher &#x1F512;
+title: Cypher &#x1F4DC;
 description: La maquina Cypher esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
 date: 2025-03-13
 toc: true
