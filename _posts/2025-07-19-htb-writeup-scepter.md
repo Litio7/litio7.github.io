@@ -1,6 +1,6 @@
 ---
 title: Scepter &#x1F4DC;
-description: La maquina Scepter esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
+description: Scepter es una máquina Windows de dificultad alta que comienza con un recurso NFS sin autenticación, lo que permite al atacante descargar un archivo de certificado PFX sensible. Posteriormente, se descubre que el usuario comprometido posee la ACL User-Force-Change-Password, lo que permite cambiar la contraseña de la cuenta A.CARTER. La cuenta A.CARTER pertenece al grupo IT SUPPORT, cuyos miembros tienen privilegios GenericAll sobre la Organizational Unit (OU) llamada STAFF ACCESS CERTIFICATE, permitiendo al atacante tomar control total sobre todas las cuentas de usuario dentro de esa OU. Además, se identifica que la Certificate Authority (CA) es vulnerable a ESC14, específicamente a una asociación explícita débil (explicit weak mapping). El atacante compromete la cuenta H.BROWN modificando el atributo mail en LDAP y solicitando el certificado del template StaffAccessCertificate. La cuenta H.BROWN pertenece al grupo CMS, que tiene privilegios para modificar el atributo altSecurityIdentities de cualquier objeto en Active Directory dentro de la OU Helpdesk Enrollment Certificate. Dado que la CA es vulnerable a ESC14, el atacante puede modificar el atributo LDAP con una asociación fuerte (X509IssuerSerialNumber) y solicitar un certificado como Domain Computer, lo que permite comprometer la cuenta P.ADAMS, quien posee privilegios DCSync, resultando en el compromiso total del dominio. Una variante del ataque consiste en explotar el weak mapping X509RFC822, solicitando el template como el usuario D.BAKER y comprometiendo también la cuenta P.ADAMS.
 date: 2025-06-19
 toc: true
 pin: false
@@ -249,8 +249,5 @@ Host script results:
 ```
 
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/657" target="_blank">Scepter Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
-
-> Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.
 {: .prompt-tip }
 

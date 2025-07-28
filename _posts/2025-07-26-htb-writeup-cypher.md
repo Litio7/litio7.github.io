@@ -1,6 +1,6 @@
 ---
 title: Cypher &#x1F4DC;
-description: La maquina Cypher esta activa. Este artículo se publicará para acceso público una vez que la maquina se retire, según la política de HackTheBox.
+description: Cypher es una máquina Linux de dificultad media que requiere explotar una vulnerabilidad de cypher injection para evadir la autenticación en una página de inicio de sesión. Esto permite acceder a una aplicación web personalizada que permite ejecutar consultas definidas por el usuario. Mediante fuzzing, se descubre un archivo Java en la aplicación, el cual revela una vulnerabilidad de command injection que permite obtener acceso a la máquina como el usuario neo4j. Un archivo de historial contiene las credenciales del usuario graphasm, quien tiene permisos para ejecutar bbot como usuario root. La escalada de privilegios se realiza creando un módulo personalizado para bbot, lo que permite ejecutar comandos arbitrarios con privilegios de root. 
 date: 2025-03-13
 toc: true
 pin: false
@@ -61,5 +61,3 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 > <a href="https://www.hackthebox.com/achievement/machine/1521382/650" target="_blank">Cypher Machine from Hack The Box has been Pwned</a>
 {: .prompt-tip }
 
-> Una máquina puede estar activa o retirada. Retirada, significa que la máquina no cuenta para los puntos de temporada.
-{: .prompt-tip }

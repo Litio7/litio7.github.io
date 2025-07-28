@@ -1,5 +1,5 @@
 ---
-title: Dog &#x1F4DC;
+title: Dog
 description: Dog es una máquina Linux de dificultad fácil que permite acceder a información sensible a través de un repositorio git expuesto, lo que conduce a la filtración de credenciales para obtener acceso como administrador a BackdropCMS. Con privilegios de administrador, el atacante puede explotar una vulnerabilidad de Remote Code Execution subiendo un archivo comprimido malicioso que contiene una backdoor en PHP, logrando así un acceso inicial al sistema. La cuenta de usuario johncusack reutiliza la misma contraseña que la de BackdropCMS. Tras comprometer esta cuenta, se descubre que el usuario puede ejecutar el binario bee con privilegios de sudo, lo que permite escalar privilegios y obtener acceso como usuario root.
 date: 2025-03-14
 toc: true
