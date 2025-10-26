@@ -474,5 +474,5 @@ Con este hash, puedo iniciar sesión directamente en la cuenta de `Administrator
 *Evil-WinRM* PS C:\Users\Administrator> type Desktop\root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/627" target="_blank">Cicada Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/627" target="_blank">***Litio7 has successfully solved Cicada from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

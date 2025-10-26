@@ -343,5 +343,5 @@ Mediante Burp Suite, modifico el parámetro 'log_file' en la solicitud intercept
 
 ![](/assets/img/htb-writeup-sea/sea3_5.png)
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/620" target="_blank">Sea Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/620" target="_blank">***Litio7 has successfully solved Sea from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

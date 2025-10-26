@@ -577,6 +577,6 @@ Verifico en mi listener de Netcat y confirmo que se ha recibido una conexión co
 root@monitorsthree:~# cat root.txt 
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/622" target="_blank">Monitorsthree Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/622" target="_blank">***Litio7 has successfully solved Monitorsthree from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 

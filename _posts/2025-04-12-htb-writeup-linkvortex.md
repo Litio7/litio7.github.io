@@ -240,5 +240,5 @@ Con la clave privada, la copio a mi máquina y me conecto por ssh como `root`.
 root@linkvortex:~# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/638" target="_blank">Linkvortex Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/638" target="_blank">***Litio7 has successfully solved Linkvortex from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

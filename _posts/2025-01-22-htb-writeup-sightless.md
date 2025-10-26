@@ -347,5 +347,5 @@ Ahora pude acceder al archivo y copiarlo para acceder como `root` al servidor.
 root@sightless:~# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/624" target="_blank">Sightless Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/624" target="_blank">***Litio7 has successfully solved Sightless from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

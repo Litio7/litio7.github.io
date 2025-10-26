@@ -124,5 +124,5 @@ sudo password for susan: susan_nasus_413759210
 root@perfection:/home/susan## cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/590" target="_blank">Perfection Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/590" target="_blank">***Litio7 has successfully solved Perfection from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

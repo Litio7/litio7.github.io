@@ -96,5 +96,5 @@ ${self.module.cache.util.os.popen('cat /flag.txt').read()}
 
 ![](assets/img/htb-writeup-spookifier/spookifier4.png)
 
-> <a href="https://www.hackthebox.com/achievement/challenge/1521382/413" target="_blank">Spookifier Challenge from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/challenge/1521382/413" target="_blank">***Litio7 has successfully solved Spookifier from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

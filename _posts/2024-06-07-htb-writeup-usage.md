@@ -208,5 +208,5 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
 root@usage:~# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/597" target="_blank">Usage Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/597" target="_blank">***Litio7 has successfully solved Usage from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

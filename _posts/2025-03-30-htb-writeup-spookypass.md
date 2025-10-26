@@ -83,5 +83,5 @@ Welcome inside!
 HTB{un0bfu5c4t3d_5tr1ng5}
 ```
 
-> <a href="https://www.hackthebox.com/achievement/challenge/1521382/806" target="_blank">SpookyPass Challenge from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/challenge/1521382/806" target="_blank">***Litio7 has successfully solved SpookyPass from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

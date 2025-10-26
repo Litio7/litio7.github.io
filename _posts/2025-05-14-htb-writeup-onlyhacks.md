@@ -64,5 +64,5 @@ Al recargar la página, accedo al panel como el usuario Renata. Desde allí, pue
 
 ![](assets/img/htb-writeup-onlyhacks/onlyhacks8.png)
 
-> <a href="https://www.hackthebox.com/achievement/challenge/1521382/860" target="_blank">OnlyHacks Challenge from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/challenge/1521382/860" target="_blank">***Litio7 has successfully solved OnlyHacks from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

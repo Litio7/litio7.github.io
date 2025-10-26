@@ -275,6 +275,6 @@ Finalmente, se utiliza evil-winrm para establecer una sesión remota como el usu
 *Evil-WinRM* PS C:\Users\Administrator> type Desktop/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/634" target="_blank">Administrator Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/634" target="_blank">***Litio7 has successfully solved Administrator from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 

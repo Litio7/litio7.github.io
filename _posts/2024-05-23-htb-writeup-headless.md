@@ -144,5 +144,5 @@ dvir@headless:~$ sudo /usr/bin/syscheck
 
 ![](/assets/img/htb-writeup-headless/headless11.png)
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/594" target="_blank">Headless Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/594" target="_blank">***Litio7 has successfully solved Headless from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

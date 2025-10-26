@@ -10,9 +10,7 @@ categories:
   - Hack_The_Box
   - Sherlocks
 tags:
-  - windows
   - hack_the_box
-  - forensics
   - dfir
 
 ---
@@ -25,7 +23,7 @@ Microsoft-Windows-Sysmon-Operational.evtx
 ![](/assets/img/htb-writeup-unit42/unit421_1.png)
 
 ---
-### Q1. How many Event logs are there with Event ID 11?
+### **`Q1.`** **How many Event logs are there with Event ID 11?**
 
 Se utiliza la función 'Filter Current Log' para buscar exclusivamente eventos con Event ID 11.
 
@@ -41,9 +39,9 @@ En la parte superior del visor de eventos, vemos que hay 56 eventos registrados 
 
 ![](/assets/img/htb-writeup-unit42/unit421_3.png)
 
-##### A1. 56
+> **`A1.`** **56**
 
-### Q2. Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim’s system?
+### **`Q2.`** **Whenever a process is created in memory, an event with Event ID 1 is recorded with details such as command line, hashes, process path, parent process path, etc. This information is very useful for an analyst because it allows us to see all programs executed on a system, which means we can spot any malicious processes being executed. What is the malicious process that infected the victim’s system?**
 
 Filtro únicamente los eventos con Event ID 1.
 
@@ -78,9 +76,9 @@ En los detalles del evento con Event ID 1 en Sysmon, se incluye información sob
 ![](/assets/img/htb-writeup-unit42/unit422_4.png)
 
 
-##### A2. C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe
+> **`A2.`** **C:\Users\CyberJunkie\Downloads\Preventivo24.02.14.exe.exe**
 
-### Q3. Which Cloud drive was used to distribute the malware?
+### **`Q3.`** **Which Cloud drive was used to distribute the malware?**
 
 Utilizo Event ID 22 en los registros de Sysmon, que documenta las consultas DNS realizadas por el sistema, para buscar correlaciones entre las descargas y la creación del archivo malicioso identificado previamente.
 
@@ -104,7 +102,7 @@ La creación de un archivo temporal en la ruta de Firefox '.part' ocurrió inmed
 
 ##### A3.dropbox
   
-### Q4. The initial malicious file time-stamped (a defense evasion technique, where the file creation date is changed to make it appear old) many files it created on disk. What was the timestamp changed to for a PDF file?
+### **`Q4.`** **The initial malicious file time-stamped (a defense evasion technique, where the file creation date is changed to make it appear old) many files it created on disk. What was the timestamp changed to for a PDF file?**
 
 Filtro el visor de eventos para mostrar únicamente los eventos con Event ID 2, que registra modificaciones en las marcas de tiempo de creación de los archivos. 
 En estos eventos, se detallan:
@@ -124,7 +122,7 @@ Esto sugiere que el archivo fue manipulado para parecer más antiguo y evitar ge
 
 ##### A.4 2024-01-14 08:10:06
 
-### Q5. The malicious file dropped a few files on disk. Where was “once.cmd” created on disk? Please answer with the full path along with the filename.
+### **`Q5.`** **The malicious file dropped a few files on disk. Where was “once.cmd” created on disk? Please answer with the full path along with the filename.**
 
 Filtro el visor de eventos para mostrar únicamente los registros de Event ID 11.
 
@@ -136,9 +134,9 @@ Encuentro un resultado donde el archivo fue creado por el proceso malicioso 'Pre
 
 ![](/assets/img/htb-writeup-unit42/unit425_2.png)
 
-##### A5. C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd
+> **`A5.`** **C:\Users\CyberJunkie\AppData\Roaming\Photo and Fax Vn\Photo and vn 1.1.2\install\F97891C\WindowsVolume\Games\once.cmd**
 
-### Q6. The malicious file attempted to reach a dummy domain, most likely to check the internet connection status. What domain name did it try to connect to?
+### **`Q6.`** **The malicious file attempted to reach a dummy domain, most likely to check the internet connection status. What domain name did it try to connect to?**
 
 Filtro los registros para mostrar únicamente los eventos relacionados con Event ID 22, que corresponde a las consultas DNS realizadas por el sistema.
 
@@ -148,9 +146,9 @@ Dentro de estos registros, encuentro un evento que muestra una consulta DNS real
 
 En este caso, el archivo malicioso probablemente intentó usarlo como una forma de verificar la conexión a Internet, un paso típico en las primeras fases de ejecución de malware.
 
-##### A6. www.example.com
+> **`A6.`** **www.example.com**
 
-### Q7. Which IP address did the malicious process try to reach out to?
+### **`Q7.`** **Which IP address did the malicious process try to reach out to?**
 
 Aplico un filtro para Event ID 3, que corresponde a conexiones de red iniciadas o recibidas por el sistema.
 Este evento incluye detalles como:
@@ -170,9 +168,9 @@ Detalles de la conexión:
 * Puerto de destino: 80.
 
 
-##### A7. 93.184.216.34
+> **`A7.`** **93.184.216.34**
 
-### Q8. The malicious process terminated itself after infecting the PC with a backdoored variant of UltraVNC. When did the process terminate itself?
+### **`Q8.`** **The malicious process terminated itself after infecting the PC with a backdoored variant of UltraVNC. When did the process terminate itself?**
 
 Filtro los eventos con Event ID 5, que registra la terminación de procesos en los registros de Sysmon.
 
@@ -182,7 +180,7 @@ Filtro los eventos con Event ID 5, que registra la terminación de procesos en l
 
 El proceso se auto terminó después de completar la infección con UltraVNC backdooreado.
 
-##### A8. 2024-02-14 03:41:58
+> **`A8.`** **2024-02-14 03:41:58**
 
 ---
 ### Timeline
@@ -202,5 +200,6 @@ El proceso se auto terminó después de completar la infección con UltraVNC bac
 | 2024-02-14 03:41:58.8 | Malware terminates itself             | Process Termination (5) |
 
 
-> <https://labs.hackthebox.com/achievement/sherlock/1521382/632>
+> <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/632" target="_blank">***Litio7 has successfully solved Unit42 from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 {: .prompt-tip }

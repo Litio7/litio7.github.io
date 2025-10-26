@@ -308,5 +308,5 @@ uid=0(root) gid=0(root) groups=0(root)
 root@underpass:~# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/641" target="_blank">Underpass Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/641" target="_blank">***Litio7 has successfully solved Underpass from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

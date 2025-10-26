@@ -10,8 +10,8 @@ categories:
   - Hack_The_Box
   - Machines
 tags:
-  - linux
   - hack_the_box
+  - linux
   - exposure_of_information_through_directory_listing
   - cross_site_scripting
   - sql_injection
@@ -33,7 +33,7 @@ tags:
   - initial_access
   - exploit_public-facing_application
   - execution
-  - command-and-scripting-interpreter 
+  - command_and_scripting_interpreter 
   - javascript
   - credential_access
   - steal_web_session_cookie
@@ -706,8 +706,8 @@ uid=0(root) gid=0(root) groups=0(root)
 root@cat:/home/axel# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/646" target="_blank">Cat Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/646" target="_blank">***Litio7 has successfully solved Cat from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 
 ---
 ## Common Weakness

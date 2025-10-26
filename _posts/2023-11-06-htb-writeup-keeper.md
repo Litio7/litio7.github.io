@@ -139,5 +139,5 @@ Para conviertir la clave privada del archivo '.ppk' a un formato '.pem' que Open
 root@keeper:~# cat root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/556" target="_blank">Keeper Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/556" target="_blank">***Litio7 has successfully solved Keeper from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

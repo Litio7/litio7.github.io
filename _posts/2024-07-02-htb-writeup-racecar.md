@@ -206,5 +206,5 @@ b'?!}'
 
 HTB{why_d1d_1_s4v3_th3_fl4g_0n_th3_5t4ck?!}
 
-> <a href="https://www.hackthebox.com/achievement/challenge/1521382/242" target="_blank">Racecar Challenge from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/challenge/1521382/242" target="_blank">***Litio7 has successfully solved Racecar from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

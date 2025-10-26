@@ -320,5 +320,5 @@ Y de esta forma, obtiengo la clave privada SSH del usuario `root`.
 root@chemistry:~# cat root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/631" target="_blank">Chemistry Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/631" target="_blank">***Litio7 has successfully solved Chemistry from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

@@ -10,11 +10,8 @@ categories:
   - Hack_The_Box
   - Sherlocks
 tags:
-  - windows
-  - forensics
   - hack_the_box
   - soc
-  - llmnr_poisoning
 
 ---
 ### Initial Analysis
@@ -25,13 +22,13 @@ capture.pcap
 ```
 
 ---
-### Q1. Its suspected by the security team that there was a rogue device in Forela’s internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.
+### **`Q1.`** **Its suspected by the security team that there was a rogue device in Forela’s internal network running responder tool to perform an LLMNR Poisoning attack. Please find the malicious IP Address of the machine.**
 
 LLMNR usa el puerto 'UDP 5355'. Dado que estoy tratando con un posible ataque de envenenamiento de LLMNR, utilizo Wireshark para filtrar este puerto.
 
 ![](/assets/img/htb-writeup-noxious/noxious1.png)
 
-##### A1. 172.17.79.135
+> **`A1.`** **172.17.79.135**
 
 ### Q2.What is the hostname of the rogue machine?
 
@@ -39,23 +36,23 @@ El dispositivo usó 'DHCP' para obtener una dirección IP asignada a sí mismo y
 
 ![](/assets/img/htb-writeup-noxious/noxious2.png)
 
-##### A2. kali
+> **`A2.`** **kali**
 
-### Q3. Now we need to confirm whether the attacker captured the user’s hash and it is crackable!! What is the username whose hash was captured?
+### **`Q3.`** **Now we need to confirm whether the attacker captured the user’s hash and it is crackable!! What is the username whose hash was captured?**
 
 Filtro por smb2. El primer conjunto de autenticación NTLM comienza en el paquete 9290 y termina en el 9293
 
 ![](/assets/img/htb-writeup-noxious/noxious3.png)
 
-##### A3. john.deacon
+> **`A3.`** **john.deacon**
 
-### Q4. In NTLM traffic we can see that the victim credentials were relayed multiple times to the attacker’s machine. When were the hashes captured the First time?
+### **`Q4.`** **In NTLM traffic we can see that the victim credentials were relayed multiple times to the attacker’s machine. When were the hashes captured the First time?**
 
 El tiempo debe estar definido en UTC
 
 La configuracion correcta es: View → Time Display Format → UTC Date and Time of Day.
 
-##### A4. 2024-06-24 11:18:30
+> **`A4.`** **2024-06-24 11:18:30**
 
 ### Q5.What was the typo made by the victim when navigating to the file share that caused his credentials to be leaked?
 
@@ -65,7 +62,7 @@ Al observar el tráfico LLMNR, la máquina del atacante respondió a una consult
 
 Allí es donde la máquina maliciosa del atacante respondió a la consulta haciéndose pasar por un controlador de dominio.
 
-##### A5. DCC01
+> **`A5.`** **DCC01**
 
 ### Q6.To get the actual credentials of the victim user we need to stitch together multiple values from the ntlm negotiation packets. What is the NTLM server challenge value?
 
@@ -73,17 +70,17 @@ El paquete '9291' contiene el 'NTLM server challenge value'
 
 ![](/assets/img/htb-writeup-noxious/noxious4.png)
 
-##### A6. 601019d191f054f1
+> **`A6.`** **601019d191f054f1**
 
-### Q7. Now doing something similar find the NTProofStr value.
+### **`Q7.`** **Now doing something similar find the NTProofStr value.**
 
 En este caso utilizo el paquete '9292' para encontrar el 'NTProofStr value'.
 
 ![](/assets/img/htb-writeup-noxious/noxious5.png)
 
-##### A7. c0cc803a6d9fb5a9082253a04dbd4cd4
+> **`A7.`** **c0cc803a6d9fb5a9082253a04dbd4cd4**
 
-### Q8. To test the password complexity, try recovering the password from the information found from packet capture. This is a crucial step as this way we can find whether the attacker was able to crack this and how quickly.
+### **`Q8.`** **To test the password complexity, try recovering the password from the information found from packet capture. This is a crucial step as this way we can find whether the attacker was able to crack this and how quickly.**
 
 Para construir el hash 'NTLMv2', necesito un ultimo valor.
 
@@ -113,9 +110,9 @@ john.deacon::FORELA:601019d191f054f1:c0cc803a6d9fb5a9082253a04dbd4cd4:0101000000
 NotMyPassword0k?
 ```
 
-##### A8. NotMyPassword0k?
+> **`A8.`** **NotMyPassword0k?**
 
-### Q9. Just to get more context surrounding the incident, what is the actual file share that the victim was trying to navigate to?
+### **`Q9.`** **Just to get more context surrounding the incident, what is the actual file share that the victim was trying to navigate to?**
 
 Revisando algunos paquetes mas, encuentro el paquete numero '10214' con informacion de un recurso compartido.
 
@@ -123,7 +120,8 @@ Revisando algunos paquetes mas, encuentro el paquete numero '10214' con informac
 
 Aquí la víctima se conecta al recurso compartido en el controlador de dominio.
 
-##### A9. \\DC01\DC-Confidential
+> **`A9.`** **\\DC01\DC-Confidential**
 
-> <https://labs.hackthebox.com/achievement/sherlock/1521382/747>
+> <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/747" target="_blank">***Litio7 has successfully solved Noxious from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 {: .prompt-tip }

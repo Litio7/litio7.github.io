@@ -388,5 +388,5 @@ uid=0(root) gid=0(root) groups=0(root)
 root@backfire:~# cat root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/643" target="_blank">Backfire Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/643" target="_blank">***Litio7 has successfully solved Backfire from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

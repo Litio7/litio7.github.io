@@ -550,5 +550,5 @@ uid=1000(reader) gid=1000(reader) euid=0(root) egid=0(root) groups=0(root),1000(
 bash-5.1# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/649" target="_blank">Checker Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/649" target="_blank">***Litio7 has successfully solved Checker from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

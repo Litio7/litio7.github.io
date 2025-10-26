@@ -10,9 +10,7 @@ categories:
   - Hack_The_Box
   - Sherlocks
 tags:
-  - windows
   - hack_the_box
-  - forensics
   - dfir
 
 ---
@@ -55,7 +53,7 @@ Este comando generó dos archivos:
 El ataque de kerberoasting explota la funcionalidad del servicio Kerberos para obtener un ticket de servicio cifrado, que puede ser posteriormente descifrado offline por el atacante. Los registros de seguridad del controlador de dominio (DC) permiten identificar este comportamiento mediante el análisis de eventos específicos asociados con el servicio Kerberos.
 
 ---
-### Q1. Analyzing Domain Controller Security Logs, can you confirm the date & time when the kerberoasting activity occurred?
+### **`Q1.`** **Analyzing Domain Controller Security Logs, can you confirm the date & time when the kerberoasting activity occurred?**
 
 ![](assets/img/htb-writeup-campfire-1/campfire-11.png)
 ![](assets/img/htb-writeup-campfire-1/campfire-12.png)
@@ -75,9 +73,9 @@ Los eventos muestran una marca de tiempo que indica las 00hs (mi hora local). Al
 
 ![](assets/img/htb-writeup-campfire-1/campfire-14.png)
 
-##### A1. 2024-05-21 03:18:09
+> **`A1.`** **2024-05-21 03:18:09**
 
-### Q2. What is the Service Name that was targeted?
+### **`Q2.`** **What is the Service Name that was targeted?**
 
 En el evento relacionado con kerberoasting, se identificó el servicio objetivo a través del atributo 'Service Name'.
 
@@ -85,9 +83,9 @@ En el evento relacionado con kerberoasting, se identificó el servicio objetivo 
 
 El servicio solicitado fue: MSSQLService.
 
-##### A2. MSSQLService
+> **`A2.`** **MSSQLService**
 
-### Q3. It is really important to identify the Workstation from which this activity occurred. What is the IP Address of the workstation?
+### **`Q3.`** **It is really important to identify the Workstation from which this activity occurred. What is the IP Address of the workstation?**
 
 El evento relevante contiene la información sobre el cliente que realizó la solicitud.
 
@@ -95,9 +93,9 @@ El evento relevante contiene la información sobre el cliente que realizó la so
 
 Al analizar el registro, se identifica el valor correspondiente al campo 'Client Address' como 172.17.79.129.
 
-##### A3. 172.17.79.129
+> **`A3.`** **172.17.79.129**
 
-### Q4. What is the name of the file used to Enumerate Active directory objects and possibly find Kerberoastable accounts in the network?
+### **`Q4.`** **What is the name of the file used to Enumerate Active directory objects and possibly find Kerberoastable accounts in the network?**
 
 Análisis de los registros de PowerShell
 
@@ -113,17 +111,17 @@ Al analizar el contenido del bloque de script registrado, se detectó que la her
 
 ![](assets/img/htb-writeup-campfire-1/campfire-19.png)
 
-##### A4. powerview.ps1
+> **`A4.`** **powerview.ps1**
 
-### Q5. When was this script executed?
+### **`Q5.`** **When was this script executed?**
 
 El primer evento registrado tiene un timestamp de 2024-05-21 03:16:32 UTC. Este es el momento en el que se ejecutó el script powerview.ps1, justo dos minutos antes del ataque de Kerberoasting identificado en los registros de seguridad del controlador de dominio.
 
 ![](assets/img/htb-writeup-campfire-1/campfire-110.png)
 
-##### A5. 2024-05-21 03:16:32
+> **`A5.`** **2024-05-21 03:16:32**
 
-### Q6. What is the full path of the tool used to perform the actual kerberoasting attack?
+### **`Q6.`** **What is the full path of the tool used to perform the actual kerberoasting attack?**
 
 Análisis de los archivos Prefetch.
 
@@ -136,15 +134,15 @@ Identifique un programa ejecutable llamado Rubeus.exe, conocido por ser una herr
 
 ![](assets/img/htb-writeup-campfire-1/campfire-112.png)
 
-##### A6. C:\USERS\ALONZO.SPIRE\DOWNLOADS\RUBEUS.EXE
+> **`A6.`** **C:\USERS\ALONZO.SPIRE\DOWNLOADS\RUBEUS.EXE**
 
-### Q7. When was the tool executed to dump creden
+### **`Q7.`** **When was the tool executed to dump creden**
 
 En el campo Last Run, la marca de tiempo registrada para Rubeus.exe fue (2024-05-21 03:18:08) UTC, 1 segundo antes del evento malicioso registrado en los logs del controlador de dominio.
 
 ![](assets/img/htb-writeup-campfire-1/campfire-112.png)
 
-##### A7. 2024-05-21 03:18:08
+> **`A7.`** **2024-05-21 03:18:08**
 
 ---
 ### Timeline
@@ -155,5 +153,6 @@ En el campo Last Run, la marca de tiempo registrada para Rubeus.exe fue (2024-05
 | 2024-05-21 03:18:08 | Rubeus.exe run                    | Prefetch          |
 | 2024-05-21 03:18:09 | Kerberoasting auth attempt        | DC Security Logs  |
 
-> <https://labs.hackthebox.com/achievement/sherlock/1521382/737>
+> <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/737" target="_blank">***Litio7 has successfully solved Campfire-1 from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 {: .prompt-tip }

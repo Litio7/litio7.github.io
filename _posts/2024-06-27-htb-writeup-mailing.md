@@ -253,5 +253,5 @@ Por ultimo, utilizo Impacket-WMIexec con las credenciales del usuario 'localadmi
 C:\Users\localadmin\Desktop> type root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/600" target="_blank">Mailing Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/600" target="_blank">***Litio7 has successfully solved Mailing from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

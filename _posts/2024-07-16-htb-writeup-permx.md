@@ -285,5 +285,5 @@ Password: 123456
 root@permx:/home/mtz# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/613" target="_blank">Permx Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/613" target="_blank">***Litio7 has successfully solved Permx from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

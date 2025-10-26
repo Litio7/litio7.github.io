@@ -420,5 +420,5 @@ uid=0(root) gid=0(root) groups=0(root)
 root@bigbang:/# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/645" target="_blank">BigBang Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/645" target="_blank">***Litio7 has successfully solved BigBang from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

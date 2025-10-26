@@ -177,5 +177,5 @@ python -c 'import pty;pty.spawn("/bin/bash")'
 root@boardlight:~$ cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/608" target="_blank">Boardlight Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/608" target="_blank">***Litio7 has successfully solved Boardlight from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

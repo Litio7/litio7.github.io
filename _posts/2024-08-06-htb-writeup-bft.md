@@ -10,8 +10,6 @@ categories:
   - Hack_The_Box
   - Sherlocks
 tags:
-  - windows
-  - forensics
   - hack_the_box
   - dfir
 
@@ -54,7 +52,7 @@ Timeline Explorer requiere '.Net'
 <https://dotnet.microsoft.com/es-es/download/dotnet>
 
 ---
-### Q1. Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?
+### **`Q1.`** **Simon Stark was targeted by attackers on February 13. He downloaded a ZIP file from a link received in an email. What was the name of the ZIP file he downloaded from the link?**
 
 Filtro por '.zip'
 
@@ -71,9 +69,9 @@ Los resultados una vez filtrados muestran 3 archivos zip:
 
 Se identifica que 'Stage-20240213T093324Z-001.zip' es la descarga inicial debido a su referencia de ruta en otro archivo zip.
 
-##### A1. Stage-20240213T093324Z-001.zip
+> **`A1.`** **Stage-20240213T093324Z-001.zip**
 
-### Q2. Examine the Zone Identifier contents for the initially downloaded ZIP file. This field reveals the HostUrl from where the file was downloaded, serving as a valuable Indicator of Compromise (IOC) in our investigation/analysis. What is the full Host URL from where this ZIP file was downloaded?
+### **`Q2.`** **Examine the Zone Identifier contents for the initially downloaded ZIP file. This field reveals the HostUrl from where the file was downloaded, serving as a valuable Indicator of Compromise (IOC) in our investigation/analysis. What is the full Host URL from where this ZIP file was downloaded?**
 
 Filtro por 'HostUrl='
 
@@ -81,9 +79,9 @@ Filtro por 'HostUrl='
 
 Esta es la URL del host desde donde se descargó este archivo. A partir de esto, podemos suponer que se utilizó Google Drive para alojar este archivo zip.
 
-##### A2. https://storage.googleapis.com/drive-bulk-export-anonymous/20240213T093324.039Z/4133399871716478688/a40aecd0-1cf3-4f88-b55a-e188d5c1c04f/1/c277a8b4-afa9-4d34-b8ca-e1eb5e5f983c?authuser
+> **`A2.`** **https://storage.googleapis.com/drive-bulk-export-anonymous/20240213T093324.039Z/4133399871716478688/a40aecd0-1cf3-4f88-b55a-e188d5c1c04f/1/c277a8b4-afa9-4d34-b8ca-e1eb5e5f983c?authuser**
 
-### Q3. What is the full path and name of the malicious file that executed malicious code and connected to a C2 server?
+### **`Q3.`** **What is the full path and name of the malicious file that executed malicious code and connected to a C2 server?**
 
 Para encontrar el archivo malicioso, utilizo la columna 'Parent Path' para filtrar cualquier referencia al directorio 'Stage'.
 
@@ -91,15 +89,15 @@ Para encontrar el archivo malicioso, utilizo la columna 'Parent Path' para filtr
 
 El archivo 'invoice.bat' se destaca porque los archivos por lotes '.bat' se usan comúnmente para ejecutar comandos en sistemas Windows.
 
-##### A3. C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat
+> **`A3.`** **C:\Users\simon.stark\Downloads\Stage-20240213T093324Z-001\Stage\invoice\invoices\invoice.bat**
 
-### Q4. Analyze the $Created0x30 timestamp for the previously identified file. When was this file created on disk?
+### **`Q4.`** **Analyze the $Created0x30 timestamp for the previously identified file. When was this file created on disk?**
 
 ![](/assets/img/htb-writeup-bft/bft1_5.png)
 
-##### A4. 2024-02-13 16:38:39
+> **`A4.`** **2024-02-13 16:38:39**
 
-### Q5. Finding the hex offset of an MFT record is beneficial in many investigative scenarios. Find the hex offset of the stager file from Question 3.⁵
+### **`Q5.`** **Finding the hex offset of an MFT record is beneficial in many investigative scenarios. Find the hex offset of the stager file from Question 3.⁵**
 
 ![](/assets/img/htb-writeup-bft/bft1_5.png)
 
@@ -113,9 +111,9 @@ Como cada entrada MFT ocupa 1024 bytes, multiplico este número por 1024 para ca
 
 ![](/assets/img/htb-writeup-bft/bft1_6.png)
 
-##### A5. 16E3000
+> **`A5.`** **16E3000**
 
-### Q6. Each MFT record is 1024 bytes in size. If a file on disk has smaller size than 1024 bytes, they can be stored directly on MFT File itself. These are called MFT Resident files. During Windows File system Investigation, its crucial to look for any malicious/suspicious files that may be resident in MFT. This way we can find contents of malicious files/scripts. Find the contents of The malicious stager identified in Question3 and answer with the C2 IP and port.
+### **`Q6.`** **Each MFT record is 1024 bytes in size. If a file on disk has smaller size than 1024 bytes, they can be stored directly on MFT File itself. These are called MFT Resident files. During Windows File system Investigation, its crucial to look for any malicious/suspicious files that may be resident in MFT. This way we can find contents of malicious files/scripts. Find the contents of The malicious stager identified in Question3 and answer with the C2 IP and port.**
 
 Abro el archivo $MFT con el programa 'Windows Hex Editor'.
 
@@ -127,7 +125,7 @@ Abro el archivo $MFT con el programa 'Windows Hex Editor'.
 
 Al analizar el script de PowerShell incrustado en el archivo '.bat', puedo extraer la dirección IP y puerto que utiliza el malware para comunicarse con su servidor de comando y control.
 
-##### A6. 43.204.110.203:6666
+> **`A6.`** **43.204.110.203:6666**
 
 ---
 ### Timeline
@@ -139,5 +137,6 @@ Al analizar el script de PowerShell incrustado en el archivo '.bat', puedo extra
 | 16:38:39   | invoice.bat unzipped        | $MFT      |
 
 
-> <https://labs.hackthebox.com/achievement/sherlock/1521382/633>
+> <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/633" target="_blank">***Litio7 has successfully solved Bft from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
 {: .prompt-tip }

@@ -80,5 +80,5 @@ Node.js incluye el módulo `fs` que permite acceder al sistema de archivos. Este
 
 ![](/assets/img/htb-writeup-jscalc/jscalc2.png)
 
-> <a href="https://www.hackthebox.com/achievement/challenge/1521382/551" target="_blank">JsCalc Challenge from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/challenge/1521382/551" target="_blank">***Litio7 has successfully solved JsCalc from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

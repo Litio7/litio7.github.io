@@ -328,5 +328,5 @@ Password: sidefromsidetheothersidesidefromsidetheotherside
 root@greenhorn:~# cat root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/617" target="_blank">Greenhorn Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/617" target="_blank">***Litio7 has successfully solved Greenhorn from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

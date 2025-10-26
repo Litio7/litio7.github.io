@@ -419,5 +419,5 @@ uid=0(root) gid=0(root) groups=0(root)
 root@heal:/# cat /root/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/640" target="_blank">Heal Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/640" target="_blank">***Litio7 has successfully solved Heal from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }

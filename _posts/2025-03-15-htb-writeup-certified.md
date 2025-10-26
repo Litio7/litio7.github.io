@@ -569,5 +569,5 @@ Procedo a autenticarme a través de Evil-WinRM y consigo la flag.
 *Evil-WinRM* PS C:\Users\Administrator> type Desktop/root.txt
 ```
 
-> <a href="https://www.hackthebox.com/achievement/machine/1521382/633" target="_blank">Certified Machine from Hack The Box has been Pwned</a>
-{: .prompt-tip }
+> <a href="https://labs.hackthebox.com/achievement/machine/1521382/633" target="_blank">***Litio7 has successfully solved Certified from Hack The Box***</a>
+{: .prompt-info style="text-align:center" }
