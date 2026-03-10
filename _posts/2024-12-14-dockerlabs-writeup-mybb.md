@@ -11,22 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - fuzzing_web
-  - os_command_injection
-  - misconfigurations
-  - data_leaks
-  - password_attacks
-  - interactive_tty
-  - sudo_abuse
-  - cve
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - cve_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

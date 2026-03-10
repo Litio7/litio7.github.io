@@ -11,12 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ftp
-  - tcp
-  - cve
-  - information_gathering
-  - cve_exploitation
-  - backdoor
 
 ---
 ## Information Gathering

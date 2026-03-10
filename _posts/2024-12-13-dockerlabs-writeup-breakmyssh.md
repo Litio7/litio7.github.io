@@ -11,12 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - password_attacks
-  - cve
-  - ssh
-  - tcp
-  - information_gathering
-  - privilege_escalation
 
 ---
 ## Information Gathering

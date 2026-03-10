@@ -20,26 +20,24 @@ tags:
 ---
 ## Information
 
-> Exploit a vulnerability inherent within an Android service to achieve remote code execution.
+> Aprovechar una vulnerabilidad inherente a un servicio de Android para lograr la ejecución remota de código.
 {: .prompt-info }
+
+| ***FILE INFORMATION*** | ***APP INFORMATION*** |
+| **File Name** *`com.mobilehackinglab.cyclicscanner.apk`* | **App Name** *`Cyclic Scanner`* |
+| **Size** *`11.33MB`* | **Package Name** *`com.mobilehackinglab.cyclicscanner`* |
+| **MD5** *`0e3232f37cb0f986014e4c767ea0d420`* | **Main Activity** *`com.mobilehackinglab.cyclicscanner.MainActivity`* |
+| **SHA1** *`d9cd0a100731389b8bfbf9a019d70a65e8f6016c`* | **Target SDK** *`33`* **Min SDK** *`30`* **Max SDK** |
+| **SHA256** *`2a01bfe39237c3cc0118bf845fb6c3da75f2ad0ace918d207977d6766adf3750`* | **Android Version Name** *`1.0`* **Android Version Code** *`1`* |
 
 ---
 ## Application Analysis
-
-| ***FILE INFORMATION*** | ***APP INFORMATION*** |
-| **File Name**: *`com.mobilehackinglab.cyclicscanner.apk`* | **App Name**: *`Cyclic Scanner`* |
-| **Size**: *`11.33MB`* | **Package Name**: *`com.mobilehackinglab.cyclicscanner`* |
-| **MD5** *`0e3232f37cb0f986014e4c767ea0d420`* | **Main Activity**: *`com.mobilehackinglab.cyclicscanner.MainActivity`* |
-| **SHA1**: *`d9cd0a100731389b8bfbf9a019d70a65e8f6016c`* | **Target SDK**: *`33`* **Min SDK**: *`30`* |
-| **SHA256**: *`2a01bfe39237c3cc0118bf845fb6c3da75f2ad0ace918d207977d6766adf3750`* | **Android Version Name**: *`1.0`* **Android Version Code**: *`1`* |
-
----
 
 ![](assets/img/mhl-writeup-cyclicscanner/cyclicscanner1_1.png){: .shadow .left w="200" }
 
 Luego de installar y abrir la aplicacion, se puede apreciar una unica funcionalidad. Un swich en estado **off**, al cambiar su estado a **on** aparece un mensage **Toast**:
 
-***Scan service started, your device will be scanned regularly.***
+***"Scan service started, your device will be scanned regularly."***
 
 Parecería ser que se a iniciado un **Service** y que algunas acciones se estan ejecutando en segundo plano. Volver el swich a **off** no parece ser posible, indicando tambien por otro mensage **Toast**:
 
@@ -90,27 +88,17 @@ Si el mismo es activado, su estado cambia a `isChecked == true`. Y proccede a mo
 Cuando el usuario intenta desactivar el switch, la lógica no detiene el servicio. En cambio, fuerza el estado del switch a `true` mediante `setChecked(true)`.
 
 ```java
-public static final void setupSwitch$lambda$3(MainActivity this$0, CompoundButton compoundButton, boolean isChecked) {
-    Intrinsics.checkNotNullParameter(this$0, "this$0");
-    if (isChecked) {
-        Toast.makeText(this$0, "Scan service started, your device will be scanned regularly.", 0).show();
-        this$0.startForegroundService(new Intent(this$0, (Class<?>) ScanService.class));
-        return;
-    }
-    Toast.makeText(this$0, "Scan service cannot be stopped, this is for your own safety!", 0).show();
-    ActivityMainBinding activityMainBinding = this$0.binding;
-    if (activityMainBinding == null) {
-        Intrinsics.throwUninitializedPropertyAccessException("binding");
-        activityMainBinding = null;
-    }
-    activityMainBinding.serviceSwitch.setChecked(true);
+if (isChecked) {
+    Toast.makeText(this$0, "Scan service started, your device will be scanned regularly.", 0).show();
+    this$0.startForegroundService(new Intent(this$0, (Class<?>) ScanService.class));
+    return;
 }
 ```
 {: file='MainActivity.java' }
 
 ---
 
-La clase `ScanService` implementa un **Service** el cual realiza un escaneo ficheros de forma periódica.
+La clase `ScanService` implementa un **Service** el cual realiza un escaneo de ficheros de forma periódica.
 
 ![](assets/img/mhl-writeup-cyclicscanner/cyclicscanner1_4.png){: .shadow w="700" h="400" }
 
@@ -137,7 +125,7 @@ try {
 
 ---
 
-La clase **ScanEngine** identifica malware comparando hashes hardcodeados. Para ello la aplicación recorre directorios compartidos y por cada fichero, construye y ejecuta un comando que obtiene el hash del fichero y lo valida contra la lista incorporada en el codigo.
+La clase **ScanEngine** identifica malware comparando hashes hardcodeados. Para ello la aplicación recorre los directorios compartidos y por cada fichero, construye y ejecuta un comando para obtener su hash y lo valida contra la lista incorporada en el codigo.
 
 ![](assets/img/mhl-writeup-cyclicscanner/cyclicscanner1_5.png){: .shadow w="700" h="400" }
 
@@ -160,7 +148,7 @@ De tal forma, es posible desarrollar una aplicación cuya única función sea cr
 String fileName = "example.txt;" + userCommand;
 ```
 
-En el campo **Input Command** el usuario escribe el comando que desea ejecutar, por ejemplo `touch pwned.txt`.
+En el campo **Command Input** el usuario escribe el comando que desea ejecutar, por ejemplo `touch pwned.txt`.
 
 ![](assets/img/mhl-writeup-cyclicscanner/cyclicscanner1_6.png){: .shadow w="200" }
 
@@ -211,10 +199,10 @@ pwned.txt
 ---
 ## Common Weakness
 
-| CWE ID | Name | Description |
-| :--- | :--- | :--- |
-| <a id="cwe-489" href="https://cwe.mitre.org/data/definitions/489.html" target="_blank">CWE-489</a> | <a href="#active-debug-code" class="vuln-ref">Active Debug Code</a> | The product is released with debugging code still enabled or active. |
-| <a id="cwe-78" href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a> | <a href="#os-command-injection" class="vuln-ref">OS Command Injection</a> | The product constructs all or part of an OS command using externally-influenced input from an upstream component. |
+| CWE ID | CWE Name |
+| :--- | :--- |
+| <a id="cwe-489" href="https://cwe.mitre.org/data/definitions/489.html" target="_blank">CWE-489</a> | <a href="#active-debug-code" class="vuln-ref">Active Debug Code</a> | 
+| <a id="cwe-78" href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a> | <a href="#os-command-injection" class="vuln-ref">OS Command Injection</a> |
 
 ---
 ## MITRE ATT&CK Matrix

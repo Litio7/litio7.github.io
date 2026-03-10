@@ -11,16 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - ssh
-  - upnp
-  - data_leaks
-  - misconfigurations
-  - information_gathering
-  - web_analysis
-  - data_leak_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

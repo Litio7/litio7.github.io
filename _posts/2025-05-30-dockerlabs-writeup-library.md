@@ -11,16 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - http
-  - fuzzing_web
-  - data_leaks
-  - sudo_abuse
-  - python_library_hijacking
-  - information_gathering
-  - web_analysis
-  - data_leak_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

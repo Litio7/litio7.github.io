@@ -12,23 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - ftp
-  - ssh
-  - http
-  - tcp
-  - devtools
-  - chromium
-  - ssti
-  - cve
-  - rce
-  - os_command_injection
-  - password_attacks
-  - port_forwarding
-  - information_gathering
-  - web_analysis
-  - foothold
-  - escaping_docker
-  - privilege_escalation
 
 ---
 ## Information Gathering

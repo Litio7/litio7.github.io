@@ -1,6 +1,6 @@
 ---
 title: Noxious
-description: El IDS, nos alertó sobre un posible dispositivo no autorizado en la red interna de Active Directory. El sistema de detección de intrusiones también indicó señales de tráfico LLMNR, lo cual es inusual. Se sospecha que se produjo un ataque de envenenamiento de LLMNR. El tráfico LLMNR se dirigió hacia Forela-WKstn002, que tiene la dirección IP 172.17.79.136. Se le proporciona a usted, nuestro experto en análisis forense de redes, una captura de paquetes limitada del tiempo circundante. Dado que esto ocurrió en la VLAN de Active Directory, se sugiere que realicemos una búsqueda de amenazas de red teniendo en cuenta el vector de ataque de Active Directory, centrándonos específicamente en el envenenamiento de LLMNR.
+description: The IDS device alerted us to a possible rogue device in the internal Active Directory network. The Intrusion Detection System also indicated signs of LLMNR traffic, which is unusual. It is suspected that an LLMNR poisoning attack occurred. The LLMNR traffic was directed towards Forela-WKstn002, which has the IP address 172.17.79.136. A limited packet capture from the surrounding time is provided to you, our Network Forensics expert. Since this occurred in the Active Directory VLAN, it is suggested that we perform network threat hunting with the Active Directory attack vector in mind, specifically focusing on LLMNR poisoning.
 date: 2024-08-02
 toc: true
 pin: false
@@ -124,4 +124,3 @@ Aquí la víctima se conecta al recurso compartido en el controlador de dominio.
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/747" target="_blank">***Litio7 has successfully solved Noxious from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip }

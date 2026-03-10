@@ -11,21 +11,6 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - tcp
-  - dns
-  - smb
-  - kerberos
-  - ldap
-  - winrm
-  - misconfigurations
-  - debugging
-  - resource_based_constrained_delegation
-  - tgs
-  - information_gathering
-  - vulnerability_exploitation
-  - active_directory_enumeration
-  - active_directory_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

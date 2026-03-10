@@ -11,26 +11,6 @@ categories:
 tags:
   - linux
   - the_hackers_labs
-  - tcp
-  - ssh
-  - http
-  - wordpress
-  - fuzzing_web
-  - steganography
-  - misconfigurations
-  - os_command_injection
-  - rce
-  - interactive_tty
-  - port_forwarding
-  - password_attacks
-  - suid
-  - path_hijacking
-  - information_gathering
-  - web_analysis
-  - misconfiguration_exploitation
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - http
-  - fuzzing_web
-  - password_attacks
-  - rfi
-  - interactive_tty
-  - sudo_abuse
-  - cron_abuse
-  - information_gathering
-  - web_analysis
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

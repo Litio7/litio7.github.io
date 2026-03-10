@@ -12,19 +12,6 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - fuzzing_web
-  - lfi
-  - path_traversal
-  - rce
-  - cve
-  - smtp
-  - http
-  - winrm
-  - tcp
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

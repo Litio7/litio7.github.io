@@ -12,24 +12,6 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - tcp
-  - dns
-  - rpc
-  - smb
-  - sid_enum
-  - kerberos
-  - ldap
-  - winrm
-  - active_directory
-  - password_spraying
-  - sebackupprivilege_abuse
-  - pass_the_hash
-  - hash_dumping
-  - reg_abuse
-  - information_gathering
-  - active_directory_enumeration
-  - active_directory_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

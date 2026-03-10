@@ -12,19 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - udp
-  - ssh
-  - http
-  - snmp
-  - misconfigurations
-  - data_leaks
-  - password_attacks
-  - sudo_abuse
-  - information_gathering
-  - misconfiguration_exploitation
-  - data_leak_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

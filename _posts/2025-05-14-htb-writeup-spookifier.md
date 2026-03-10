@@ -11,10 +11,7 @@ categories:
   - Challenges
 tags:
   - hack_the_box
-  - ssti
-  - arbitrary_file_read
-  - web_analysis
-  - vulnerability_exploitation
+  - web
 
 ---
 ## Web Analysis

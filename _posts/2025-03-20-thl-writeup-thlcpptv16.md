@@ -11,25 +11,6 @@ categories:
 tags:
   - linux
   - the_hackers_labs
-  - ssh
-  - http
-  - tcp
-  - wordpress
-  - sqli_blind
-  - cve
-  - password_attacks
-  - arbitrary_file_read
-  - data_leaks
-  - sudo_abuse
-  - suid
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - foothold
-  - escaping_docker
-  - lateral_movement
-  - pivoting
-  - privilege_escalation
 
 ---
 ## Information Gathering

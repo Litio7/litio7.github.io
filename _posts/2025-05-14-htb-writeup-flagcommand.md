@@ -11,11 +11,7 @@ categories:
   - Challenges
 tags:
   - hack_the_box
-  - misconfigurations
-  - api
-  - devtools
-  - web_analysis
-  - misconfiguration_exploitation
+  - web
 
 ---
 ## Web Analysis

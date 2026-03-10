@@ -12,20 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - fuzzing_web
-  - xss
-  - cve
-  - port_forwarding
-  - os_command_injection
-  - password_attacks
-  - ssh
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - http
-  - php
-  - data_leaks
-  - rce
-  - interactive_tty
-  - sudo_abuse
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - data_leak_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

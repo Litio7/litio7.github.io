@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - http
-  - ssh
-  - data_leaks
-  - java_script
-  - fuzzing_web
-  - password_attacks
-  - sudo_abuse
-  - suid
-  - information_gathering
-  - web_analysis
-  - data_leak_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

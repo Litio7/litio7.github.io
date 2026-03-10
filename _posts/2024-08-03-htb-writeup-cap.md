@@ -12,17 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - ftp
-  - ssh
-  - http
-  - data_leaks
-  - idor
-  - capabilities
-  - tcp
-  - information_gathering
-  - web_analysis
-  - data_leak_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

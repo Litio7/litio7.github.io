@@ -11,16 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - ftp
-  - ssh
-  - password_attacks
-  - misconfigurations
-  - sudo_abuse
-  - java_script
-  - information_gathering
-  - misconfiguration_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -12,21 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - http
-  - lfi
-  - data_leaks
-  - arbitrary_file_read
-  - fuzzing_web
-  - git
-  - password_attacks
-  - cve
-  - arbitrary_code_execution
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

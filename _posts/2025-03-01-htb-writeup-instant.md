@@ -12,18 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - ssh
-  - http
-  - tcp
-  - apk
-  - api
-  - data_leaks
-  - lfi
-  - password_attacks
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

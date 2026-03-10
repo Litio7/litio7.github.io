@@ -12,9 +12,6 @@ categories:
 tags:
   - hack_the_box
   - reversing
-  - reverse_engineering
-  - information_gathering
-  - misconfiguration_exploitation
 
 ---
 ## Information Gathering

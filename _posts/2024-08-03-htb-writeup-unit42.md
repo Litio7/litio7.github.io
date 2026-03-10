@@ -1,6 +1,6 @@
 ---
 title: Unit42
-description: En este Sherlock, te familiarizarás con los registros de Sysmon y varios EventIDs útiles para identificar y analizar actividades maliciosas en un sistema Windows. Unit42 de Palo Alto realizó recientemente una investigación sobre una campaña de UltraVNC, en la que los atacantes utilizaron una versión con backdoor de UltraVNC para mantener el acceso a los sistemas. Este laboratorio está inspirado en esa campaña y guía a los participantes a través de la etapa de acceso inicial de la campaña.
+description: In this Sherlock, you will familiarize yourself with Sysmon logs and various useful EventIDs for identifying and analyzing malicious activities on a Windows system. Palo Alto's Unit42 recently conducted research on an UltraVNC campaign, wherein attackers utilized a backdoored version of UltraVNC to maintain access to systems. This lab is inspired by that campaign and guides participants through the initial access stage of the campaign.
 date: 2024-08-03
 toc: true
 pin: false
@@ -202,4 +202,3 @@ El proceso se auto terminó después de completar la infección con UltraVNC bac
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/632" target="_blank">***Litio7 has successfully solved Unit42 from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip }

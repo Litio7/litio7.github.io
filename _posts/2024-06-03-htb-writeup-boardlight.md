@@ -12,21 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - fuzzing_web
-  - rce
-  - cve
-  - data_leaks
-  - misconfigurations
-  - suid
-  - ssh
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - lateral_movement
-  - privilege_escalation
-
 
 ---
 ## Information Gathering

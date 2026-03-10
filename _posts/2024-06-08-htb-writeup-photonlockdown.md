@@ -12,8 +12,6 @@ categories:
 tags:
   - hack_the_box
   - hardware
-  - data_leaks
-  - data_leak_exploitation
 
 ---
 ## Data Leak Exploitation

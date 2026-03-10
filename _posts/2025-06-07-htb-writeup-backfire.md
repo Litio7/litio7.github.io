@@ -12,22 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - http
-  - https
-  - ssrf
-  - rce
-  - misconfigurations
-  - cve
-  - data_leaks
-  - port_forwarding
-  - sudo_abuse
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -10,8 +10,8 @@ categories:
   - Hack_The_Box
   - Machines
 tags:
-  - hack_the_box
   - linux
+  - hack_the_box
   - exposure_of_information_through_directory_listing
   - cross_site_scripting
   - sql_injection
@@ -714,63 +714,63 @@ root@cat:/home/axel# cat /root/root.txt
 
 | CWE ID | Name | Description |
 | :--- | :--- | :--- |
-| <a id="cwe-548" href="https://cwe.mitre.org/data/definitions/548.html" target="_blank">CWE-548</a> | <a href="#exposure-of-information-through-directory-listing" class="vuln-ref">Exposure of Information Through Directory Listing</a> | The product inappropriately exposes a directory listing with an index of all the resources located inside of the directory.
-| <a id="cwe-79" href="https://cwe.mitre.org/data/definitions/79.html" target="_blank">CWE-79</a> | <a href="#cross-site-scripting" class="vuln-ref">Cross-site Scripting</a> | The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.
-| <a id="cwe-89" href="https://cwe.mitre.org/data/definitions/89.html" target="_blank">CWE-89</a> | <a href="#sql-injection" class="vuln-ref">SQL Injection</a> | The product constructs all or part of an SQL command using externally-influenced input from an upstream component.
-| <a id="cwe-94" href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a> | <a href="#code-injection" class="vuln-ref">Code Injection</a> | The product constructs a code segment using externally-influenced input from an upstream component.
-| <a id="cwe-328" href="https://cwe.mitre.org/data/definitions/328.html" target="_blank">CWE-328</a> | <a href="#use-of-weak-hash" class="vuln-ref">Use of Weak Hash</a> | The product uses an algorithm does not meet security expectations for a hash.
-| <a id="cwe-521" href="https://cwe.mitre.org/data/definitions/521.html" target="_blank">CWE-521</a> | <a href="#weak-password-requirements" class="vuln-ref">Weak Password Requirements</a> | The product does not require that users should have strong passwords.
-| <a id="cwe-532" href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a> | <a href="#insertion-of-sensitive-information-into-log-file" class="vuln-ref">Insertion of Sensitive Information into Log File</a> | The product writes sensitive information to a log file.
+| <a id="cwe-548" href="https://cwe.mitre.org/data/definitions/548.html" target="_blank">CWE-548</a> | <a href="#exposure-of-information-through-directory-listing" class="vuln-ref">Exposure of Information Through Directory Listing</a> | The product inappropriately exposes a directory listing with an index of all the resources located inside of the directory. |
+| <a id="cwe-79" href="https://cwe.mitre.org/data/definitions/79.html" target="_blank">CWE-79</a> | <a href="#cross-site-scripting" class="vuln-ref">Cross-site Scripting</a> | The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users. |
+| <a id="cwe-89" href="https://cwe.mitre.org/data/definitions/89.html" target="_blank">CWE-89</a> | <a href="#sql-injection" class="vuln-ref">SQL Injection</a> | The product constructs all or part of an SQL command using externally-influenced input from an upstream component. |
+| <a id="cwe-94" href="https://cwe.mitre.org/data/definitions/94.html" target="_blank">CWE-94</a> | <a href="#code-injection" class="vuln-ref">Code Injection</a> | The product constructs a code segment using externally-influenced input from an upstream component. |
+| <a id="cwe-328" href="https://cwe.mitre.org/data/definitions/328.html" target="_blank">CWE-328</a> | <a href="#use-of-weak-hash" class="vuln-ref">Use of Weak Hash</a> | The product uses an algorithm does not meet security expectations for a hash. |
+| <a id="cwe-521" href="https://cwe.mitre.org/data/definitions/521.html" target="_blank">CWE-521</a> | <a href="#weak-password-requirements" class="vuln-ref">Weak Password Requirements</a> | The product does not require that users should have strong passwords. |
+| <a id="cwe-532" href="https://cwe.mitre.org/data/definitions/532.html" target="_blank">CWE-532</a> | <a href="#insertion-of-sensitive-information-into-log-file" class="vuln-ref">Insertion of Sensitive Information into Log File</a> | The product writes sensitive information to a log file. |
 
 ---
 ## MITRE ATT&CK Matrix
 
 | Tactics | Techniques | Sub-Techniques | ID |
 | :--- | :--- | :--- | :---: |
-| [**`Reconnaissance`**](#reconnaissance) | | | <a href="https://attack.mitre.org/tactics/TA0043/" target="_blank">**`TA0043`**</a>
-| | [*Active Scanning*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1595/" target="_blank">*T1595*</a>
-| | | [*Scanning IP Blocks*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/001/" target="_blank">*T1595.001*</a>
-| | | [*Vulnerability Scanning*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">*T1595.002*</a>
-| | [*Gather Victim Host Information*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1592/" target="_blank">*T1592*</a>
-| | | [*Software*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1592/002/" target="_blank">*T1592.002*</a>
-| | [*Search Victim-Owned Websites*](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1594/" target="_blank">*T1594*</a>
-| | | [*Wordlist Scanning*](#search-victim-owned-websites) | <a href="https://attack.mitre.org/techniques/T1595/003/" target="_blank">*T1595.003*</a>
-| [*Collection*](#email-collection) | | | <a href="https://attack.mitre.org/tactics/TA0009/" target="_blank">*TA0009*</a>
-| | [*Data from Information Repositories*](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1213/" target="_blank">*T1213*</a>
-| | | [*Code Repositories*](#search-victim-owned-websites) | <a href="https://attack.mitre.org/techniques/T1213/003/" target="_blank">*T1213.003*</a>
-| [**`Initial Access`**](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0001/" target="_blank">**`TA0001`**</a>
-| | [*Exploit Public-Facing Application*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1190/" target="_blank">*T1190*</a>
-| [*Credential Access*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0006/" target="_blank">*TA0006*</a>
-| | [*Steal Web Session Cookie*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1539/" target="_blank">*T1539*</a>
-| [*Defense Evasion*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0005/" target="_blank">*TA0005*</a>
-| | [*Use Alternate Authentication Material*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1550/" target="_blank">*T1550*</a>
-| | | [*Web Session Cookie*](#exploit-public-facing-application) | <a href="https://attack.mitre.org/techniques/T1550/004" target="_blank">*T1550.004*</a>
-| [*Execution*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0002/" target="_blank">*TA0002*</a>
-| | [*Command and Scripting Interpreter*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1059/" target="_blank">*T1059*</a>
-| | | [*JavaScript*](#exploit-public-facing-application) | <a href="https://attack.mitre.org/techniques/T1059/007/" target="_blank">*T1059.007*</a>
-| | [*Brute Force*](#brute-force) | | <a href="https://attack.mitre.org/techniques/T1110/" target="_blank">*T1110*</a>
-| | | [*Password Cracking*](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">*T1110.002*</a>
-| [**`Lateral Movement`**](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0008/" target="_blank">**`TA0008`**</a>
-| | [*Remote Services*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1021/" target="_blank">*T1021*</a>
-| | | [*SSH*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1021/004" target="_blank">*T1021.004*</a>
-| [*Discovery*](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0007/" target="_blank">*TA0007*</a>
-| | [*Account Discovery*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1087/" target="_blank">*T1087*</a>
-| | | [*Local Account*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1087/001/" target="_blank">*T1087.001*</a>
-| | [*File and Directory Discovery*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1083/" target="_blank">*T1083*</a>
-| | [*Unsecured Credentials*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1552/" target="_blank">*T1552*</a>
-| | | [*Credentials In Files*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">*T1552.001*</a>
-| | | [*SSH*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1021/004" target="_blank">*T1021.004*</a>
-| [**`Privilege Escalation`**](#privilege-escalation) | | | <a href="https://attack.mitre.org/tactics/TA0004/" target="_blank">**`TA0004`**</a>
-| | [*Email Collection*](#email-collection) | | <a href="https://attack.mitre.org/techniques/T1114/" target="_blank">*T1114*</a>
-| | | [*Local Email Collection*](#email-collection) | <a href="https://attack.mitre.org/techniques/T1114/001/" target="_blank">*T1114.001*</a>
-| | [*Network Service Discovery*](#network-service-discovery) | | <a href="https://attack.mitre.org/techniques/T1046/" target="_blank">*T1046*</a>
-| [*Command and Control*](#network-service-discovery) | | | <a href="https://attack.mitre.org/tactics/TA0011/" target="_blank">*TA0011*</a>
-| | [*Protocol Tunneling*](#network-service-discovery) | | <a href="https://attack.mitre.org/techniques/T1572/" target="_blank">*T1572*</a>
-| | [*Exploitation for Client Execution*](#exploitation-for-client-execution) | | <a href="https://attack.mitre.org/techniques/T1203/" target="_blank">*T1203*</a>
-| | [*Phishing*](#exploitation-for-client-execution) | | <a href="https://attack.mitre.org/techniques/T1572/" target="_blank">*T1566*</a>
-| | | [*Spearphishing Link*](#exploitation-for-client-execution) | <a href="https://attack.mitre.org/techniques/T1572/002/" target="_blank">*T1566.002*</a>
-| [*Exfiltration*](#exfiltration-over-c2-channel) | | | <a href="https://attack.mitre.org/tactics/TA0010/" target="_blank">*TA0010*</a>
-| | [*Exfiltration Over C2 Channel*](#exfiltration-over-c2-channel) | | <a href="https://attack.mitre.org/techniques/T1041/" target="_blank">*T1041*</a>
-| | | [*Credentials In Files*](#exfiltration-over-c2-channel) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">*T1552.001*</a>
-| | [*Valid Accounts*](#exfiltration-over-c2-channel) | | <a href="https://attack.mitre.org/techniques/T1078/" target="_blank">*T1078*</a>
-| | | [*Local Accounts*](#exfiltration-over-c2-channel) | <a href="https://attack.mitre.org/techniques/T1078/003/" target="_blank">*T1078.003*</a>
+| [**`Reconnaissance`**](#reconnaissance) | | | <a href="https://attack.mitre.org/tactics/TA0043/" target="_blank">**`TA0043`**</a> |
+| | [*Active Scanning*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1595/" target="_blank">*T1595*</a> |
+| | | [*Scanning IP Blocks*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/001/" target="_blank">*T1595.001*</a> |
+| | | [*Vulnerability Scanning*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1595/002/" target="_blank">*T1595.002*</a> |
+| | [*Gather Victim Host Information*](#active-scanning) | | <a href="https://attack.mitre.org/techniques/T1592/" target="_blank">*T1592*</a> |
+| | | [*Software*](#active-scanning) | <a href="https://attack.mitre.org/techniques/T1592/002/" target="_blank">*T1592.002*</a> |
+| | [*Search Victim-Owned Websites*](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1594/" target="_blank">*T1594*</a> |
+| | | [*Wordlist Scanning*](#search-victim-owned-websites) | <a href="https://attack.mitre.org/techniques/T1595/003/" target="_blank">*T1595.003*</a> |
+| [*Collection*](#email-collection) | | | <a href="https://attack.mitre.org/tactics/TA0009/" target="_blank">*TA0009*</a> |
+| | [*Data from Information Repositories*](#search-victim-owned-websites) | | <a href="https://attack.mitre.org/techniques/T1213/" target="_blank">*T1213*</a> |
+| | | [*Code Repositories*](#search-victim-owned-websites) | <a href="https://attack.mitre.org/techniques/T1213/003/" target="_blank">*T1213.003*</a> |
+| [**`Initial Access`**](#initial-access) | | | <a href="https://attack.mitre.org/tactics/TA0001/" target="_blank">**`TA0001`**</a> |
+| | [*Exploit Public-Facing Application*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1190/" target="_blank">*T1190*</a> |
+| [*Credential Access*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0006/" target="_blank">*TA0006*</a> |
+| | [*Steal Web Session Cookie*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1539/" target="_blank">*T1539*</a> |
+| [*Defense Evasion*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0005/" target="_blank">*TA0005*</a> |
+| | [*Use Alternate Authentication Material*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1550/" target="_blank">*T1550*</a> |
+| | | [*Web Session Cookie*](#exploit-public-facing-application) | <a href="https://attack.mitre.org/techniques/T1550/004" target="_blank">*T1550.004*</a> |
+| [*Execution*](#exploit-public-facing-application) | | | <a href="https://attack.mitre.org/tactics/TA0002/" target="_blank">*TA0002*</a> |
+| | [*Command and Scripting Interpreter*](#exploit-public-facing-application) | | <a href="https://attack.mitre.org/techniques/T1059/" target="_blank">*T1059*</a> |
+| | | [*JavaScript*](#exploit-public-facing-application) | <a href="https://attack.mitre.org/techniques/T1059/007/" target="_blank">*T1059.007*</a> |
+| | [*Brute Force*](#brute-force) | | <a href="https://attack.mitre.org/techniques/T1110/" target="_blank">*T1110*</a> |
+| | | [*Password Cracking*](#brute-force) | <a href="https://attack.mitre.org/techniques/T1110/002/" target="_blank">*T1110.002*</a> |
+| [**`Lateral Movement`**](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0008/" target="_blank">**`TA0008`**</a> |
+| | [*Remote Services*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1021/" target="_blank">*T1021*</a> |
+| | | [*SSH*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1021/004" target="_blank">*T1021.004*</a> |
+| [*Discovery*](#lateral-movement) | | | <a href="https://attack.mitre.org/tactics/TA0007/" target="_blank">*TA0007*</a> |
+| | [*Account Discovery*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1087/" target="_blank">*T1087*</a> |
+| | | [*Local Account*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1087/001/" target="_blank">*T1087.001*</a> |
+| | [*File and Directory Discovery*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1083/" target="_blank">*T1083*</a> |
+| | [*Unsecured Credentials*](#lateral-movement) | | <a href="https://attack.mitre.org/techniques/T1552/" target="_blank">*T1552*</a> |
+| | | [*Credentials In Files*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">*T1552.001*</a> |
+| | | [*SSH*](#lateral-movement) | <a href="https://attack.mitre.org/techniques/T1021/004" target="_blank">*T1021.004*</a> |
+| [**`Privilege Escalation`**](#privilege-escalation) | | | <a href="https://attack.mitre.org/tactics/TA0004/" target="_blank">**`TA0004`**</a> |
+| | [*Email Collection*](#email-collection) | | <a href="https://attack.mitre.org/techniques/T1114/" target="_blank">*T1114*</a> |
+| | | [*Local Email Collection*](#email-collection) | <a href="https://attack.mitre.org/techniques/T1114/001/" target="_blank">*T1114.001*</a> |
+| | [*Network Service Discovery*](#network-service-discovery) | | <a href="https://attack.mitre.org/techniques/T1046/" target="_blank">*T1046*</a> |
+| [*Command and Control*](#network-service-discovery) | | | <a href="https://attack.mitre.org/tactics/TA0011/" target="_blank">*TA0011*</a> |
+| | [*Protocol Tunneling*](#network-service-discovery) | | <a href="https://attack.mitre.org/techniques/T1572/" target="_blank">*T1572*</a> |
+| | [*Exploitation for Client Execution*](#exploitation-for-client-execution) | | <a href="https://attack.mitre.org/techniques/T1203/" target="_blank">*T1203*</a> |
+| | [*Phishing*](#exploitation-for-client-execution) | | <a href="https://attack.mitre.org/techniques/T1566/" target="_blank">*T1566*</a> |
+| | | [*Spearphishing Link*](#exploitation-for-client-execution) | <a href="https://attack.mitre.org/techniques/T1566/002/" target="_blank">*T1566.002*</a> |
+| [*Exfiltration*](#exfiltration-over-c2-channel) | | | <a href="https://attack.mitre.org/tactics/TA0010/" target="_blank">*TA0010*</a> |
+| | [*Exfiltration Over C2 Channel*](#exfiltration-over-c2-channel) | | <a href="https://attack.mitre.org/techniques/T1041/" target="_blank">*T1041*</a> |
+| | | [*Credentials In Files*](#exfiltration-over-c2-channel) | <a href="https://attack.mitre.org/techniques/T1552/001/" target="_blank">*T1552.001*</a> |
+| | [*Valid Accounts*](#exfiltration-over-c2-channel) | | <a href="https://attack.mitre.org/techniques/T1078/" target="_blank">*T1078*</a> |
+| | | [*Local Accounts*](#exfiltration-over-c2-channel) | <a href="https://attack.mitre.org/techniques/T1078/003/" target="_blank">*T1078.003*</a> |

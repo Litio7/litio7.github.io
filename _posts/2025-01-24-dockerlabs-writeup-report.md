@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - http
-  - tcp
-  - fuzzing_web
-  - rfi
-  - interactive_tty
-  - git
-  - data_leaks
-  - information_gathering
-  - web_analysis
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

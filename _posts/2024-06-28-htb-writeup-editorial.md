@@ -12,21 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - api
-  - data_leaks
-  - ssrf
-  - cve
-  - rce
-  - git
-  - sudo_abuse
-  - ssh
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

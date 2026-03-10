@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - http
-  - tcp
-  - fuzzing_web
-  - lfi
-  - suid
-  - sudo_abuse
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - lateral_movement
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

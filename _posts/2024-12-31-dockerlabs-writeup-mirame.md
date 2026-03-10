@@ -11,16 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - http
-  - tcp
-  - sqli_blind
-  - steganography
-  - suid
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -1,6 +1,6 @@
 ---
 title: Campfire-1
-description: Alonzo detectó archivos extraños en su computadora e informó al equipo SOC recién formado. Al evaluar la situación, se cree que puede haberse producido un ataque de Kerberosting en la red. Es su trabajo confirmar los hallazgos mediante el análisis de la evidencia proporcionada. Se le proporcionan registros de seguridad del controlador de dominio, registros operativos de PowerShell de la estación de trabajo afectada y archivos de precarga de la estación de trabajo afectada.
+description: Alonzo Spotted Weird files on his computer and informed the newly assembled SOC Team. Assessing the situation it is believed a Kerberoasting attack may have occurred in the network. It is your job to confirm the findings by analyzing the provided evidence. You are provided with, 1- Security Logs from the Domain Controller 2- PowerShell-Operational Logs from the affected workstation 3- Prefetch Files from the affected workstation
 date: 2024-07-08
 toc: true
 pin: false
@@ -155,4 +155,3 @@ En el campo Last Run, la marca de tiempo registrada para Rubeus.exe fue (2024-05
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/737" target="_blank">***Litio7 has successfully solved Campfire-1 from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip }

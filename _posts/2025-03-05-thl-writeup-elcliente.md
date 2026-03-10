@@ -11,23 +11,6 @@ categories:
 tags:
   - linux
   - the_hackers_labs
-  - ssh
-  - http
-  - tcp
-  - fuzzing_web
-  - xss
-  - cookie_hijacking
-  - rce
-  - data_leaks
-  - sudo_abuse
-  - suid
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - foothold
-  - lateral_movement
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

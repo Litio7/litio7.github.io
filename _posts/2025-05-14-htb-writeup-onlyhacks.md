@@ -11,11 +11,7 @@ categories:
   - Challenges
 tags:
   - hack_the_box
-  - xss
-  - devtools
-  - cookie_hijacking
-  - web_analysis
-  - vulnerability_exploitation
+  - web
 
 ---
 ## Web Analysis

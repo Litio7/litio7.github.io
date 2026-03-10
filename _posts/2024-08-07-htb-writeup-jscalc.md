@@ -10,9 +10,7 @@ categories:
   - Challenges
 tags:
   - hack_the_box
-  - rce
-  - web_analysis
-  - vulnerability_exploitation
+  - web
 
 ---
 ## Web Analysis

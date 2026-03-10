@@ -12,16 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - ssti
-  - data_leaks
-  - password_attacks
-  - ssh
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

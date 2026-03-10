@@ -1,6 +1,6 @@
 ---
 title: Campfire-2
-description: La red de Forela está bajo constante ataque. El sistema de seguridad emitió una alerta sobre una antigua cuenta de administrador que solicita un ticket de KDC en un controlador de dominio. El inventario muestra que esta cuenta de usuario no se utiliza en este momento, por lo que se le solicita que la revise. Esto puede ser un ataque AsREPRoast, ya que cualquiera puede solicitar el ticket de cualquier usuario que tenga la autenticación previa deshabilitada.
+description: Forela's Network is constantly under attack. The security system raised an alert about an old admin account requesting a ticket from KDC on a domain controller. Inventory shows that this user account is not used as of now so you are tasked to take a look at this. This may be an AsREP roasting attack as anyone can request any user's ticket which has preauthentication disabled.
 date: 2024-08-03
 toc: true
 pin: false
@@ -95,4 +95,3 @@ Aunque el evento 4769 no muestra explícitamente una acción maliciosa, ya que e
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/736" target="_blank">***Litio7 has successfully solved Campfire-2 from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip }

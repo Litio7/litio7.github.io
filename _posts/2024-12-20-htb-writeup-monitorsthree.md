@@ -12,25 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - ssh
-  - http
-  - tcp
-  - fuzzing_web
-  - sqli_blind
-  - password_attacks
-  - cve
-  - rce
-  - interactive_tty
-  - data_leaks
-  - port_forwarding
-  - cron_abuse
-  - devtools
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

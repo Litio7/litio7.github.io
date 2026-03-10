@@ -12,19 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - upnp
-  - rce
-  - password_attacks
-  - port_forwarding
-  - fuzzing_web
-  - lfi
-  - information_gathering
-  - web_analysis
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

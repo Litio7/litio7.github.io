@@ -12,16 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - xss
-  - os_command_injection
-  - sudo_abuse
-  - ssh
-  - upnp
-  - tcp
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

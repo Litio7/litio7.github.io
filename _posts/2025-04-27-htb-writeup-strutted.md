@@ -12,21 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - http
-  - cve
-  - path_traversal
-  - rce
-  - interactive_tty
-  - data_leaks
-  - sudo_abuse
-  - suid
-  - information_gathering
-  - web_analysis
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

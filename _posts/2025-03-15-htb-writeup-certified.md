@@ -12,24 +12,6 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - tcp
-  - dns
-  - smb
-  - kerberos
-  - ldap
-  - winrm
-  - sid_enum
-  - access_control_list
-  - shadow_credentials_attack
-  - tgt
-  - unpac_the_hash
-  - pass_the_hash
-  - adcs_abuse
-  - hash_dumping
-  - information_gathering
-  - active_directory_enumeration
-  - active_directory_exploitation
-  - privilege_escalation
 
 ---
 ### Machine Information

@@ -12,24 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - http
-  - cve
-  - sqli_blind
-  - ssrf
-  - data_leaks
-  - php
-  - 2FA
-  - arbitrary_file_read
-  - password_attacks
-  - reverse_engineering
-  - sudo_abuse
-  - suid
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

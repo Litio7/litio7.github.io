@@ -12,33 +12,13 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - tcp
-  - dns
-  - smb
-  - kerberos
-  - ldap
-  - mssql
-  - winrm
-  - active_directory
-  - data_leaks
-  - misconfigurations
-  - shadow_credentials_attack
-  - tgt
-  - pass_the_hash
-  - mssql_command_execution
-  - hash_dumping
-  - adcs_abuse
-  - unpac_the_hash
-  - information_gathering
-  - misconfiguration_exploitation
-  - data_leak_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ### Machine Information
 
-As is common in real life Windows pentests, you will start this box with credentials for the following account: `rose` / `KxEPkKe6R8su`
+> As is common in real life Windows pentests, you will start this box with credentials for the following account:
+> * `rose` / `KxEPkKe6R8su`
+{: .prompt-info }
 
 ---
 ## Information Gathering

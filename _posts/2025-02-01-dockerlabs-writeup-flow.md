@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - ssh
-  - http
-  - data_leaks
-  - password_attacks
-  - os_command_injection
-  - reverse_engineering
-  - buffer_overflow
-  - information_gathering
-  - web_analysis
-  - data_leak_exploitation
-  - vulnerability_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

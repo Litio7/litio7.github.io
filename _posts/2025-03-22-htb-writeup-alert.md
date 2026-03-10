@@ -12,20 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - ssh
-  - http
-  - xss
-  - fuzzing_web
-  - lfi
-  - arbitrary_file_read
-  - password_attacks
-  - port_forwarding
-  - rce
-  - information_gathering
-  - web_analysis
-  - foothold
-  - privilege_escalation
 
 ---
 ## Information Gathering

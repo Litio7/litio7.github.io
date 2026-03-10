@@ -11,13 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ftp
-  - http
-  - tcp
-  - cve
-  - metasploit
-  - information_gathering
-  - cve_exploitation
 
 ---
 ## Information Gathering

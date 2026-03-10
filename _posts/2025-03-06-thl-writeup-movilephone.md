@@ -11,9 +11,6 @@ categories:
 tags:
   - android
   - the_hackers_labs
-  - adb
-  - tcp
-  - privilege_escalation
 
 ---
 ## Information Gathering

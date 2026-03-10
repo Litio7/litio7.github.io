@@ -12,28 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - tcp
-  - http
-  - ssh
-  - wordpress
-  - php
-  - cve
-  - insecure_deserialization
-  - rce
-  - interactive_tty
-  - password_attacks
-  - port_forwarding
-  - fuzzing_web
-  - apk
-  - api
-  - os_command_injection
-  - rfi
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - lateral_movement
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

@@ -11,21 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - tcp
-  - ftp
-  - ssh
-  - http
-  - php
-  - arbitrary_file_read
-  - path_traversal
-  - fuzzing_web
-  - cve
-  - sudo_abuse
-  - os_command_injection
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

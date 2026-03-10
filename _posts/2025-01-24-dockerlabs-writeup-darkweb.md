@@ -11,19 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - smb
-  - ftp
-  - misconfigurations
-  - data_leaks
-  - password_attacks
-  - onion
-  - tor
-  - sudo_abuse
-  - information_gathering
-  - misconfiguration_exploitation
-  - data_leak_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

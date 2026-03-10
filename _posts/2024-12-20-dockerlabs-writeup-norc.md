@@ -11,25 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - fuzzing_web
-  - sqli
-  - sqli_blind
-  - data_leaks
-  - wordpress
-  - cron_abuse
-  - rce
-  - cve
-  - interactive_tty
-  - capabilities
-  - ssh
-  - http
-  - tcp
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

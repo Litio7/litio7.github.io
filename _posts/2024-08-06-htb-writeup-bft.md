@@ -1,6 +1,6 @@
 ---
 title: Bft
-description: En este Sherlock, se familiarizará con la investigación forense de MFT (tabla maestra de archivos). Se le presentarán herramientas y metodologías conocidas para analizar artefactos de MFT a fin de identificar actividades maliciosas. Durante nuestro análisis, utilizará la herramienta MFTECmd para analizar el archivo MFT proporcionado, TimeLine Explorer para abrir y analizar los resultados del MFT analizado y un editor hexadecimal para recuperar el contenido de los archivos del MFT.
+description: In this Sherlock, you will become acquainted with MFT (Master File Table) forensics. You will be introduced to well-known tools and methodologies for analyzing MFT artifacts to identify malicious activity. During our analysis, you will utilize the MFTECmd tool to parse the provided MFT file, TimeLine Explorer to open and analyze the results from the parsed MFT, and a Hex editor to recover file contents from the MFT.
 date: 2024-08-06
 toc: true
 pin: false
@@ -139,4 +139,3 @@ Al analizar el script de PowerShell incrustado en el archivo '.bat', puedo extra
 
 > <a href="https://labs.hackthebox.com/achievement/sherlock/1521382/633" target="_blank">***Litio7 has successfully solved Bft from Hack The Box***</a>
 {: .prompt-info style="text-align:center" }
-{: .prompt-tip }

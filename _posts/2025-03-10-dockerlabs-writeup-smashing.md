@@ -11,23 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - http
-  - tcp
-  - api
-  - fuzzing_web
-  - insecure_deserialization
-  - password_attacks
-  - buffer_overflow
-  - sudo_abuse
-  - interactive_tty
-  - idor
-  - os_command_injection
-  - information_gathering
-  - web_analysis
-  - vulnerability_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

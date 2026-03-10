@@ -12,23 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - fuzzing_web
-  - ssh
-  - http
-  - tcp
-  - os_command_injection
-  - api
-  - misconfigurations
-  - suid
-  - capabilities
-  - cve
-  - devtools
-  - information_gathering
-  - web_analysis
-  - misconfiguration_exploitation
-  - foothold
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering

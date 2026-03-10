@@ -12,23 +12,6 @@ categories:
 tags:
   - windows
   - hack_the_box
-  - tcp
-  - ftp
-  - dns
-  - smb
-  - kerberos
-  - ldap
-  - winrm
-  - active_directory
-  - access_control_list
-  - password_attacks
-  - targeted_kerberoast_attack
-  - dcsync_attack
-  - tgs
-  - information_gathering
-  - active_directory_enumeration
-  - active_directory_exploitation
-  - privilege_escalation
 
 ---
 ### Machine Information

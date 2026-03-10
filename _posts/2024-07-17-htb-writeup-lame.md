@@ -12,16 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - os_command_injection
-  - metasploit
-  - ftp
-  - ssh
-  - smb
-  - tcp
-  - os_command_injection
-  - rce
-  - information_gathering
-  - foothold
 
 ---
 ## Information Gathering

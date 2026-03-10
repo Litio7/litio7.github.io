@@ -12,17 +12,6 @@ categories:
 tags:
   - linux
   - hack_the_box
-  - rce
-  - cve
-  - sudo_abuse
-  - ssh
-  - http
-  - insecure_deserialization
-  - tcp
-  - information_gathering
-  - web_analysis
-  - cve_exploitation
-  - privilege_escalation
 
 ---
 ## Information Gathering

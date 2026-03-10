@@ -11,20 +11,6 @@ categories:
 tags:
   - linux
   - dockerlabs
-  - ssh
-  - smb
-  - tcp
-  - misconfigurations
-  - reverse_engineering
-  - cryptography
-  - sudo_abuse
-  - data_leaks
-  - capabilities
-  - information_gathering
-  - misconfiguration_exploitation
-  - data_leak_exploitation
-  - lateral_movement
-  - privilege_escalation
 
 ---
 ## Information Gathering
